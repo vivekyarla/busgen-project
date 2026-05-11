@@ -1,90 +1,92 @@
 ---
-// Six-node loop showing the canonical 2024–2026 circular pattern.
-// Hand-positioned SVG; doesn't need to be data-driven for the prototype.
+// Six-node hexagonal loop showing the canonical 2024–2026 circular pattern.
+// Hand-positioned; doesn't need to be data-driven for the prototype.
 //
-// Nodes (clockwise from top): NVIDIA, Microsoft, OpenAI, AMD, CoreWeave, Oracle
-// Arrows are illustrative, not exhaustive.
+// Positions on a hexagon, center (300, 300), radius 195:
+//   top         (300, 105)   NVIDIA
+//   upper-right (469, 202)   Microsoft
+//   lower-right (469, 398)   Oracle
+//   bottom      (300, 495)   OpenAI
+//   lower-left  (131, 398)   CoreWeave
+//   upper-left  (131, 202)   AMD
 ---
 <figure class="circular-loop" aria-label="Canonical circular deal pattern">
   <svg viewBox="0 0 600 600" role="img" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
-              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <marker id="arrow-gilt" viewBox="0 0 10 10" refX="9" refY="5"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b6f1a" />
+      </marker>
+      <marker id="arrow-ox" viewBox="0 0 10 10" refX="9" refY="5"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b1c1c" />
       </marker>
     </defs>
 
-    {/* Title arc inside circle */}
-    <circle cx="300" cy="300" r="180" fill="none" stroke="#c9bfa6" stroke-dasharray="2 6" />
+    {/* Background guide arc */}
+    <circle cx="300" cy="300" r="195" fill="none" stroke="#c9bfa6" stroke-dasharray="2 6" />
 
-    {/* Arrows (drawn first, behind nodes). Each curve goes node-to-node. */}
-    {/* NVIDIA -> CoreWeave (invest) */}
-    <path d="M 300 110 Q 480 200 480 380" fill="none" stroke="#8b6f1a" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* CoreWeave -> OpenAI (compute) */}
-    <path d="M 470 400 Q 380 520 300 520" fill="none" stroke="#8b6f1a" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* OpenAI -> AMD (purchase) */}
-    <path d="M 280 510 Q 160 460 130 380" fill="none" stroke="#8b6f1a" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* AMD -> OpenAI (warrants) */}
-    <path d="M 140 360 Q 200 470 280 500" fill="none" stroke="#8b1c1c" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* OpenAI -> Microsoft (Azure spend) */}
-    <path d="M 320 510 Q 460 460 480 350" fill="none" stroke="#8b6f1a" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* Microsoft -> OpenAI (invest) */}
-    <path d="M 470 330 Q 410 470 320 510" fill="none" stroke="#8b1c1c" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* Microsoft -> NVIDIA (chip purchase, indirect) */}
-    <path d="M 480 280 Q 440 170 320 110" fill="none" stroke="#8b6f1a" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)" />
-    {/* OpenAI -> Oracle (Stargate spend) */}
-    <path d="M 310 525 Q 230 540 130 420" fill="none" stroke="#8b6f1a" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)" />
+    {/* --- Forward edges (gilt) --- */}
+    {/* NVIDIA -> Microsoft (chip supply) */}
+    <path d="M 340 130 Q 430 130 460 175" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+    {/* Microsoft -> OpenAI (Azure exclusive) */}
+    <path d="M 459 240 Q 430 410 340 480" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+    {/* OpenAI -> Oracle (Stargate compute) */}
+    <path d="M 340 480 Q 450 470 470 430" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
     {/* Oracle -> NVIDIA (chip purchase) */}
-    <path d="M 130 360 Q 140 200 280 110" fill="none" stroke="#8b6f1a" stroke-width="1.5" marker-end="url(#arrow)" />
-    {/* NVIDIA -> AMD competitive ring (illustrative) — skipped */}
+    <path d="M 470 360 Q 480 200 340 130" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+    {/* NVIDIA -> CoreWeave (invest + supply) */}
+    <path d="M 270 135 Q 145 240 145 365" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+    {/* CoreWeave -> OpenAI (compute) */}
+    <path d="M 175 425 Q 230 490 270 487" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+    {/* OpenAI -> AMD (chip "purchase") */}
+    <path d="M 265 478 Q 130 470 130 235" fill="none" stroke="#8b6f1a" stroke-width="1.4" marker-end="url(#arrow-gilt)" />
+
+    {/* --- Reverse / equity edges (oxblood) --- */}
+    {/* AMD -> OpenAI (warrants) */}
+    <path d="M 165 230 Q 240 460 285 482" fill="none" stroke="#8b1c1c" stroke-width="1.6" marker-end="url(#arrow-ox)" />
+    {/* OpenAI -> Microsoft (equity investment back) */}
+    <path d="M 320 480 Q 410 410 455 245" fill="none" stroke="#8b1c1c" stroke-width="1.6" marker-end="url(#arrow-ox)" />
+    {/* OpenAI -> CoreWeave (equity stake via $350M shares) */}
+    <path d="M 280 490 Q 170 480 155 425" fill="none" stroke="#8b1c1c" stroke-width="1.6" marker-end="url(#arrow-ox)" />
 
     {/* Nodes */}
-    <g font-family="Hoefler Text, Garamond, Georgia, serif" font-size="20" text-anchor="middle">
-      {/* top */}
-      <g transform="translate(300 100)">
-        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">NVIDIA</text>
+    <g font-family="Hoefler Text, Garamond, Georgia, serif" font-size="18" text-anchor="middle">
+      <g transform="translate(300 105)">
+        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.4" />
+        <text y="5">NVIDIA</text>
       </g>
-      {/* upper right */}
-      <g transform="translate(485 305)">
-        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">Microsoft</text>
+      <g transform="translate(469 202)">
+        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.4" />
+        <text y="5">Microsoft</text>
       </g>
-      {/* lower right */}
-      <g transform="translate(440 470)" style="display:none">
-        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">Oracle</text>
+      <g transform="translate(469 398)">
+        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.4" />
+        <text y="5">Oracle</text>
       </g>
-      {/* bottom */}
-      <g transform="translate(300 525)">
-        <circle r="48" fill="#f5efe2" stroke="#1a1612" stroke-width="1.6" />
-        <text y="6" font-style="italic">OpenAI</text>
+      <g transform="translate(300 495)">
+        <circle r="48" fill="#f5efe2" stroke="#1a1612" stroke-width="1.8" />
+        <text y="5" font-style="italic">OpenAI</text>
       </g>
-      {/* lower left */}
-      <g transform="translate(115 305)">
-        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">AMD</text>
+      <g transform="translate(131 398)">
+        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.4" />
+        <text y="5">CoreWeave</text>
       </g>
-      {/* upper left */}
-      <g transform="translate(160 470)">
-        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">CoreWeave</text>
-      </g>
-      <g transform="translate(140 415)">
-        <circle r="38" fill="#f5efe2" stroke="#1a1612" stroke-width="1.2" />
-        <text y="6">Oracle</text>
+      <g transform="translate(131 202)">
+        <circle r="42" fill="#f5efe2" stroke="#1a1612" stroke-width="1.4" />
+        <text y="5">AMD</text>
       </g>
     </g>
 
     {/* Center caption */}
     <g text-anchor="middle" font-family="Hoefler Text, Garamond, Georgia, serif">
       <text x="300" y="295" font-size="13" font-style="italic" fill="#4a4339" letter-spacing="1">the recurring cast</text>
-      <text x="300" y="320" font-size="11" fill="#4a4339">customer · investor · supplier</text>
-      <text x="300" y="338" font-size="11" fill="#4a4339">are the same counterparty</text>
+      <text x="300" y="318" font-size="11" fill="#4a4339">customer · investor · supplier</text>
+      <text x="300" y="334" font-size="11" fill="#4a4339">collapse into one counterparty</text>
     </g>
   </svg>
   <figcaption>
-    Solid lines: announced deal direction. <span style="color: var(--oxblood)">Oxblood</span>: reverse flow that closes the loop (warrants, equity tranches). <span style="font-style: italic">Dashed</span>: deals not yet analyzed in the catalog.
+    <span style="color: var(--gilt)">Gilt</span>: announced deal direction (compute spend, chip purchases). <span style="color: var(--oxblood)">Oxblood</span>: reverse flow closing the loop — equity, warrants, in-kind credits.
   </figcaption>
 </figure>
 
