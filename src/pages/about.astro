@@ -1,74 +1,198 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getDeals, getPrincipals } from '../lib/deals';
+
+const deals = getDeals();
+const analyzed = deals.filter((d) => d.analysis && d.analysis.verdict !== 'pending');
+const circular = deals.filter((d) => d.analysis?.verdict === 'circular').length;
+const mixed    = deals.filter((d) => d.analysis?.verdict === 'mixed').length;
+const buildout = deals.filter((d) => d.analysis?.verdict === 'buildout').length;
 ---
-<Base title="About" description="What this site is, what the data is, what's the project's contribution.">
+<Base title="About" description="The argument, the method, the data, the acknowledgements.">
   <p class="eyebrow">About</p>
-  <h1>About this project</h1>
+  <h1 style="max-width: 22ch">About this project</h1>
 
   <section class="prose">
     <h2 class="smallcaps">The argument</h2>
     <p>
-      The current wave of AI mega-deals (OpenAI–Nvidia–Oracle, Microsoft–OpenAI,
-      Anthropic–Amazon, AMD–OpenAI, the Stargate consortium) blurs the line
-      between customer, investor, and supplier. The same dollars appear on both
-      sides of the ledger: a chip company invests in a model company that
-      commits to buying compute from a cloud company that buys chips from the
-      chip company.
+      The current wave of AI mega-deals — OpenAI–Nvidia–Oracle,
+      Microsoft–OpenAI, Anthropic–Amazon, AMD–OpenAI, the Stargate
+      consortium — does not look like a normal industrial buildout. The
+      same dollars appear on both sides of the ledger: a chip company
+      invests in a model company that commits to buying compute from a
+      cloud company that buys chips from the chip company. The same
+      check is recognized as an investment gain on one income statement
+      and as cloud revenue on another.
     </p>
     <p>
-      The argument here is that the industry is structurally a small number of
-      people moving very large sums in patterns that recur across deals. The
-      same figures — Altman, Amodei, Huang, Nadella, Hassabis, Ellison, Su,
-      Musk, Son, Jassy, Pichai, Zuckerberg — appear repeatedly as
-      counterparties. Following Jill Lepore's observation that AI governance
-      has collapsed into the personalities of a few private actors, this site
-      argues the same about AI capital flows.
-    </p>
-
-    <h2 class="smallcaps">The build</h2>
-    <p>
-      Each deal in the catalog gets:
+      The argument here is that the industry is structurally a small
+      number of people moving very large sums in patterns that recur
+      across deals. The same dozen figures — Altman, Amodei, Huang,
+      Nadella, Hassabis, Ellison, Su, Musk, Son, Jassy, Pichai,
+      Zuckerberg, Intrator — appear repeatedly as counterparties,
+      often in arrangements where the line between customer, investor,
+      and supplier is unclear.
     </p>
     <p>
-      — an <strong>incentive map</strong> describing who benefits, what flows where, and what the press release leaves out;
-    </p>
-    <p>
-      — a <strong>sustainability rubric</strong> scoring the deal on real demand, arms-length pricing, cash-vs-equity clarity, counterparty independence, and third-party verification;
-    </p>
-    <p>
-      — a plain-language <strong>verdict</strong>: <em>buildout</em>, <em>circular</em>, <em>mixed</em>, or <em>pending</em>.
+      Following Jill Lepore's observation that AI governance has
+      collapsed into the personalities of a few private actors, this
+      site argues the same about AI capital flows. The dollars do not
+      come from a normal market with thousands of independent
+      counterparties; they come from a court.
     </p>
 
-    <h2 class="smallcaps">The Pantheon</h2>
+    <h2 class="smallcaps">The method</h2>
     <p>
-      The Greco-Roman framing is half-joke and half-argument. A market in which
-      twelve figures recur as gods of overlapping domains resembles a
-      mythological court more than a competitive market. Each principal gets
-      an analog whose mythological function does analytical work: Hephaestus
-      (Huang) forges what every other god needs; Hermes (Altman) is the
+      The catalog draws its underlying deal data from
+      <a href="https://github.com/jstwng/compute-deal-map-data">jstwng/compute-deal-map-data</a>,
+      a community-maintained, source-backed corpus of {deals.length}
+      AI-ecosystem transactions licensed CC&nbsp;BY&nbsp;4.0. Every deal
+      carries a primary-source URL.
+    </p>
+    <p>
+      On top of that substrate, this project adds three contributions:
+    </p>
+    <p>
+      <strong>1. The principals layer.</strong> The upstream data is
+      company-level. The argument is about <em>people</em>. So a
+      <code>principals.yml</code> file maps each company to its
+      public-face decision-maker(s), letting the site show — by simple
+      join — how often each figure appears across deals.
+    </p>
+    <p>
+      <strong>2. The analysis overlay.</strong> Each analyzed deal gets
+      a structured reading: a <em>verdict</em> (buildout, circular,
+      mixed, pending), a <em>sustainability rubric</em> scoring the
+      deal 0–3 on five criteria, an <em>incentive map</em> describing
+      who benefits and what flows where, and <em>circularity notes</em>
+      explaining the mechanism by which dollars loop. As of this writing
+      {analyzed.length} of {deals.length} deals are analyzed
+      ({circular} circular, {mixed} mixed, {buildout} buildout). The
+      rest are catalogued without verdict.
+    </p>
+    <p>
+      <strong>3. The Pantheon.</strong> The Greco-Roman framing is half
+      joke and half argument. A market in which twelve figures recur as
+      gods of overlapping domains resembles a mythological court more
+      than a competitive market. Each principal gets a mythological
+      analog whose function does analytical work: Hephaestus (Huang)
+      forges what every other god needs; Hermes (Altman) is the
       messenger who makes the deals; Cronus (Ellison) is the old titan
-      tolerated by his successors.
-    </p>
-    <p>
-      Deals flagged as circular get satirical illustration treatment; deals
-      flagged as genuine buildout get flattering treatment. The dual register
-      is part of the argument — humor makes the incestuous deal network
-      legible in a way a spreadsheet cannot.
+      tolerated by his successors. Deals flagged as circular receive
+      satirical illustration treatment; deals flagged as genuine
+      buildout receive flattering treatment. The dual register is part
+      of the argument — humor makes the incestuous deal network legible
+      in a way a spreadsheet cannot.
     </p>
 
-    <h2 class="smallcaps">The data</h2>
+    <h2 class="smallcaps">The rubric, in detail</h2>
+    <p>Each analyzed deal is scored 0–3 on five criteria. Higher is more sustainable, lower is more circular.</p>
+
+    <div class="rubric-explainer">
+      <div>
+        <h3>Real economic demand</h3>
+        <p>Does the buyer have non-investor revenue justifying the purchase? Is the headline figure proportional to the buyer's actual workload, or to its press strategy?</p>
+      </div>
+      <div>
+        <h3>Arms-length pricing</h3>
+        <p>Is the price set by competition with independent bidders, or by negotiating-with-yourself between parties that share equity?</p>
+      </div>
+      <div>
+        <h3>Cash vs. equity clarity</h3>
+        <p>Is consideration flowing as cash, equity, in-kind credits, or a murky hybrid (e.g., "$10B investment" denominated largely as compute credits redeemable only with the investor)?</p>
+      </div>
+      <div>
+        <h3>Counterparty independence</h3>
+        <p>Are the buyer and seller financially distinct firms, or do they share major shareholders, board members, or cross-investment such that the "transaction" is largely intra-court bookkeeping?</p>
+      </div>
+      <div>
+        <h3>Third-party verification</h3>
+        <p>Are the terms disclosed in audited filings, regulatory dockets, or only in press releases? Press-release-grade disclosure is treated as weak evidence.</p>
+      </div>
+    </div>
+
+    <h2 class="smallcaps">What "verdict" means</h2>
     <p>
-      Deal data is sourced from <a href="https://github.com/jstwng/compute-deal-map-data">jstwng/compute-deal-map-data</a>,
-      a community-maintained, source-backed catalog of AI ecosystem deals
-      licensed CC BY 4.0. Every deal carries a primary-source URL.
+      <span class="badge badge--buildout">Buildout</span> &nbsp;
+      Genuine industrial purchase. Arms-length parties, real demand,
+      clean instrument, disclosed terms. The control cases in the
+      dataset (Apple–TSMC, ASML–TSMC, regulated power PPAs) live here.
     </p>
     <p>
-      This project's contribution is the <strong>principals layer</strong> (mapping
-      companies to the people behind them), the <strong>analysis overlay</strong>
-      (rubric and verdict per deal), and the <strong>visual framing</strong>.
-      Adding a new deal to the catalog is an upstream contribution to
-      jstwng/compute-deal-map-data; adding analysis to a deal is a local
-      <code>analysis/&lt;id&gt;.yml</code> file in this repo.
+      <span class="badge badge--mixed">Mixed</span> &nbsp;
+      Real demand and substantive engineering, but the financing chain
+      includes circular elements. Stargate sits here: the Abilene
+      campus is physically being built, but the dollars routing
+      through Crusoe → Oracle → OpenAI → NVIDIA form a closed loop
+      that the individual contracts disguise.
+    </p>
+    <p>
+      <span class="badge badge--circular">Circular</span> &nbsp;
+      The same dollars appear on both sides of the ledger.
+      Investments denominated as captive compute credit;
+      "purchases" paired with equity grants of equivalent magnitude;
+      cloud contracts where the supplier issues stock to the
+      customer. Mechanism varies; the loop closes.
+    </p>
+    <p>
+      <span class="badge badge--pending">Pending verdict</span> &nbsp;
+      Catalogued from the upstream dataset but not yet analyzed. Most
+      deals are here. The analytical layer is being filled in deal by
+      deal.
+    </p>
+
+    <h2 class="smallcaps">What this site is not</h2>
+    <p>
+      It is not a prediction about whether any specific deal will
+      "work." Several deals flagged here as circular will produce real
+      products, real revenue, and real returns; the question is not
+      whether anyone wins, but whether the dollar figures publicly
+      reported as <em>investment</em>, <em>cloud revenue</em>, and
+      <em>chip orders</em> can all be true at once. They generally
+      cannot.
+    </p>
+    <p>
+      It is not neutral. The framing is editorial. The verdicts are
+      arguments. Every deal carries a primary-source URL so readers
+      can check the underlying evidence against the reading.
+    </p>
+
+    <h2 class="smallcaps">Acknowledgements</h2>
+    <p>
+      Deal data: <a href="https://github.com/jstwng/compute-deal-map-data">jstwng/compute-deal-map-data</a> (CC&nbsp;BY&nbsp;4.0). Source URLs preserved for every entry.
+    </p>
+    <p>
+      Conceptual scaffolding: Jill Lepore's reporting on AI
+      governance, in particular the argument that the regulatory and
+      policy conversation has collapsed into the personalities of
+      Altman, Hassabis, and Amodei.
+    </p>
+    <p>
+      Built with Astro. Source at <a href="https://github.com/vivekyarla/busgen-project">github.com/vivekyarla/busgen-project</a>. Site code MIT-licensed; overlay text CC&nbsp;BY&nbsp;4.0.
     </p>
   </section>
 </Base>
+
+<style>
+  .rubric-explainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+    margin: 1.2rem 0 2.5rem;
+  }
+  .rubric-explainer > div {
+    border-left: 2px solid var(--gilt);
+    padding: 0.2rem 0 0.4rem 1rem;
+  }
+  .rubric-explainer h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    margin: 0 0 0.3rem;
+    color: var(--ink);
+  }
+  .rubric-explainer p {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+</style>

@@ -1,39 +1,73 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PantheonFigure from '../../components/PantheonFigure.astro';
 import { getPrincipals, getDealsByPrincipal } from '../../lib/deals';
 
 const principals = getPrincipals();
-const principalsWithCounts = principals
-  .map((p) => ({ p, count: getDealsByPrincipal(p.slug).length }))
-  .sort((a, b) => b.count - a.count);
+const enriched = principals
+  .map((p) => {
+    const deals = getDealsByPrincipal(p.slug);
+    const circular = deals.filter((d) => d.analysis?.verdict === 'circular').length;
+    const biggest = deals
+      .filter((d) => typeof d.value_billions === 'number')
+      .sort((a, b) => (b.value_billions ?? 0) - (a.value_billions ?? 0))[0];
+    return { p, deals, circular, biggest };
+  })
+  .sort((a, b) => b.deals.length - a.deals.length);
+
+const total = enriched.reduce((acc, e) => acc + e.deals.length, 0);
+const totalCircular = enriched.reduce((acc, e) => acc + e.circular, 0);
 ---
 <Base title="Pantheon" description="The recurring cast — twelve principals as a mythological court.">
   <p class="eyebrow">The recurring cast</p>
   <h1>The Pantheon</h1>
+
   <p class="prose">
-    The thesis is that AI industrial spend is structurally a small number of
-    figures moving very large sums in patterns that recur across deals. Here
-    they are, as a court: a forge god, a messenger, a sky father, a hunter,
-    a temperate prophet, an old titan, and the rest. Each god's appearances
-    across deals are the recurring cast made visible.
+    Twelve figures. Their companies appear, on aggregate, across {total} of
+    the catalog's deals (one deal can name two gods, so the figure
+    double-counts by design — the double-counting <em>is</em> the point).
+    {totalCircular} of those appearances are in deals flagged as circular.
   </p>
-  <p class="prose" style="color: var(--ink-soft)">
-    The analogs are an analytical claim, not a costume. They commit to a
-    reading of each principal's role in the market — Hephaestus
-    forges what every other god needs, Hermes makes the deals, Cronus
-    is the old titan tolerated by his successors — and let the joke do
-    work the spreadsheet can't.
+  <p class="prose" style="color: var(--ink-soft); max-width: 62ch">
+    The pantheon analogs are analytical claims, not costumes. Each
+    god's mythological function names a structural role in the market:
+    Hephaestus forges what every other god needs; Hermes is the
+    messenger who makes the deals; Cronus is the old titan tolerated
+    by his successors; Plutus writes the checks; Charon ferries
+    workloads across the river for a fee.
   </p>
 
   <div class="pantheon-grid">
-    {principalsWithCounts.map(({ p, count }) => (
-      <div style="position: relative">
-        <PantheonFigure principal={p} />
-        <div style="position: absolute; top: 1.1rem; right: 1.2rem; font-family: var(--serif); font-size: 0.85rem; color: var(--ink-soft)">
-          {count} {count === 1 ? 'deal' : 'deals'}
+    {enriched.map(({ p, deals, circular }) => (
+      <a class="principal-card" href={`/pantheon/${p.slug}/`}>
+        <span class="god">{p.pantheon.god}</span>
+        <span class="name">{p.name}</span>
+        <span class="epithet">{p.pantheon.epithet}</span>
+        <p class="note">{p.pantheon.note}</p>
+        <div class="principal-stats">
+          <span><strong>{deals.length}</strong> {deals.length === 1 ? 'deal' : 'deals'}</span>
+          {circular > 0 && (
+            <span style="color: var(--oxblood)"><strong>{circular}</strong> circular</span>
+          )}
         </div>
-      </div>
+      </a>
     ))}
   </div>
 </Base>
+
+<style>
+  .principal-stats {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    gap: 1rem;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  .principal-stats strong {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+</style>
