@@ -1,0 +1,72 @@
+id: amd-openai-gpu
+
+verdict: circular
+circularity_score: 95
+
+principals_involved: [su, altman]
+
+rubric:
+  real_economic_demand:
+    score: 1
+    note: >-
+      OpenAI has genuine compute appetite, but the 6GW figure runs years
+      ahead of any disclosed model-training roadmap and far exceeds
+      OpenAI's verifiable revenue base. The "purchase" is at best a
+      capacity option, at worst a press-release number.
+  arms_length_pricing:
+    score: 0
+    note: >-
+      OpenAI received warrants for ~10% of AMD priced at $0.01 per
+      share. No reasonable arms-length GPU purchaser receives 10% of
+      the supplier as a perk. The pricing is set by what the press
+      release needs to imply, not by a market.
+  cash_vs_equity_clarity:
+    score: 0
+    note: >-
+      The headline $100B is a "deal value" combining chip purchases the
+      buyer cannot afford with equity the supplier is giving away. The
+      two are not separable in the disclosure.
+  counterparty_independence:
+    score: 0
+    note: >-
+      AMD is simultaneously OpenAI's supplier and (effectively) a
+      partial subsidiary, with OpenAI as both customer and shareholder.
+      The categories collapse.
+  third_party_verification:
+    score: 1
+    note: >-
+      The IR press release is the primary document. SEC filings on the
+      warrants exist but the GW and dollar figures are not audited
+      commitments.
+
+incentive_map: |
+  **AMD's side.** A press release that re-rates AMD as an "AI winner"
+  on the day of announcement. Stock-market value created exceeds the
+  warrants' dilution cost by orders of magnitude. This is the *point*
+  of the deal.
+
+  **OpenAI's side.** A second-source GPU narrative that reduces its
+  dependence on NVIDIA in headlines, and a 10% stake in a public chip
+  company at near-zero cost. The chips are a bonus to the equity.
+
+  **The hidden flow.** AMD's stock-price appreciation, captured by
+  OpenAI's warrants, is the actual consideration. AMD is paying OpenAI
+  (in equity) to *say* it will buy AMD chips. The chip "purchase" is
+  the cover story for the equity grant.
+
+circularity_notes: |
+  This is the most structurally honest of the cycle's circular deals
+  because the disclosure barely tries to hide what it is. Compare to
+  Amazon–Anthropic, where the circularity at least pretends to be two
+  separate transactions. Here, the warrants and the GPU commitment are
+  one instrument.
+
+  Whether AMD ships 6GW of MI450 is irrelevant to whether the deal
+  "worked": the press release already cleared.
+
+illustration_tone: satirical
+illustration_prompt: >-
+  Artemis (Su) hands Hermes (Altman) a quiver of arrows; Hermes,
+  smiling, hands back a deed to a tenth of Artemis's forest. Both look
+  at the camera. Background: a crowd of investors applauding. Marble,
+  ochre, gilt. Caption-like Latin inscription on a frieze.

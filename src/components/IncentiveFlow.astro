@@ -1,0 +1,27 @@
+---
+import type { Deal } from '../lib/deals';
+
+interface Props { deal: Deal; }
+const { deal } = Astro.props;
+const dealTypeLabel = deal.deal_type.replaceAll('_', ' ');
+---
+<div class="flow-block">
+  <div class="flow-node">
+    {deal.source_name}
+    <span class="cat">{deal.source_company?.category ?? ''}</span>
+  </div>
+  <div class="flow-edge">
+    <span class="label">{dealTypeLabel}</span>
+    <span class="arrow">→</span>
+    {deal.value_display && <span class="value">{deal.value_display}</span>}
+  </div>
+  <div class="flow-node">
+    {deal.target_name}
+    <span class="cat">{deal.target_company?.category ?? ''}</span>
+  </div>
+</div>
+{deal.is_reverse_edge_present && (
+  <div class="circular-hint">
+    <strong>Reverse edge present.</strong> The dataset contains at least one deal flowing in the opposite direction ({deal.target_name} → {deal.source_name}). That alone doesn't prove circular financing — but it's a flag worth investigating.
+  </div>
+)}

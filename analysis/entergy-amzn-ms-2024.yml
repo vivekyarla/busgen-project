@@ -1,0 +1,58 @@
+id: entergy-amzn-ms-2024
+
+verdict: buildout
+circularity_score: 10
+
+principals_involved: [jassy]
+
+rubric:
+  real_economic_demand:
+    score: 3
+    note: >-
+      Amazon needs power for actual data-center construction in
+      Mississippi. The megawatts are physical and metered.
+  arms_length_pricing:
+    score: 3
+    note: >-
+      Entergy is a regulated utility. Tariffs are reviewed by the
+      Mississippi Public Service Commission. Pricing discovery is
+      adversarial and public.
+  cash_vs_equity_clarity:
+    score: 3
+    note: >-
+      A power purchase agreement is one of the cleanest commercial
+      instruments in the dataset. Megawatt-hours for dollars.
+  counterparty_independence:
+    score: 3
+    note: >-
+      A utility and a customer. No cross-shareholding, no convertibles.
+  third_party_verification:
+    score: 3
+    note: >-
+      Entergy quantified $2B in customer benefits in regulatory
+      filings — the unusual position of a deal where the price is
+      attested in a state regulatory docket.
+
+incentive_map: |
+  **Entergy's side.** Anchor data-center load that supports
+  replacement of aging generation and lowers ratepayer cost for the
+  utility's existing customers.
+
+  **Amazon's side.** Long-term power supply at regulated rates, in a
+  jurisdiction welcoming to the project. Real cost; real value.
+
+  **The flow.** Electrons one direction, dollars the other.
+  Externalities (jobs, capex) audited in regulatory filings.
+
+circularity_notes: |
+  A model of what the AI buildout *could* look like at the
+  infrastructure layer: a regulated counterparty, a public price, a
+  disclosed customer benefit. The contrast with the lab-cloud-chipmaker
+  triangles is the entire point of including it in the catalog.
+
+illustration_tone: flattering
+illustration_prompt: >-
+  Plutus (Jassy) signs a tablet held by a magistrate of Mississippi
+  in plain dress. The magistrate reads aloud the price; citizens of
+  the polis nod, satisfied. A column behind them lists the tariff in
+  plain numbers.

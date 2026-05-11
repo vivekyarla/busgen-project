@@ -1,0 +1,68 @@
+id: crwv-openai-cloud
+
+verdict: circular
+circularity_score: 92
+
+principals_involved: [intrator, altman]
+
+rubric:
+  real_economic_demand:
+    score: 2
+    note: >-
+      OpenAI is a real consumer of GPU capacity. CoreWeave has the
+      physical fleet. The transaction has economic substance at the
+      compute layer.
+  arms_length_pricing:
+    score: 0
+    note: >-
+      CoreWeave issued OpenAI $350M of CoreWeave shares as part of the
+      contract. The "customer" is also receiving equity in the
+      supplier. This is a Series-B-of-the-customer disguised as a
+      cloud-services agreement.
+  cash_vs_equity_clarity:
+    score: 1
+    note: >-
+      The $22.4B contract value mixes future cloud consumption with the
+      $350M equity grant. The two are not separately quantified in
+      revenue recognition.
+  counterparty_independence:
+    score: 0
+    note: >-
+      CoreWeave was already partially owned by OpenAI's
+      partner-of-record NVIDIA. Now CoreWeave owns a slice of OpenAI
+      too. The neocloud–lab–chipmaker triangle closes.
+  third_party_verification:
+    score: 2
+    note: >-
+      CoreWeave's pre-IPO and post-IPO disclosures document the
+      transaction. The structure is on the record; the substance is
+      the question.
+
+incentive_map: |
+  **CoreWeave's side.** Locks in OpenAI as a multi-year reference
+  customer immediately before its IPO. The equity grant looks like a
+  cost; it functions as a marketing line item, since OpenAI's logo as
+  a customer is worth more than the share dilution.
+
+  **OpenAI's side.** Compute capacity plus a free position in
+  CoreWeave's pre-IPO equity. OpenAI is *paid to be a customer* —
+  the inverse of an arms-length relationship.
+
+  **The hidden flow.** OpenAI's reported "cloud spend" returns to
+  OpenAI as CoreWeave equity appreciation post-IPO. Both parties book
+  the relationship as a win on different ledger lines.
+
+circularity_notes: |
+  The cleanest illustration in the dataset of "the supplier pays the
+  customer to be the customer." The economic logic is unimpeachable
+  for the two parties — CoreWeave needed the IPO reference customer,
+  OpenAI needed the GPUs — but the pattern, repeated across the
+  industry, is what makes the cycle's revenue figures unreliable.
+
+illustration_tone: satirical
+illustration_prompt: >-
+  Charon (Intrator) ferries Hermes (Altman) across the river. As they
+  reach the far shore, Charon presses gold coins into Hermes's hand
+  rather than the reverse. Hermes accepts them with practiced grace.
+  An accountant on the bank records the fare as paid in both
+  directions.

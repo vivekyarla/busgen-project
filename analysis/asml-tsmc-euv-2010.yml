@@ -1,0 +1,59 @@
+id: asml-tsmc-euv-2010
+
+verdict: buildout
+circularity_score: 3
+
+principals_involved: []
+
+rubric:
+  real_economic_demand:
+    score: 3
+    note: >-
+      The 2010 EUV order was a multi-decade bet by TSMC on a tool that
+      did not yet work reliably. Pure industrial commitment to a future
+      capability.
+  arms_length_pricing:
+    score: 3
+    note: >-
+      ASML is the sole EUV supplier; TSMC is the largest customer.
+      Pricing is commercial and disclosed in capex aggregates.
+  cash_vs_equity_clarity:
+    score: 2
+    note: >-
+      A separate 2012 deal had TSMC, Intel, and Samsung co-invest in
+      ASML to accelerate EUV R&D — that one would score lower on
+      equity-clarity. This 2010 order is pure equipment supply.
+  counterparty_independence:
+    score: 3
+    note: >-
+      ASML and TSMC are independent public companies.
+  third_party_verification:
+    score: 3
+    note: >-
+      Both firms file public quarterly disclosures. EUV revenue and
+      shipment counts are tracked by the entire semiconductor industry.
+
+incentive_map: |
+  **ASML's side.** A reference customer for an unproven technology.
+  The TSMC commitment underwrote the years of EUV development that
+  eventually defined leading-edge manufacturing.
+
+  **TSMC's side.** A bet that EUV would win out over alternatives. It
+  did, and TSMC built process leadership on top of it.
+
+  **The flow.** Capital equipment one direction; cash the other; over
+  fifteen years, an entire process generation made possible.
+
+circularity_notes: |
+  The dataset's oldest deal, included as historical contrast. This is
+  what genuine industrial buildout looks like: a multi-decade,
+  one-direction commitment to a technology that did not exist yet.
+  Compare to the AI-era deals announced and consummated in the same
+  quarter.
+
+illustration_tone: flattering
+illustration_prompt: >-
+  Hephaestus receiving a new and unfamiliar instrument from a
+  visiting craftsman from across the sea. Both gods examine it
+  carefully; the instrument is unfinished, but the bargain is honest.
+  The composition is patient, almost reverent.

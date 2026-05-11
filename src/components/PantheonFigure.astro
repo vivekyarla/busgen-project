@@ -1,0 +1,12 @@
+---
+import type { Principal } from '../lib/deals';
+
+interface Props { principal: Principal; }
+const { principal } = Astro.props;
+---
+<a class="principal-card" href={`/pantheon/${principal.slug}/`}>
+  <span class="god">{principal.pantheon.god}</span>
+  <span class="name">{principal.name}</span>
+  <span class="epithet">{principal.pantheon.epithet}</span>
+  <p class="note">{principal.pantheon.note}</p>
+</a>

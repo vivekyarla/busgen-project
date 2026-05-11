@@ -1,0 +1,70 @@
+id: openai-msft-azure-2023
+
+verdict: circular
+circularity_score: 85
+
+principals_involved: [altman, nadella]
+
+rubric:
+  real_economic_demand:
+    score: 3
+    note: >-
+      The compute demand is real. GPT-4 was trained on Azure
+      infrastructure built specifically for OpenAI. ChatGPT inference
+      load is genuine, large, and growing.
+  arms_length_pricing:
+    score: 0
+    note: >-
+      Microsoft is OpenAI's exclusive cloud provider, largest investor,
+      and product distribution partner. There is no second bidder. The
+      Azure rate OpenAI pays is whatever the joint negotiation
+      produces, and most of it returns to Microsoft as revenue.
+  cash_vs_equity_clarity:
+    score: 1
+    note: >-
+      Of Microsoft's reported $10B "investment," a substantial portion
+      is denominated in Azure credits — money that can only be spent at
+      Microsoft. The cash-vs-in-kind split is not publicly disclosed.
+  counterparty_independence:
+    score: 0
+    note: >-
+      Microsoft and OpenAI are operationally the same firm at the
+      compute layer. The October 2025 restructuring formalized a $250B
+      Azure commitment — the original 2023 deal scaled by 25× without
+      ever leaving the same two parties.
+  third_party_verification:
+    score: 2
+    note: >-
+      Microsoft 10-K and 10-Q filings carry the investment numbers.
+      The Azure commitment side is press-release-grade through 2024.
+
+incentive_map: |
+  **Microsoft's side.** Captures the entire frontier-model compute
+  workload of the cycle, plus product distribution (Copilot,
+  Azure OpenAI Service). The $10B "investment" is largely Azure
+  credit — a way to denominate the deal as an investment for
+  press purposes while routing the actual flow as captive compute
+  revenue.
+
+  **OpenAI's side.** Compute supply at a scale no other partner could
+  guarantee, plus enterprise distribution. The price is exclusivity
+  and structural dependence.
+
+  **The hidden flow.** Microsoft writes a check; the check returns as
+  Azure consumption; Microsoft reports both an investment gain and
+  Azure AI revenue growth. Each dollar appears twice in the financial
+  narrative.
+
+circularity_notes: |
+  The original sin of the cycle. Every later deal — Amazon–Anthropic,
+  Anthropic–Microsoft, AMD–OpenAI — is a variation on the structure
+  this one established: investment denominated as captive compute
+  credit, with the investor recognizing both equity upside and revenue
+  growth from the same dollars.
+
+illustration_tone: satirical
+illustration_prompt: >-
+  Zeus (Nadella) on a throne hands a sealed scroll labeled "10 talents"
+  to Hermes (Altman). Hermes opens the scroll: inside is a smaller
+  scroll labeled "10 talents of Azure credit only." Hermes shrugs
+  cheerfully. Zeus looks pleased. A scribe records it as a great gift.

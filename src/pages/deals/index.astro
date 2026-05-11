@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import DealCard from '../../components/DealCard.astro';
+import { getDeals } from '../../lib/deals';
+
+const deals = getDeals();
+const groups = {
+  circular: deals.filter((d) => d.analysis?.verdict === 'circular'),
+  mixed:    deals.filter((d) => d.analysis?.verdict === 'mixed'),
+  buildout: deals.filter((d) => d.analysis?.verdict === 'buildout'),
+  pending:  deals.filter((d) => !d.analysis || d.analysis.verdict === 'pending'),
+};
+---
+<Base title="Deals" description="Library of AI ecosystem deals with verdicts and analytical overlay.">
+  <p class="eyebrow">The library</p>
+  <h1>Deals</h1>
+  <p class="prose">
+    {deals.length} deals catalogued, drawn from the upstream dataset. Each gets a verdict, a sustainability rubric, and a plain-language read of the incentive map. Most are still <span class="badge badge--pending">Pending verdict</span> — the analytical layer is being filled in deal by deal.
+  </p>
+
+  {groups.circular.length > 0 && (
+    <section>
+      <hr class="rule" />
+      <h2 class="smallcaps">Circular ({groups.circular.length})</h2>
+      <p class="prose">Same dollars on both sides of the ledger; counterparties interlocked.</p>
+      <div class="deal-grid">
+        {groups.circular.map((d) => <DealCard deal={d} />)}
+      </div>
+    </section>
+  )}
+
+  {groups.mixed.length > 0 && (
+    <section>
+      <hr class="rule" />
+      <h2 class="smallcaps">Mixed ({groups.mixed.length})</h2>
+      <p class="prose">Real demand alongside circular elements.</p>
+      <div class="deal-grid">
+        {groups.mixed.map((d) => <DealCard deal={d} />)}
+      </div>
+    </section>
+  )}
+
+  {groups.buildout.length > 0 && (
+    <section>
+      <hr class="rule" />
+      <h2 class="smallcaps">Buildout ({groups.buildout.length})</h2>
+      <p class="prose">Arms-length, independent counterparties, genuine demand.</p>
+      <div class="deal-grid">
+        {groups.buildout.map((d) => <DealCard deal={d} />)}
+      </div>
+    </section>
+  )}
+
+  <section>
+    <hr class="rule" />
+    <h2 class="smallcaps">Pending verdict ({groups.pending.length})</h2>
+    <p class="prose">Catalogued from the upstream dataset; not yet analyzed. Add an overlay file in <code>analysis/&lt;id&gt;.yml</code>.</p>
+    <div class="deal-grid">
+      {groups.pending.slice(0, 60).map((d) => <DealCard deal={d} />)}
+    </div>
+    {groups.pending.length > 60 && (
+      <p class="prose" style="color: var(--ink-soft); margin-top: 1rem">
+        Showing 60 of {groups.pending.length}. Filtering UI is a TODO.
+      </p>
+    )}
+  </section>
+</Base>

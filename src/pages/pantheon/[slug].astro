@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import DealCard from '../../components/DealCard.astro';
+import { getPrincipals, getDealsByPrincipal } from '../../lib/deals';
+
+export async function getStaticPaths() {
+  return getPrincipals().map((p) => ({
+    params: { slug: p.slug },
+    props: { principal: p, deals: getDealsByPrincipal(p.slug) },
+  }));
+}
+
+const { principal, deals } = Astro.props;
+const others = getPrincipals().filter((p) => p.slug !== principal.slug).slice(0, 6);
+---
+<Base title={`${principal.name} · ${principal.pantheon.god}`} description={principal.pantheon.note}>
+  <p class="eyebrow">Pantheon · {principal.pantheon.epithet}</p>
+  <h1 style="font-size: 3rem">
+    <span style="font-style: italic; color: var(--gilt); display: block; font-size: 1.4rem; margin-bottom: 0.2rem">{principal.pantheon.god}</span>
+    {principal.name}
+  </h1>
+  <p class="prose" style="font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--ink-soft); max-width: 50ch">
+    {principal.pantheon.note}
+  </p>
+  <p class="prose" style="margin-top: 1.5rem; color: var(--ink-soft)">
+    {principal.role} · {principal.companies.join(', ')}
+  </p>
+
+  <hr class="rule" />
+
+  <h2 class="smallcaps">Appearances ({deals.length})</h2>
+  {deals.length === 0 ? (
+    <p class="prose">No deals tied to this principal's companies in the dataset.</p>
+  ) : (
+    <div class="deal-grid">
+      {deals.map((d) => <DealCard deal={d} />)}
+    </div>
+  )}
+
+  <hr class="rule" />
+
+  <h2 class="smallcaps">Other gods</h2>
+  <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem">
+    {others.map((p) => (
+      <a href={`/pantheon/${p.slug}/`} style="text-decoration: none; color: var(--ink)">
+        <span style="font-family: var(--serif); font-style: italic; color: var(--gilt)">{p.pantheon.god}</span>
+        <span style="display: block; font-family: var(--serif)">{p.name}</span>
+      </a>
+    ))}
+  </div>
+</Base>

@@ -1,0 +1,68 @@
+id: anthropic-msft-azure
+
+verdict: circular
+circularity_score: 80
+
+principals_involved: [amodei, nadella, huang]
+
+rubric:
+  real_economic_demand:
+    score: 2
+    note: >-
+      Anthropic's compute demand is real; Claude usage and enterprise
+      contracts are growing. But the deal expands Anthropic's compute
+      well beyond its current revenue base.
+  arms_length_pricing:
+    score: 1
+    note: >-
+      $30B commitment from Anthropic to Azure is paired with a $5B
+      Microsoft investment into Anthropic, announced together. The two
+      figures are negotiated in the same room.
+  cash_vs_equity_clarity:
+    score: 2
+    note: >-
+      The investment and the compute commitment are at least disclosed
+      as separate instruments here, unlike the AMD–OpenAI warrants.
+  counterparty_independence:
+    score: 1
+    note: >-
+      Anthropic is now financially tied to Microsoft *and* Amazon — its
+      two largest cloud customers are also its two largest investors.
+      The neutrality positioning ("we'll run anywhere") is gone.
+  third_party_verification:
+    score: 2
+    note: >-
+      Microsoft 10-Q will eventually disclose the investment; Azure
+      revenue growth will reflect the consumption side. Standard
+      large-cap disclosure pipeline.
+
+incentive_map: |
+  **Microsoft's side.** Hedges its OpenAI dependence by acquiring a
+  stake in the second frontier lab and converting that lab's compute
+  spend into Azure revenue. The 1GW capacity number is the headline;
+  the recurring revenue is the prize.
+
+  **Anthropic's side.** Capital and capacity to keep pace with OpenAI.
+  Loses the "safety-positioned, vendor-neutral" register that
+  distinguished it from OpenAI culturally. Apollo, on Zeus's payroll.
+
+  **NVIDIA's side.** The Grace Blackwell / Vera Rubin systems are
+  named in the announcement. Every gigawatt of capacity routes through
+  Hephaestus's forge. The cycle finds NVIDIA again.
+
+circularity_notes: |
+  Same dollars on both sides, same structural pattern as the OpenAI
+  template — but with a key difference: Anthropic now has *two* major
+  hyperscaler investors-and-customers (AWS + Azure), each treating the
+  relationship as exclusive in their own press releases. The
+  positioning is incoherent except as a financial structure designed
+  to maximize the optical revenue both hyperscalers can claim from
+  Anthropic's growth.
+
+illustration_tone: satirical
+illustration_prompt: >-
+  Apollo (Amodei) standing between two thrones. On one, Zeus
+  (Nadella) hands him a laurel marked "Azure"; on the other, Plutus
+  (Jassy) hands him a heavier laurel marked "AWS." Apollo wears both.
+  Behind, Hephaestus (Huang) sells matching forge-equipment to each
+  throne with the same invoice.

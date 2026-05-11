@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About" description="What this site is, what the data is, what's the project's contribution.">
+  <p class="eyebrow">About</p>
+  <h1>About this project</h1>
+
+  <section class="prose">
+    <h2 class="smallcaps">The argument</h2>
+    <p>
+      The current wave of AI mega-deals (OpenAI–Nvidia–Oracle, Microsoft–OpenAI,
+      Anthropic–Amazon, AMD–OpenAI, the Stargate consortium) blurs the line
+      between customer, investor, and supplier. The same dollars appear on both
+      sides of the ledger: a chip company invests in a model company that
+      commits to buying compute from a cloud company that buys chips from the
+      chip company.
+    </p>
+    <p>
+      The argument here is that the industry is structurally a small number of
+      people moving very large sums in patterns that recur across deals. The
+      same figures — Altman, Amodei, Huang, Nadella, Hassabis, Ellison, Su,
+      Musk, Son, Jassy, Pichai, Zuckerberg — appear repeatedly as
+      counterparties. Following Jill Lepore's observation that AI governance
+      has collapsed into the personalities of a few private actors, this site
+      argues the same about AI capital flows.
+    </p>
+
+    <h2 class="smallcaps">The build</h2>
+    <p>
+      Each deal in the catalog gets:
+    </p>
+    <p>
+      — an <strong>incentive map</strong> describing who benefits, what flows where, and what the press release leaves out;
+    </p>
+    <p>
+      — a <strong>sustainability rubric</strong> scoring the deal on real demand, arms-length pricing, cash-vs-equity clarity, counterparty independence, and third-party verification;
+    </p>
+    <p>
+      — a plain-language <strong>verdict</strong>: <em>buildout</em>, <em>circular</em>, <em>mixed</em>, or <em>pending</em>.
+    </p>
+
+    <h2 class="smallcaps">The Pantheon</h2>
+    <p>
+      The Greco-Roman framing is half-joke and half-argument. A market in which
+      twelve figures recur as gods of overlapping domains resembles a
+      mythological court more than a competitive market. Each principal gets
+      an analog whose mythological function does analytical work: Hephaestus
+      (Huang) forges what every other god needs; Hermes (Altman) is the
+      messenger who makes the deals; Cronus (Ellison) is the old titan
+      tolerated by his successors.
+    </p>
+    <p>
+      Deals flagged as circular get satirical illustration treatment; deals
+      flagged as genuine buildout get flattering treatment. The dual register
+      is part of the argument — humor makes the incestuous deal network
+      legible in a way a spreadsheet cannot.
+    </p>
+
+    <h2 class="smallcaps">The data</h2>
+    <p>
+      Deal data is sourced from <a href="https://github.com/jstwng/compute-deal-map-data">jstwng/compute-deal-map-data</a>,
+      a community-maintained, source-backed catalog of AI ecosystem deals
+      licensed CC BY 4.0. Every deal carries a primary-source URL.
+    </p>
+    <p>
+      This project's contribution is the <strong>principals layer</strong> (mapping
+      companies to the people behind them), the <strong>analysis overlay</strong>
+      (rubric and verdict per deal), and the <strong>visual framing</strong>.
+      Adding a new deal to the catalog is an upstream contribution to
+      jstwng/compute-deal-map-data; adding analysis to a deal is a local
+      <code>analysis/&lt;id&gt;.yml</code> file in this repo.
+    </p>
+  </section>
+</Base>
