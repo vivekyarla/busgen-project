@@ -1,9 +1,0 @@
----
-import type { Verdict } from '../lib/deals';
-import { verdictLabel } from '../lib/deals';
-
-interface Props { verdict: Verdict | undefined | null; }
-const { verdict } = Astro.props;
-const v: Verdict = verdict ?? 'pending';
----
-<span class={`badge badge--${v}`}>{verdictLabel(v)}</span>
