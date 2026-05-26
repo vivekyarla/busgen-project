@@ -1,3 +1,3 @@
 [submodule "data/source"]
 	path = data/source
-	url = https://github.com/jstwng/compute-deal-map-data
+	url = https://github.com/vivekyarla/compute-deal-map-data
