@@ -35,18 +35,41 @@ export interface Filters {
 
 /**
  * Returns a subset of the graph: nodes whose layer is active, and links whose
- * deal_type is active and both endpoints are visible. Reuses the original node
- * and link object references so react-force-graph preserves positions.
+ * deal_type is active, within the time bound, and with both endpoints visible.
+ * Reuses original node/link object references so react-force-graph preserves
+ * positions.
+ *
+ * When `maxMonth` is below the dataset max (the timeline is rewound), nodes with
+ * no visible link are hidden — so companies "appear" as they get their first
+ * deal. A null `maxMonth` (or full range) keeps all in-layer nodes.
  */
-export function applyFilters(data: GraphData, filters: Filters): GraphData {
-  const nodes = data.nodes.filter((n) => filters.layers.has(n.layer));
-  const visible = new Set(nodes.map((n) => n.id));
+export function applyFilters(
+  data: GraphData,
+  filters: Filters,
+  maxMonth: number | null = null,
+): GraphData {
+  const layerNodes = data.nodes.filter((n) => filters.layers.has(n.layer));
+  const inLayer = new Set(layerNodes.map((n) => n.id));
+
   const links = data.links.filter(
     (l) =>
       filters.dealTypes.has(l.deal_type) &&
-      visible.has(endpointId(l.source)) &&
-      visible.has(endpointId(l.target)),
+      (maxMonth == null || l.month == null || l.month <= maxMonth) &&
+      inLayer.has(endpointId(l.source)) &&
+      inLayer.has(endpointId(l.target)),
   );
+
+  const rewound = maxMonth != null && maxMonth < data.meta.maxMonth;
+  let nodes = layerNodes;
+  if (rewound) {
+    const connected = new Set<string>();
+    for (const l of links) {
+      connected.add(endpointId(l.source));
+      connected.add(endpointId(l.target));
+    }
+    nodes = layerNodes.filter((n) => connected.has(n.id));
+  }
+
   return { nodes, links, meta: data.meta };
 }
 

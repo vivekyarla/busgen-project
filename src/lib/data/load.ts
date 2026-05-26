@@ -3,6 +3,7 @@ import path from "node:path";
 import yaml from "js-yaml";
 import { CompanySchema, DealSchema, type Company, type Deal } from "./types";
 import { layerForCategory, layerY, type Layer } from "./layers";
+import { monthIndex } from "./time";
 
 /**
  * Build-time loader. Reads the curated dataset from the git submodule at
@@ -46,6 +47,8 @@ export interface GraphLink {
   value_display?: string;
   date?: string;
   date_display?: string;
+  /** Parsed month index (year*12 + month-1), or null if no/unparseable date. */
+  month: number | null;
   description?: string;
   source_url?: string;
 }
@@ -58,6 +61,9 @@ export interface GraphData {
     dealCount: number;
     syntheticCount: number;
     generatedAt: string;
+    /** Min/max dated-deal month index across the dataset (for the time slider). */
+    minMonth: number;
+    maxMonth: number;
   };
 }
 
@@ -162,6 +168,7 @@ export function loadGraph(): GraphData {
       value_display: d.value_display ?? undefined,
       date: d.date ?? undefined,
       date_display: d.date_display ?? undefined,
+      month: monthIndex(d.date),
       description: d.description ?? undefined,
       source_url: d.source_url ?? undefined,
     });
@@ -173,6 +180,12 @@ export function loadGraph(): GraphData {
     n.val = Math.max(2, n.inboundDeals + n.outboundDeals * 0.4);
   }
 
+  const months = links
+    .map((l) => l.month)
+    .filter((m): m is number => m != null);
+  const minMonth = months.length ? Math.min(...months) : 0;
+  const maxMonth = months.length ? Math.max(...months) : 0;
+
   cached = {
     nodes,
     links,
@@ -181,6 +194,8 @@ export function loadGraph(): GraphData {
       dealCount: deals.length,
       syntheticCount: nodes.filter((n) => n.synthetic).length,
       generatedAt: new Date().toISOString(),
+      minMonth,
+      maxMonth,
     },
   };
   return cached;

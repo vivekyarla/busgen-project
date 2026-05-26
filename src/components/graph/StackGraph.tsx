@@ -28,6 +28,19 @@ const DIM_LINK = "rgba(82,82,91,0.05)";
 const IDLE_LINK = "rgba(161,161,170,0.16)";
 const HOT_LINK = "rgba(244,244,245,0.6)";
 const PLANE_HALF_W = 760; // x half-extent for planes + layer labels
+// Reference distances for constant-on-screen label sizing (smaller = bigger).
+const NODE_LABEL_REF = 380;
+const LAYER_LABEL_REF = 2600;
+// Level-of-detail: at the overview only high-activity hubs are labeled; as the
+// camera nears, the activity cutoff drops toward 0 and every label appears.
+const LOD_NEAR = 340; // camera distance at/below which all labels show
+const LOD_FAR = 1050; // camera distance at/above which only top hubs show
+const LOD_MAX_CUTOFF = 9; // min deal-activity to be labeled at the overview
+
+function lodCutoff(camDist: number): number {
+  const t = (camDist - LOD_NEAR) / (LOD_FAR - LOD_NEAR);
+  return Math.max(0, Math.min(1, t)) * LOD_MAX_CUTOFF;
+}
 
 /** Approximate sphere radius react-force-graph renders for a given val. */
 function nodeRadius(val: number): number {
@@ -83,6 +96,10 @@ export default function StackGraph({
     return { hiNodes, hiLinks };
   }, [selectedId, data.links]);
 
+  // Selection mirror for the (deps-free) render loop to read without staleness.
+  const selRef = useRef<{ ids: Set<string> }>({ ids: new Set() });
+  selRef.current = { ids: hiNodes };
+
   // Sphere + floating company label. Rebuilds only when color mode or the
   // selection (dimming) changes — react-force-graph keeps node positions.
   const buildNodeObject = useCallback(
@@ -114,6 +131,13 @@ export default function StackGraph({
       label.strokeWidth = 0.8;
       label.backgroundColor = false as unknown as string;
       label.position.set(0, r + 5, 0);
+      // Captured base scale + reference distance drive constant-on-screen sizing;
+      // kind/activity/nodeId drive level-of-detail visibility in the loop.
+      label.userData.baseScale = label.scale.clone();
+      label.userData.refDist = NODE_LABEL_REF;
+      label.userData.kind = "nodeLabel";
+      label.userData.activity = nodeActivity(n);
+      label.userData.nodeId = n.id;
       group.add(label);
 
       return group;
@@ -121,10 +145,40 @@ export default function StackGraph({
     [colorMode, maxActivity, selectedId, hiNodes],
   );
 
-  // Instance setup: orbit controls with bounds, spread forces, planes + labels.
+  // Instance setup: orbit controls with bounds, spread forces, planes + labels,
+  // plus a persistent loop that keeps label sprites a constant on-screen size.
   useEffect(() => {
     let raf = 0;
+    let loopRaf = 0;
     let tries = 0;
+    const tmp = new THREE.Vector3();
+
+    const scaleLabels = () => {
+      const fg = fgRef.current;
+      const cam = fg?.camera?.();
+      const scene = fg?.scene?.();
+      if (cam && scene) {
+        const cutoff = lodCutoff(cam.position.length());
+        const sel = selRef.current.ids;
+        scene.traverse((obj: THREE.Object3D) => {
+          const base = obj.userData?.baseScale as THREE.Vector3 | undefined;
+          const ref = obj.userData?.refDist as number | undefined;
+          if (!base || !ref) return;
+          obj.getWorldPosition(tmp);
+          const f = cam.position.distanceTo(tmp) / ref;
+          obj.scale.set(base.x * f, base.y * f, base.z * f);
+          // Level-of-detail: hide minor node labels at the overview, always show
+          // selected/neighbor labels. Layer labels are exempt (always visible).
+          if (obj.userData.kind === "nodeLabel") {
+            const act = (obj.userData.activity as number) ?? 0;
+            const nid = obj.userData.nodeId as string;
+            obj.visible = act >= cutoff || sel.has(nid);
+          }
+        });
+      }
+      loopRaf = requestAnimationFrame(scaleLabels);
+    };
+
     const setup = () => {
       const fg = fgRef.current;
       if (!fg || typeof fg.scene !== "function") {
@@ -132,8 +186,8 @@ export default function StackGraph({
         return;
       }
 
-      fg.d3Force("charge")?.strength(-380);
-      fg.d3Force("link")?.distance(85).strength(0.22);
+      fg.d3Force("charge")?.strength(-470);
+      fg.d3Force("link")?.distance(100).strength(0.2);
       fg.d3ReheatSimulation?.();
 
       const scene = fg.scene();
@@ -173,6 +227,9 @@ export default function StackGraph({
           // Anchored to the right edge so it clears the left-side control panel.
           text.position.set(PLANE_HALF_W - 60, y + 30, 0);
           text.renderOrder = 1;
+          text.userData.baseScale = text.scale.clone();
+          text.userData.refDist = LAYER_LABEL_REF;
+          text.userData.kind = "layerLabel";
           scene.add(text);
         }
       }
@@ -191,9 +248,15 @@ export default function StackGraph({
       }
 
       fg.cameraPosition?.({ x: 0, y: 150, z: 1100 }, { x: 0, y: 0, z: 0 }, 0);
+
+      // Kick off the constant-size label loop now that the instance is live.
+      if (!loopRaf) loopRaf = requestAnimationFrame(scaleLabels);
     };
     raf = requestAnimationFrame(setup);
-    return () => cancelAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(raf);
+      cancelAnimationFrame(loopRaf);
+    };
   }, []);
 
   return (

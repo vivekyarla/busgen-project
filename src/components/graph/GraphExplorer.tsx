@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { GraphData } from "@/lib/data/load";
 import { LAYER_ORDER } from "@/lib/data/layers";
 import {
@@ -13,6 +13,9 @@ import StackGraph from "./StackGraph";
 import ControlPanel from "./ControlPanel";
 import Legend from "./Legend";
 import NodeDetailPanel from "./NodeDetailPanel";
+import TimeBar from "./TimeBar";
+
+const TIMELINE_FLOOR = 2020 * 12; // focus the slider on the AI-boom era
 
 export default function GraphExplorer({ data }: { data: GraphData }) {
   // Deal types ordered by frequency in the dataset.
@@ -20,9 +23,7 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
     const counts = new Map<string, number>();
     for (const l of data.links)
       counts.set(l.deal_type, (counts.get(l.deal_type) ?? 0) + 1);
-    return [...counts.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .map(([t]) => t);
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
   }, [data.links]);
 
   const maxActivity = useMemo(
@@ -30,16 +31,41 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
     [data.nodes],
   );
 
+  // Slider spans the boom era; deals before the floor are always present.
+  const sliderMin = Math.max(data.meta.minMonth, TIMELINE_FLOOR);
+  const sliderMax = data.meta.maxMonth;
+
   const [filters, setFilters] = useState<Filters>(() => ({
     layers: new Set<string>(LAYER_ORDER),
     dealTypes: new Set<string>(dealTypes),
   }));
   const [colorMode, setColorMode] = useState<ColorMode>("layer");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [maxMonth, setMaxMonth] = useState<number>(sliderMax);
+  const [playing, setPlaying] = useState(false);
+
+  // Advance the timeline while playing.
+  useEffect(() => {
+    if (!playing) return;
+    const id = setInterval(() => {
+      setMaxMonth((m) => Math.min(m + 1, sliderMax));
+    }, 110);
+    return () => clearInterval(id);
+  }, [playing, sliderMax]);
+
+  // Stop at the end of the timeline.
+  useEffect(() => {
+    if (playing && maxMonth >= sliderMax) setPlaying(false);
+  }, [playing, maxMonth, sliderMax]);
+
+  const handlePlayToggle = () => {
+    if (!playing && maxMonth >= sliderMax) setMaxMonth(sliderMin); // restart
+    setPlaying((p) => !p);
+  };
 
   const filtered = useMemo(
-    () => applyFilters(data, filters),
-    [data, filters],
+    () => applyFilters(data, filters, maxMonth),
+    [data, filters, maxMonth],
   );
 
   return (
@@ -78,6 +104,23 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
       {/* Bottom-left: legend */}
       <div className="pointer-events-none absolute bottom-0 left-0 z-10 p-4">
         <Legend colorMode={colorMode} maxActivity={maxActivity} />
+      </div>
+
+      {/* Bottom-center: time slider */}
+      <div className="pointer-events-none absolute bottom-0 left-1/2 z-10 -translate-x-1/2 p-4">
+        <TimeBar
+          min={sliderMin}
+          max={sliderMax}
+          value={maxMonth}
+          onChange={(v) => {
+            setPlaying(false);
+            setMaxMonth(v);
+          }}
+          playing={playing}
+          onPlayToggle={handlePlayToggle}
+          visibleDeals={filtered.links.length}
+          totalDeals={data.meta.dealCount}
+        />
       </div>
 
       {/* Right: node detail */}
