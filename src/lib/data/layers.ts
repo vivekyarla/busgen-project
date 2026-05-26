@@ -87,7 +87,7 @@ export function layerForCategory(category: string): Layer {
 }
 
 /** Vertical spacing between layer planes (graph units). */
-export const PLANE_SPACING = 130;
+export const PLANE_SPACING = 190;
 
 /** Fixed y-coordinate for a layer's plane (top positive, bottom negative). */
 export function layerY(layer: Layer): number {
