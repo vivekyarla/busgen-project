@@ -1,22 +1,40 @@
+import { loadGraph } from "@/lib/data/load";
+import { LAYER_ORDER, LAYER_META } from "@/lib/data/layers";
+import StackGraph from "@/components/graph/StackGraph";
+
 export default function Home() {
+  const data = loadGraph();
+
   return (
-    <main className="flex-1 flex flex-col items-center justify-center px-6 py-24">
-      <div className="max-w-2xl text-center space-y-6">
+    <div className="relative flex-1 h-full overflow-hidden">
+      <StackGraph data={data} />
+
+      <header className="pointer-events-none absolute left-0 top-0 z-10 p-6">
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">
           Situational Unawareness
         </p>
-        <h1 className="text-4xl sm:text-5xl font-semibold leading-tight tracking-tight text-zinc-50">
-          A live map of the AI stack.
+        <h1 className="mt-1 text-lg font-semibold text-zinc-100">
+          The AI Stack
         </h1>
-        <p className="text-lg leading-relaxed text-zinc-400">
-          Deals pile up across the stack faster than public markets price them
-          in. This site is a tool for finding where that gap is widening — the
-          next bottlenecks before they show up in headlines.
+        <p className="mt-1 text-xs text-zinc-500">
+          {data.meta.companyCount} companies · {data.meta.dealCount} deals
         </p>
-        <p className="text-sm text-zinc-500 pt-8">
-          The map is coming online. Stand by.
-        </p>
-      </div>
-    </main>
+      </header>
+
+      <aside className="pointer-events-none absolute right-0 top-0 z-10 space-y-1.5 p-6">
+        {LAYER_ORDER.map((l) => (
+          <div
+            key={l}
+            className="flex items-center justify-end gap-2 text-xs text-zinc-400"
+          >
+            {LAYER_META[l].label}
+            <span
+              className="inline-block h-2.5 w-2.5 rounded-full"
+              style={{ background: LAYER_META[l].color }}
+            />
+          </div>
+        ))}
+      </aside>
+    </div>
   );
 }

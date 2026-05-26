@@ -43,3 +43,6 @@ next-env.d.ts
 # legacy astro caches
 .astro/
 dist/
+
+# local agent / preview tooling
+.claude/
