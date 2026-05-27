@@ -56,6 +56,8 @@ interface StackGraphProps {
   maxActivity: number;
   selectedId: string | null;
   onSelect: (id: string | null) => void;
+  /** When this changes, fly the camera to the given coords. */
+  focusTarget: { x: number; y: number; z: number; nonce: number } | null;
 }
 
 export default function StackGraph({
@@ -64,6 +66,7 @@ export default function StackGraph({
   maxActivity,
   selectedId,
   onSelect,
+  focusTarget,
 }: StackGraphProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -175,7 +178,11 @@ export default function StackGraph({
       const cam = fg?.camera?.();
       const scene = fg?.scene?.();
       if (cam && scene) {
-        const cutoff = lodCutoff(cam.position.length());
+        const tgt = fg.controls?.()?.target as THREE.Vector3 | undefined;
+        const camDist = tgt
+          ? cam.position.distanceTo(tgt)
+          : cam.position.length();
+        const cutoff = lodCutoff(camDist);
         const sel = selRef.current.ids;
         scene.traverse((obj: THREE.Object3D) => {
           // Gentle idle spin on the node crystals.
@@ -283,6 +290,21 @@ export default function StackGraph({
       cancelAnimationFrame(loopRaf);
     };
   }, []);
+
+  // Fly the camera to a searched node.
+  useEffect(() => {
+    if (!focusTarget) return;
+    const fg = fgRef.current;
+    if (!fg?.cameraPosition) return;
+    const { x, y, z } = focusTarget;
+    if (![x, y, z].every((v) => Number.isFinite(v))) return;
+    fg.cameraPosition(
+      { x, y: y + 30, z: z + 240 },
+      { x, y, z },
+      800,
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusTarget?.nonce]);
 
   return (
     <div ref={containerRef} className="absolute inset-0">

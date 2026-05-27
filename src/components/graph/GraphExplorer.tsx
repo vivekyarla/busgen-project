@@ -14,6 +14,7 @@ import ControlPanel from "./ControlPanel";
 import Legend from "./Legend";
 import NodeDetailPanel from "./NodeDetailPanel";
 import TimeBar from "./TimeBar";
+import SearchBox from "./SearchBox";
 
 const TIMELINE_FLOOR = 2020 * 12; // focus the slider on the AI-boom era
 
@@ -43,6 +44,24 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [maxMonth, setMaxMonth] = useState<number>(sliderMax);
   const [playing, setPlaying] = useState(false);
+  const [focusTarget, setFocusTarget] = useState<{
+    x: number;
+    y: number;
+    z: number;
+    nonce: number;
+  } | null>(null);
+
+  // Select a node and fly the camera to it (used by search).
+  const pickNode = (id: string) => {
+    setSelectedId(id);
+    const n = data.nodes.find((node) => node.id === id) as
+      | (typeof data.nodes)[number]
+      | undefined;
+    const p = n as unknown as { x?: number; y?: number; z?: number };
+    if (p && [p.x, p.y, p.z].every((v) => typeof v === "number")) {
+      setFocusTarget({ x: p.x!, y: p.y!, z: p.z!, nonce: Date.now() });
+    }
+  };
 
   // Advance the timeline while playing.
   useEffect(() => {
@@ -76,7 +95,13 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
         maxActivity={maxActivity}
         selectedId={selectedId}
         onSelect={setSelectedId}
+        focusTarget={focusTarget}
       />
+
+      {/* Top-center: search */}
+      <div className="pointer-events-none absolute left-1/2 top-0 z-20 -translate-x-1/2 p-4">
+        <SearchBox nodes={data.nodes} onPick={pickNode} />
+      </div>
 
       {/* Top-left: title + controls */}
       <div className="pointer-events-none absolute left-0 top-0 z-10 flex max-h-full flex-col gap-3 overflow-y-auto p-4">
