@@ -67,14 +67,29 @@ export default function StackGraph({
   const [dims, setDims] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    const update = () =>
-      setDims({ width: el.clientWidth, height: el.clientHeight });
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
+    // Fall back to window size when the container measures 0 (cold-load race),
+    // so the graph never gets stuck unrendered behind the `dims.width > 0` gate.
+    const measure = () => {
+      const el = containerRef.current;
+      const width = el?.clientWidth || window.innerWidth;
+      const height = el?.clientHeight || window.innerHeight;
+      setDims((prev) =>
+        prev.width === width && prev.height === height
+          ? prev
+          : { width, height },
+      );
+    };
+    measure();
+    // Re-measure after the first paint in case layout wasn't ready on mount.
+    const raf = requestAnimationFrame(measure);
+    const ro = new ResizeObserver(measure);
+    if (containerRef.current) ro.observe(containerRef.current);
+    window.addEventListener("resize", measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, []);
 
   const { hiNodes, hiLinks } = useMemo(() => {
