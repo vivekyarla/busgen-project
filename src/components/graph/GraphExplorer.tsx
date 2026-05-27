@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { GraphData } from "@/lib/data/load";
 import { LAYER_ORDER } from "@/lib/data/layers";
 import {
@@ -116,6 +117,12 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
             {filtered.nodes.length}/{data.meta.companyCount} companies ·{" "}
             {filtered.links.length}/{data.meta.dealCount} deals
           </p>
+          <Link
+            href="/manifesto"
+            className="pointer-events-auto mt-2 inline-block text-xs text-zinc-400 underline-offset-4 transition-colors hover:text-zinc-100 hover:underline"
+          >
+            Read the manifesto →
+          </Link>
         </div>
         <ControlPanel
           filters={filters}
