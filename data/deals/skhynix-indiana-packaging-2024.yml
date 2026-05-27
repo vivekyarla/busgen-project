@@ -1,0 +1,17 @@
+id: skhynix-indiana-packaging-2024
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: multiple
+target_name: Multiple
+deal_type: equipment_supply
+value_billions: 3.87
+value_display: ~$3.87B Indiana fab
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  SK Hynix announced a $3.87B advanced-packaging plant in West Lafayette,
+  Indiana to stack HBM for AI GPUs, its first U.S. manufacturing site and the
+  first large overseas back-end fab. Aimed at co-locating HBM stacking near
+  U.S. customers (NVIDIA, AMD, hyperscalers). Later expanded with Cheongju
+  P&T7 in 2026 to form a Cheongju-Icheon-Indiana "packaging triangle."
+source_url: https://en.sedaily.com/finance/2026/01/13/sk-hynix-launches-advanced-packaging-triangle-across

@@ -1,0 +1,14 @@
+id: dell-crwv-servers
+source_slug: dell
+source_name: Dell Technologies
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: gpu_purchase
+value_billions: null
+value_display: Multi-$B (undisclosed)
+date: 2024-12
+date_display: Dec 2024
+description: >-
+  Dell ships the first fully-integrated liquid-cooled IR7000 racks with PowerEdge XE9712 servers housing NVIDIA GB200
+  NVL72 systems to CoreWeave, extending a multi-year strategic relationship.
+source_url: https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2024~12~dell-cw-customer-announce.htm

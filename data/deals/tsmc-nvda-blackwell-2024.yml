@@ -1,0 +1,17 @@
+id: tsmc-nvda-blackwell-2024
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: B100/B200 volume (N4P)
+date: "2024-03"
+date_display: Mar 2024
+description: >-
+  NVIDIA unveiled Blackwell B100/B200 at GTC 2024 on TSMC N4P -- 208B transistors,
+  two-die MCM (first GPU with TSMC die-to-die interconnect at scale). 4x Hopper
+  training perf, 30x inference perf. TSMC CoWoS packaging became the primary
+  bottleneck; CoWoS capacity doubled in 2024 to meet Blackwell demand from
+  Microsoft, Google, Meta, CoreWeave, Oracle.
+source_url: https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing

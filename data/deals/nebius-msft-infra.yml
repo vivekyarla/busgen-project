@@ -1,0 +1,12 @@
+id: nebius-msft-infra
+source_slug: nebius
+source_name: Nebius
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 17.4
+value_display: $17.4-19B
+date: 2025-09
+date_display: Sep 2025
+description: 5-year GPU infrastructure capacity deal; additional services could bring total to $19B
+source_url: https://www.fastcompany.com/91497091/computing-most-innovative-companies-2026

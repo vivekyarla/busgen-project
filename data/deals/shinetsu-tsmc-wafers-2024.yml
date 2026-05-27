@@ -1,0 +1,17 @@
+id: shinetsu-tsmc-wafers-2024
+source_slug: shin-etsu
+source_name: Shin-Etsu Chemical
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: Silicon wafers + photoresist
+date: "2024-12"
+date_display: FY2024
+description: >-
+  Shin-Etsu Chemical is the world's largest 300mm silicon wafer supplier
+  (~30% global share) and a leading EUV photoresist provider. TSMC is its
+  single largest semiconductor customer. Shin-Etsu's silicon wafer + photoresist
+  duopoly with SUMCO is a critical bottleneck for advanced-node ramps. Annual
+  CHF capex commitments aligned with TSMC's expansion.
+source_url: https://www.shinetsu.co.jp/en/ir/

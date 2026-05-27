@@ -1,0 +1,14 @@
+id: tsmc-nvda-az
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: Millions of Blackwell wafers
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  First US-made NVIDIA Blackwell wafer in volume production at TSMC Fab 21, Phoenix. Huang ordered "in the millions."
+  Advanced packaging still routed through Taiwan.
+source_url: https://www.datacenterdynamics.com/en/news/first-us-made-nvidia-blackwell-wafer-manufactured-at-tsmcs-arizona-fab/

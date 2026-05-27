@@ -1,0 +1,17 @@
+id: arista-oracle-oci-2025
+source_slug: arista
+source_name: Arista Networks
+target_slug: oracle
+target_name: Oracle
+deal_type: equipment_supply
+value_billions: null
+value_display: EOS switches for OCI training
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  Oracle selected Arista EOS-based switches for its OCI AI back-end training
+  network. Arista's Cluster Load Balancing (CLB) - an Ethernet-based
+  RDMA-aware AI load-balancing feature on 7060X6/X5 switches - helps OCI
+  avoid flow contentions and increase throughput across ML networks. OCI is
+  the back-end compute layer for OpenAI Stargate and enterprise AI workloads.
+source_url: https://www.futuriom.com/articles/news/arista-intros-key-functions-for-ai-workloads/2025/03

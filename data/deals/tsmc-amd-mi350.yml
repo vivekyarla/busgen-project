@@ -1,0 +1,14 @@
+id: tsmc-amd-mi350
+source_slug: tsmc
+source_name: TSMC
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: N3P XCDs + N6 IOD
+date: 2025-06
+date_display: Jun 2025
+description: >-
+  AMD Instinct MI350/MI355X GPU XCD chiplets fabricated on TSMC N3P with N6 base dies. Q3 2025 mass production,
+  positioned to compete with NVIDIA Blackwell.
+source_url: https://www.amd.com/en/newsroom/press-releases/2025-6-12-amd-unveils-vision-for-an-open-ai-ecosystem-detai.html

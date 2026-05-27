@@ -1,0 +1,14 @@
+id: nscale-openai-norway
+source_slug: nscale
+source_name: Nscale
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: null
+value_display: 100K GPUs
+date: 2025-07
+date_display: Jul 2025
+description: >-
+  Stargate Norway: 100K NVIDIA GPUs at Kvandal/Narvik by end-2026, 230MW renewable capacity scaling to 520MW. Nscale/Aker
+  50-50 JV, OpenAI as offtaker. First European Stargate site.
+source_url: https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai

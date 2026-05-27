@@ -1,0 +1,491 @@
+- slug: nvidia
+  name: NVIDIA
+  ticker: NVDA
+  category: chip_designer
+  subline: "$205.7B rev (FY2026)"
+
+- slug: amd
+  name: AMD
+  ticker: AMD
+  category: chip_designer
+  subline: "$34.6B rev (2025), DC $12.6B"
+
+- slug: broadcom
+  name: Broadcom
+  ticker: AVGO
+  category: chip_designer
+  subline: "$8.4B AI rev Q1, $73B backlog"
+
+- slug: marvell
+  name: Marvell
+  ticker: MRVL
+  category: chip_designer
+  subline: "~$5.2B AI ASIC rev (2025)"
+
+- slug: intel
+  name: Intel
+  ticker: INTC
+  category: chip_designer
+  subline: "$4.5B foundry rev (Q4 2025)"
+
+- slug: groq
+  name: Groq
+  ticker: null
+  category: chip_designer
+  subline: "Acquired by NVIDIA, $20B"
+  acquired: true
+
+- slug: samsung-foundry
+  name: Samsung Foundry
+  ticker: "005930.KS"
+  category: chip_designer
+  subline: "2nm GAA, Taylor TX fab"
+
+- slug: microsoft
+  name: Microsoft
+  ticker: MSFT
+  category: hyperscaler
+  subline: "$145B capex (FY2026E)"
+
+- slug: google
+  name: Google
+  ticker: GOOGL
+  category: hyperscaler
+  subline: "$175–185B capex (2026E)"
+
+- slug: amazon-aws
+  name: Amazon/AWS
+  ticker: AMZN
+  category: hyperscaler
+  subline: "$200B capex (2026E)"
+
+- slug: meta
+  name: Meta
+  ticker: META
+  category: hyperscaler
+  subline: "$115–135B capex (2026E)"
+
+- slug: oracle
+  name: Oracle
+  ticker: ORCL
+  category: hyperscaler
+  subline: "$300B Stargate commitment"
+
+- slug: apple
+  name: Apple
+  ticker: AAPL
+  category: hyperscaler
+  subline: "$600B US AI commitment"
+
+- slug: tesla
+  name: Tesla
+  ticker: TSLA
+  category: hyperscaler
+  subline: "$16.5B Samsung foundry deal"
+
+- slug: softbank
+  name: SoftBank
+  ticker: "9984.T"
+  category: hyperscaler
+  subline: "Stargate chairman, $19B equity"
+
+- slug: coreweave
+  name: CoreWeave
+  ticker: CRWV
+  category: neocloud
+  subline: "$66.8B backlog, $5.1B rev"
+
+- slug: nebius
+  name: Nebius
+  ticker: NBIS
+  category: neocloud
+  subline: "$19B+ contracted"
+
+- slug: lambda
+  name: Lambda
+  ticker: null
+  category: neocloud
+  subline: "~50K GPUs, IPO H1 2026"
+
+- slug: cerebras
+  name: Cerebras
+  ticker: null
+  category: neocloud
+  subline: "$10B+ backlog, IPO 2026"
+
+- slug: openai
+  name: OpenAI
+  ticker: null
+  category: ai_lab
+  subline: "$30B+ run-rate (2026)"
+
+- slug: anthropic
+  name: Anthropic
+  ticker: null
+  category: ai_lab
+  subline: "$30B+ run-rate (2026)"
+
+- slug: xai
+  name: xAI
+  ticker: null
+  category: ai_lab
+  subline: "Memphis Colossus cluster"
+
+- slug: nscale
+  name: Nscale
+  ticker: null
+  category: neocloud
+  subline: "UK-based AI cloud infrastructure"
+
+- slug: rivos
+  name: Rivos
+  ticker: null
+  category: chip_designer
+  subline: "RISC-V AI chip startup (acquired by Meta)"
+  acquired: true
+
+- slug: io-products
+  name: io Products
+  ticker: null
+  category: ai_lab
+  subline: "Jony Ive AI hardware startup (acquired by OpenAI)"
+  acquired: true
+
+- slug: aligned-data-centers
+  name: Aligned Data Centers
+  ticker: null
+  category: data_center
+  subline: "5GW capacity, 50+ US/LATAM campuses"
+
+- slug: blackrock
+  name: BlackRock
+  ticker: BLK
+  category: hyperscaler
+  subline: "AIP consortium lead investor"
+
+- slug: tsmc
+  name: TSMC
+  ticker: TSM
+  category: chip_designer
+  subline: "Foundry for NVIDIA, AMD, Apple, Broadcom"
+
+- slug: coherent
+  name: Coherent
+  ticker: COHR
+  category: chip_designer
+  subline: "Silicon photonics, optical networking"
+
+- slug: lumentum
+  name: Lumentum
+  ticker: LITE
+  category: chip_designer
+  subline: "Lasers, optical components"
+
+- slug: sk-hynix
+  name: SK Hynix
+  ticker: "000660.KS"
+  category: memory
+  subline: "HBM leader, ~60% share"
+
+- slug: micron
+  name: Micron Technology
+  ticker: MU
+  category: memory
+  subline: "HBM3E / HBM4, SOCAMM"
+
+- slug: samsung-memory
+  name: Samsung (Memory)
+  ticker: "005930.KS"
+  category: memory
+  subline: "HBM3E/HBM4, Stargate partner"
+
+- slug: dell
+  name: Dell Technologies
+  ticker: DELL
+  category: server_oem
+  subline: "xAI Colossus primary integrator"
+
+- slug: hpe
+  name: Hewlett Packard Enterprise
+  ticker: HPE
+  category: server_oem
+  subline: "AI server vendor, post-Juniper"
+
+- slug: foxconn
+  name: Foxconn (Hon Hai)
+  ticker: "2317.TW"
+  category: server_oem
+  subline: "NVIDIA GB200 assembly"
+
+- slug: arista
+  name: Arista Networks
+  ticker: ANET
+  category: networking
+  subline: "Ethernet for Meta AI fabric"
+
+- slug: astera-labs
+  name: Astera Labs
+  ticker: ALAB
+  category: networking
+  subline: "NVLink Fusion, PCIe connectivity"
+
+- slug: constellation
+  name: Constellation Energy
+  ticker: CEG
+  category: power
+  subline: "Nuclear baseload, TMI/Clinton"
+
+- slug: talen
+  name: Talen Energy
+  ticker: TLN
+  category: power
+  subline: "Susquehanna nuclear, AWS PPA"
+
+- slug: kairos
+  name: Kairos Power
+  ticker: null
+  category: power
+  subline: "SMR developer, Google partner"
+
+- slug: asml
+  name: ASML
+  ticker: ASML
+  category: equipment
+  subline: "EUV litho monopoly"
+
+- slug: amkor
+  name: Amkor Technology
+  ticker: AMKR
+  category: packaging
+  subline: "Apple anchor, AZ Peoria plant"
+
+- slug: zt-systems
+  name: ZT Systems
+  ticker: null
+  category: server_oem
+  subline: "Hyperscale AI rack design (acquired by AMD)"
+  acquired: true
+
+- slug: super-micro
+  name: Super Micro Computer
+  ticker: SMCI
+  category: server_oem
+  subline: "xAI Colossus rack supplier"
+
+- slug: vistra
+  name: Vistra
+  ticker: VST
+  category: power
+  subline: "Comanche Peak + PJM nuclear"
+
+- slug: x-energy
+  name: X-Energy
+  ticker: null
+  category: power
+  subline: "SMR developer, Amazon-backed"
+
+- slug: brookfield-renewable
+  name: Brookfield Renewable
+  ticker: BEP
+  category: power
+  subline: "3GW hydro framework w/ Google"
+
+- slug: sage-geosystems
+  name: Sage Geosystems
+  ticker: null
+  category: power
+  subline: "Next-gen geothermal, Meta partner"
+
+- slug: entergy
+  name: Entergy
+  ticker: ETR
+  category: power
+  subline: "Louisiana data-center power"
+
+- slug: lightmatter
+  name: Lightmatter
+  ticker: null
+  category: chip_designer
+  subline: "Photonic interconnect, $4.4B val"
+
+- slug: celestial-ai
+  name: Celestial AI
+  ticker: null
+  category: chip_designer
+  subline: "Photonic Fabric optical interconnect"
+
+- slug: d-matrix
+  name: d-Matrix
+  ticker: null
+  category: chip_designer
+  subline: "Digital in-memory inference"
+
+- slug: ayar-labs
+  name: Ayar Labs
+  ticker: null
+  category: chip_designer
+  subline: "Co-packaged optics (TeraPHY)"
+
+- slug: credo
+  name: Credo Technology
+  ticker: CRDO
+  category: networking
+  subline: "AECs, ~86% AWS revenue"
+
+- slug: applied-digital
+  name: Applied Digital
+  ticker: APLD
+  category: data_center
+  subline: "Polaris Forge ND campus"
+
+- slug: crusoe
+  name: Crusoe
+  ticker: null
+  category: neocloud
+  subline: "Stargate Abilene builder"
+
+- slug: iren
+  name: IREN (Iris Energy)
+  ticker: IREN
+  category: neocloud
+  subline: "Childress TX, MSFT GPU cloud"
+
+- slug: core-scientific
+  name: Core Scientific
+  ticker: null
+  category: data_center
+  subline: "HPC hosting (acquired by CoreWeave)"
+  acquired: true
+
+- slug: galaxy
+  name: Galaxy Digital
+  ticker: GLXY
+  category: data_center
+  subline: "Helios TX campus, CRWV lessor"
+
+- slug: multiple
+  name: Multiple
+  ticker: null
+  category: investor
+  subline: "Consortium of investors"
+
+- slug: applied-materials
+  name: Applied Materials
+  ticker: AMAT
+  category: equipment
+  subline: "$28B rev, deposition/etch/CMP leader"
+
+- slug: lam-research
+  name: Lam Research
+  ticker: LRCX
+  category: equipment
+  subline: "$15B+ rev, etch/deposition for memory"
+
+- slug: tokyo-electron
+  name: Tokyo Electron
+  ticker: "8035.T"
+  category: equipment
+  subline: "~$15B rev, coater/developer + etch"
+
+- slug: kla
+  name: KLA Corporation
+  ticker: KLAC
+  category: equipment
+  subline: "~$11B rev, process control monopoly"
+
+- slug: shin-etsu
+  name: Shin-Etsu Chemical
+  ticker: "4063.T"
+  category: equipment
+  subline: "World #1 silicon wafers + photoresist"
+
+- slug: sumco
+  name: SUMCO
+  ticker: "3436.T"
+  category: equipment
+  subline: "World #2 silicon wafer supplier"
+
+- slug: ase-group
+  name: ASE Technology Holding
+  ticker: ASX
+  category: packaging
+  subline: "~$18B OSAT leader, advanced packaging"
+
+- slug: qualcomm
+  name: Qualcomm
+  ticker: QCOM
+  category: chip_designer
+  subline: "$40B rev, Snapdragon + 5G modem leader"
+
+- slug: globalfoundries
+  name: GlobalFoundries
+  ticker: GFS
+  category: foundry
+  subline: "~$7B rev, mature-node specialist"
+
+- slug: umc
+  name: United Microelectronics
+  ticker: UMC
+  category: foundry
+  subline: "~$7B rev, mature-node Taiwanese foundry"
+
+- slug: smic
+  name: SMIC
+  ticker: "981.HK"
+  category: foundry
+  subline: "China's largest foundry, 7nm w/o EUV"
+
+- slug: arm
+  name: Arm Holdings
+  ticker: ARM
+  category: chip_designer
+  subline: "$4B rev, IP licensing (mobile to DC)"
+
+- slug: synopsys
+  name: Synopsys
+  ticker: SNPS
+  category: chip_designer
+  subline: "~$7B rev, EDA + IP duopoly"
+
+- slug: cadence
+  name: Cadence Design Systems
+  ticker: CDNS
+  category: chip_designer
+  subline: "~$5B rev, EDA + IP duopoly"
+
+- slug: sambanova
+  name: SambaNova Systems
+  ticker: null
+  category: chip_designer
+  subline: "RDU AI accelerators, gov + enterprise"
+
+- slug: mellanox
+  name: Mellanox Technologies
+  ticker: null
+  category: networking
+  subline: "InfiniBand + Ethernet (acquired by NVIDIA 2020)"
+  acquired: true
+
+- slug: cisco
+  name: Cisco Systems
+  ticker: CSCO
+  category: networking
+  subline: "$54B rev, $3B AI networking (2025)"
+
+- slug: onto-innovation
+  name: Onto Innovation
+  ticker: ONTO
+  category: equipment
+  subline: "~$1B rev, advanced metrology/inspection"
+
+- slug: entegris
+  name: Entegris
+  ticker: ENTG
+  category: equipment
+  subline: "~$3.5B rev, specialty materials/chemicals"
+
+- slug: tower-semiconductor
+  name: Tower Semiconductor
+  ticker: TSEM
+  category: foundry
+  subline: "~$1.5B rev, specialty/analog foundry"

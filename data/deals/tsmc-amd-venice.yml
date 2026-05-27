@@ -1,0 +1,14 @@
+id: tsmc-amd-venice
+source_slug: tsmc
+source_name: TSMC
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: N2 tape-out
+date: 2025-04
+date_display: Apr 2025
+description: >-
+  AMD's 6th-gen EPYC "Venice" server CPU taped out on TSMC N2 — the first HPC CPU on 2nm and the first AMD HPC product
+  designated for TSMC Arizona fabrication.
+source_url: https://www.amd.com/en/newsroom/press-releases/2025-4-14-amd-achieves-first-tsmc-n2-product-silicon-milesto.html

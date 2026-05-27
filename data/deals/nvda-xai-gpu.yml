@@ -1,0 +1,14 @@
+id: nvda-xai-gpu
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: 20
+value_display: $20B
+date: 2025-12
+date_display: Late 2025
+description: >-
+  $20B SPV (~$7.5B equity + ~$12.5B debt). NVIDIA contributed ~$2B equity. 5-year GPU lease powers xAI Colossus 2 in
+  Memphis, 200K+ GPUs.
+source_url: https://dig.watch/updates/nvidia-to-invest-2bn-in-elon-musks-xai

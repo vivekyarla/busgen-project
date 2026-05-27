@@ -1,0 +1,14 @@
+id: lambda-series-e
+source_slug: multiple
+source_name: Multiple
+target_slug: lambda
+target_name: Lambda
+deal_type: equity_investment
+value_billions: 1.5
+value_display: $1.5B
+date: 2025-11
+date_display: Nov 2025
+description: >-
+  Led by TWG Global and USITF. Total funding $2.36B. GPU cloud + on-prem compute; partners with NVIDIA and MSFT on
+  multi-$B deployments.
+source_url: https://www.texau.com/profiles/lambda

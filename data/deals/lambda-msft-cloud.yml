@@ -1,0 +1,15 @@
+id: lambda-msft-cloud
+source_slug: lambda
+source_name: Lambda
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 3
+value_display: Multi-$B
+date: 2025-11
+date_display: Nov 2025
+description: >-
+  Multi-year deal deploying tens of thousands of NVIDIA GPUs incl. GB300 NVL72 for Microsoft. Builds on 8-year
+  relationship.
+source_url: >-
+  https://lambda.ai/blog/lambda-announces-multibillion-dollar-agreement-with-microsoft-to-deploy-ai-infrastructure-powered-by-tens-of-thousands-of-nvidia-gpus

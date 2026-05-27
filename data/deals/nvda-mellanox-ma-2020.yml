@@ -1,0 +1,17 @@
+id: nvda-mellanox-ma-2020
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: mellanox
+target_name: Mellanox Technologies
+deal_type: m_and_a
+value_billions: 6.9
+value_display: $6.9B
+date: "2020-04"
+date_display: Apr 2020
+description: >-
+  NVIDIA closed its $6.9B all-cash acquisition of Mellanox Technologies in
+  April 2020 -- the largest M&A in NVIDIA's history at the time. Brought
+  InfiniBand and Ethernet networking IP in-house, becoming the foundation of
+  NVIDIA Networking (Quantum InfiniBand, Spectrum/Spectrum-X Ethernet,
+  BlueField DPUs). Critical for scale-out AI training fabrics.
+source_url: https://nvidianews.nvidia.com/news/nvidia-completes-acquisition-of-mellanox-creating-major-force-driving-next-generation-data-centers

@@ -1,0 +1,16 @@
+id: micron-nvda-hbm4-2026
+source_slug: micron
+source_name: Micron Technology
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: HBM4 36GB 12H volume
+date: "2026-03"
+date_display: Mar 2026
+description: >-
+  Micron began volume shipment of HBM4 36GB 12H in Q1 2026, designed for NVIDIA
+  Vera Rubin. Over 11 Gb/s pin speeds, >2.8 TB/s bandwidth, 2.3x bandwidth
+  and 20%+ power efficiency improvement over HBM3E. Also demonstrated 16-die
+  HBM4 48GB 16H samples. Announced at GTC 2026 alongside NVIDIA partnership.
+source_url: https://investors.micron.com/node/50236/pdf

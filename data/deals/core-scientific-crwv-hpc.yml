@@ -1,0 +1,17 @@
+id: core-scientific-crwv-hpc
+source_slug: core-scientific
+source_name: Core Scientific
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: cloud_capacity
+value_billions: 6.7
+value_display: 382 MW, 12-yr, ~$6.7B cumulative
+date: "2024-08"
+date_display: Aug 2024
+description: >-
+  Core Scientific expanded its 12-year HPC hosting agreement with CoreWeave,
+  adding 112 MW on top of a prior 270 MW commitment to reach 382 MW across
+  five sites. The expansion alone is expected to add ~$2B to cumulative
+  revenue, bringing total projected revenue from CoreWeave contracts to
+  ~$6.7B. CoreWeave still holds an option for a further 118 MW.
+source_url: https://theminermag.com/news/2024-08-06/core-coreweave-hpc-expansion

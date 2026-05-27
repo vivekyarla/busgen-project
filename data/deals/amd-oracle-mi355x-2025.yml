@@ -1,0 +1,19 @@
+id: amd-oracle-mi355x-2025
+source_slug: amd
+source_name: AMD
+target_slug: oracle
+target_name: Oracle
+deal_type: gpu_purchase
+value_billions: null
+value_display: Up to 131,072 MI355X
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  Oracle reached general availability of AMD Instinct MI355X on OCI at Oracle
+  AI World 2025. Zettascale AI clusters scale to 131,072 MI355X GPUs, with 288GB
+  HBM3 and 8TB/s memory bandwidth per GPU, targeting up to 2.8x higher
+  throughput and 2x better price-performance versus MI300X. Oracle became the
+  first hyperscaler to publicly offer MI355X and the only one offering both
+  MI355X and MI300X side-by-side. Distinct from the Sep 2024 MI300X launch and
+  the Q3 2026 MI450 supercluster.
+source_url: https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/

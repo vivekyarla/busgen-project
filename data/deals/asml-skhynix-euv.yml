@@ -1,0 +1,14 @@
+id: asml-skhynix-euv
+source_slug: asml
+source_name: ASML
+target_slug: sk-hynix
+target_name: SK Hynix
+deal_type: equipment_supply
+value_billions: 7.97
+value_display: $7.97B
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  SK Hynix disclosed 11.95 trillion won EUV tool order through 2027 - largest single ASML customer order ever, backing
+  HBM and advanced DRAM capacity at Yongin and M15X Cheongju.
+source_url: https://www.bloomberg.com/news/articles/2026-03-24/sk-hynix-to-buy-8-billion-of-top-end-asml-chipmaking-gear

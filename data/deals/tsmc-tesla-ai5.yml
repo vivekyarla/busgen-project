@@ -1,0 +1,14 @@
+id: tsmc-tesla-ai5
+source_slug: tsmc
+source_name: TSMC
+target_slug: tesla
+target_name: Tesla
+deal_type: custom_asic
+value_billions: null
+value_display: AI5 Arizona dual-foundry
+date: 2025-11
+date_display: Nov 2025
+description: >-
+  Musk confirms TSMC Arizona (alongside Samsung Taylor) will manufacture Tesla AI5 inference chips for FSD, Optimus, and
+  data centers. Samples 2026, volume ramp late 2026-2027.
+source_url: https://www.tomshardware.com/tech-industry/semiconductors/musk-confirms-tesla-ai5-and-ai6-will-be-made-at-samsung-and-tsmc

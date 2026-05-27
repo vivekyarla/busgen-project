@@ -1,0 +1,16 @@
+id: samsung-memory-nvda-hbm4-2026
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: HBM4 for Vera Rubin
+date: "2026-02"
+date_display: Feb 2026
+description: >-
+  Samsung began world-first mass production of HBM4 (6th gen) in February 2026,
+  designed for NVIDIA Vera Rubin. Samsung and SK Hynix are the two qualified
+  HBM4 suppliers for Vera Rubin. Builds on Samsung's HBM3E qualification
+  (Sep 2025) and the $6.7B P5 EUV order (Apr 2026) to scale DRAM capacity.
+source_url: https://www.kedglobal.com/korean-chipmakers/newsView/ked202602080008

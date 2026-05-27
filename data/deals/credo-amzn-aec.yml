@@ -1,0 +1,14 @@
+id: credo-amzn-aec
+source_slug: credo
+source_name: Credo Technology
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: custom_asic
+value_billions: null
+value_display: ~86% of Credo FY25 rev (~$267M+)
+date: 2025-06
+date_display: FY2025
+description: >-
+  Credo's FY25 10-K disclosed a single customer (widely identified as AWS) at ~86% of revenue, driven by Active
+  Electrical Cables (AECs) for AWS AI/ML back-end networking (Trainium, GPU racks).
+source_url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001807794&type=10-K

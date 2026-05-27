@@ -1,0 +1,18 @@
+id: orcl-openai-stargate-45gw-2025
+source_slug: oracle
+source_name: Oracle
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: 300.0
+value_display: ~$300B, 4.5 GW addl
+date: "2025-07"
+date_display: Jul 2025
+description: >-
+  OpenAI and Oracle announced an expansion adding 4.5 GW of Stargate data-center
+  capacity across multiple U.S. states, including an Abilene, TX upgrade from
+  1.2 GW toward 2 GW (later pared back). Pairs with a 5-year, ~$300B Oracle
+  compute-purchase commitment disclosed Sep 2025. Stargate is a $500B AI
+  infrastructure joint venture (OpenAI, SoftBank, Oracle, MGX) targeting 5-10
+  US campuses, each 1 GW+.
+source_url: https://aibusiness.com/data/openai-oracle-expand-data-center-capacity-for-stargate

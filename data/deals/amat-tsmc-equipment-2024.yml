@@ -1,0 +1,17 @@
+id: amat-tsmc-equipment-2024
+source_slug: applied-materials
+source_name: Applied Materials
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: Largest customer (~25% rev)
+date: "2024-12"
+date_display: FY2024
+description: >-
+  TSMC is Applied Materials' largest customer, accounting for ~25% of AMAT's
+  $27B FY2024 revenue (~$7B). Deposition (CVD/PVD/epi), etch, CMP, and ion
+  implant tools across N5, N3, N2 nodes. AMAT also supplies Intel and Samsung
+  Foundry. AMAT Sculpta and Vistara platforms enable gate-all-around (GAA)
+  transistor scaling for sub-3nm.
+source_url: https://www.appliedmaterials.com/us/en/about/investor-relations.html

@@ -1,0 +1,17 @@
+id: tsmc-asml-coinvest-2012
+source_slug: tsmc
+source_name: TSMC
+target_slug: asml
+target_name: ASML
+deal_type: equity_investment
+value_billions: 1.05
+value_display: €838M (5% equity) + €276M R&D
+date: "2012-08"
+date_display: Aug 2012
+description: >-
+  TSMC joined ASML's Customer Co-Investment Program, taking a 5% equity stake
+  for €838M ($1.05B) and committing an additional €276M over five years to
+  ASML's R&D for EUV and 450mm wafer technology. Shares issued Oct 31, 2012 via
+  Dutch foundation (20,992,625 shares, 2.5-year lock-up). Aimed at accelerating
+  EUV industrialization.
+source_url: https://www.asml.com/news/press-releases/2012/tsmc-joins-asmls-customer-co-investment-program-for-innovation

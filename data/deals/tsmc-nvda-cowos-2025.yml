@@ -1,0 +1,17 @@
+id: tsmc-nvda-cowos-2025
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: 70% of 2025 CoWoS-L capacity
+date: "2025-02"
+date_display: Feb 2025
+description: >-
+  NVIDIA secured over 70% of TSMC's 2025 CoWoS-L advanced-packaging capacity
+  for Blackwell B200/B300 GPU shipments, with volumes increasing >20% each
+  quarter and annual shipments targeted above 2 million units. Blackwell GPUs
+  continue on TSMC's 4 nm node with CoWoS-L packaging; generational transition
+  from Hopper H100/H200 expected by mid-2025.
+source_url: https://www.trendforce.com/news/2025/02/24/news-tsmc-reportedly-sees-cowos-order-surge-with-nvidia-securing-70-of-2025-cowos-l-capacity/

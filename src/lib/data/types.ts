@@ -14,6 +14,11 @@ export const CompanySchema = z.object({
   category: z.string(),
   subline: z.string().optional(),
   acquired: z.boolean().optional(),
+  // Optional explicit stack layer. If set (and valid), it overrides the
+  // category→layer mapping — handy for a new company whose category doesn't
+  // fit the defaults. One of: application | compute | networking |
+  // raw_materials | power | capital.
+  layer: z.string().optional(),
 });
 export type Company = z.infer<typeof CompanySchema>;
 

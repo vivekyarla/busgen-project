@@ -1,0 +1,17 @@
+id: nvda-lambda-h100-2024
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: lambda
+target_name: Lambda
+deal_type: gpu_purchase
+value_billions: 0.5
+value_display: $500M GPU-backed facility
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  Lambda secured a $500M GPU-backed facility to scale H100/HGX capacity for
+  its on-demand AI cloud, followed by a $320M Series C in Feb 2024. Capital
+  funded deployment of NVIDIA HGX H100 and Quantum-2 InfiniBand 1-Click
+  Clusters that provide on-demand multi-node access (16-512 H100 GPUs) for
+  AI engineers without long-term contracts.
+source_url: https://www.fierce-network.com/newswire/lambda-debuts-nvidia-hgx-h100-and-quantum-2-infiniband-clusters

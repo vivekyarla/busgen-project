@@ -1,0 +1,17 @@
+id: tsmc-amkor-arizona-2024
+source_slug: tsmc
+source_name: TSMC
+target_slug: amkor
+target_name: Amkor Technology
+deal_type: equipment_supply
+value_billions: null
+value_display: CoWoS/InFO outsourcing
+date: "2024-11"
+date_display: Nov 2024
+description: >-
+  TSMC signed an MOU to subcontract advanced packaging and test services to
+  Amkor's $2B Peoria, Arizona facility, covering TSMC's Integrated Fan-Out
+  (InFO) and Chip-on-Wafer-on-Substrate (CoWoS) technologies for common
+  customers. The front-end TSMC fab and Amkor's back-end plant are within a
+  few miles of each other to accelerate product cycle times for AI chips.
+source_url: https://www.eenewseurope.com/en/tsmc-amkor-to-bring-advanced-packaging-to-arizona

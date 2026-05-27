@@ -1,0 +1,12 @@
+id: mrvl-msft-maia
+source_slug: marvell
+source_name: Marvell
+target_slug: microsoft
+target_name: Microsoft
+deal_type: custom_asic
+value_billions: null
+value_display: Undisclosed
+date: 2024-01
+date_display: Ongoing
+description: Maia 100/200 custom ASIC co-design for Azure LLM training and inference
+source_url: https://www.gilderreport.com/broadcom-and-the-rise-of-custom-ai-silicon/

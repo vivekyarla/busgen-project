@@ -1,0 +1,17 @@
+id: nvda-google-cloud-2023
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: google
+target_name: Google
+deal_type: cloud_capacity
+value_billions: null
+value_display: DGX Cloud + A3 VMs
+date: "2023-03"
+date_display: Mar 2023
+description: >-
+  Google Cloud and NVIDIA expanded their partnership at GTC 2023 -- DGX Cloud
+  on Google Cloud, A3 supercomputer VMs with H100 GPUs (3x training perf vs A2),
+  and NVIDIA AI Enterprise on Vertex AI. Jensen Huang: "Google and NVIDIA are
+  helping developers accelerate their work with AI supercomputing." Anthropic
+  later used Google's DGX Cloud H100 VMs alongside TPU v5e for Claude serving.
+source_url: https://investor.nvidia.com/news/press-release-details/2023/Google-Cloud-and-NVIDIA-Expand-Partnership-to-Advance-AI-Computing-Software-and-Services/default.aspx

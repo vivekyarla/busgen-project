@@ -1,0 +1,17 @@
+id: micron-amd-hbm3e-mi350
+source_slug: micron
+source_name: Micron Technology
+target_slug: amd
+target_name: AMD
+deal_type: equipment_supply
+value_billions: null
+value_display: HBM3E 36GB 12-high for MI350
+date: "2025-06"
+date_display: Jun 2025
+description: >-
+  Micron integrated its HBM3E 36 GB 12-high memory into AMD's Instinct MI350
+  Series accelerators, supplying high-capacity HBM for the CDNA 4-based 3 nm
+  GPU line. Each MI350 configuration carries up to 288 GB HBM3E versus
+  predecessor 192 GB, with Micron chosen for power efficiency critical to
+  training large models and running complex HPC workloads.
+source_url: https://www.nasdaq.com/articles/micron-technology-integrates-hbm3e-36gb-memory-amd-instinct-mi350-series-solutions

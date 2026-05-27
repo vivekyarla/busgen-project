@@ -1,0 +1,17 @@
+id: asml-skhynix-m15x-2024
+source_slug: asml
+source_name: ASML
+target_slug: sk-hynix
+target_name: SK Hynix
+deal_type: equipment_supply
+value_billions: 8.0
+value_display: ~$8B (~20 EUV scanners)
+date: "2024-12"
+date_display: Dec 2024
+description: >-
+  SK Hynix is spending ~$8B to acquire roughly 20 ASML EUV lithography scanners
+  by 2027, doubling its EUV fleet. Equipment will support the $14.6B Cheongju
+  M15X fab (HBM-focused) and advance the 1c DRAM process for HBM4E core dies.
+  Investment also positions SK Hynix for Yongin Semiconductor Park fab startup
+  in 2027.
+source_url: https://news.futunn.com/en/post/70517415/sk-hynix-plans-to-purchase-euv-lithography-machines-from-asml

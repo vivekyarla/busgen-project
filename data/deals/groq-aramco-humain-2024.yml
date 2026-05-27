@@ -1,0 +1,19 @@
+id: groq-aramco-humain-2024
+source_slug: groq
+source_name: Groq
+target_slug: multiple
+target_name: Multiple
+deal_type: cloud_capacity
+value_billions: null
+value_display: World-largest LPU cluster
+date: "2024-09"
+date_display: Sep 2024
+description: >-
+  Groq partnered with Aramco Digital to build the world's largest AI
+  inferencing cluster using Groq LPUs in Saudi Arabia, processing billions
+  of tokens/day by end-2024 and scaling to hundreds of billions by 2025. The
+  facility targets AI inference capacity for regional developers. Aramco
+  Digital later rolled under Humain (Saudi's PIF-backed AI champion launched
+  May 2025), positioning Groq as anchor inference provider across Gulf
+  Cooperation Council markets.
+source_url: https://groq.humain.ai/unleashing-the-power-of-fast-ai-inference-groq-and-aramco-digital-partner-to-establish-world-leading-data-center

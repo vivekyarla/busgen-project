@@ -1,0 +1,14 @@
+id: meta-rivos-ma
+source_slug: meta
+source_name: Meta
+target_slug: rivos
+target_name: Rivos
+deal_type: m_and_a
+value_billions: 2
+value_display: ~$2B
+date: 2025-06
+date_display: "2025"
+description: >-
+  Meta acquired RISC-V chip startup Rivos to accelerate MTIA custom silicon. 55 Rivos employees joined. Follows failed
+  FuriosaAI bid.
+source_url: https://www.quiverquant.com/news/Meta+(META)+Expands+AI+Chip+Ambitions+With+%242+Billion+Rivos+Acquisition

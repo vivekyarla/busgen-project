@@ -1,0 +1,17 @@
+id: tsmc-meta-mtia-2024
+source_slug: tsmc
+source_name: TSMC
+target_slug: meta
+target_name: Meta
+deal_type: custom_asic
+value_billions: null
+value_display: MTIA v2 volume (N5)
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  TSMC fabricated Meta's MTIA v2 inference accelerator on N5 (v1 was 7nm).
+  Deployed across Meta's global datacenter regions for ranking and recommendation
+  models at strict latency targets. Broadcom co-designed, TSMC fabbed. Confirmed
+  by ACM paper and Meta engineering disclosures. MTIA v3+ moving to 2nm with
+  Broadcom multi-GW commitment (2026+).
+source_url: https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-MTIA/

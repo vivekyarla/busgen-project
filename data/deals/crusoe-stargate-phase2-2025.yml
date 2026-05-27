@@ -1,0 +1,18 @@
+id: crusoe-stargate-phase2-2025
+source_slug: crusoe
+source_name: Crusoe
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: null
+value_display: 1.2 GW, 8 buildings
+date: "2025-11"
+date_display: Nov 2025
+description: >-
+  Crusoe topped off the eighth and final building at its flagship OpenAI
+  Stargate data-center campus in Abilene, TX, completing a 1.2 GW, ~4 million
+  sq ft buildout on the Lancium Clean Campus. Crusoe develops and leases the
+  site to Oracle, which in turn provides compute to OpenAI. Phase 1's first
+  two buildings (980K sq ft, 200 MW+ IT) went operational Sep 2025 with
+  64,000 NVIDIA GB200 GPUs to be deployed by end of 2026.
+source_url: https://www.datacenterdynamics.com/en/news/crusoe-tops-out-final-building-at-openai-stargate-data-center-campus-in-abilene-texas

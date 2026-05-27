@@ -1,0 +1,17 @@
+id: kla-tsmc-metrology-2024
+source_slug: kla
+source_name: KLA Corporation
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: Process control monopoly
+date: "2024-12"
+date_display: FY2024
+description: >-
+  KLA holds ~85% global share in process-control / metrology / inspection
+  equipment. TSMC is KLA's largest customer (~25% of ~$11B FY2024 revenue) for
+  optical/e-beam inspection at advanced nodes. Every wafer at N5/N3/N2 passes
+  through KLA tools multiple times. KLA also supplies Samsung Foundry and Intel
+  Foundry.
+source_url: https://ir.kla.com/

@@ -1,0 +1,17 @@
+id: qcom-samsung-foundry-snapdragon-2024
+source_slug: samsung-foundry
+source_name: Samsung Foundry
+target_slug: qualcomm
+target_name: Qualcomm
+deal_type: custom_asic
+value_billions: null
+value_display: Snapdragon dual-source
+date: "2024-10"
+date_display: Oct 2024
+description: >-
+  Qualcomm uses Samsung Foundry as a dual-source for Snapdragon mobile SoCs
+  alongside TSMC. Snapdragon 8 Gen 1 (4nm, 2022) and select PC chips were
+  produced at Samsung 4LPP. Qualcomm reportedly placed 2nm Samsung orders for
+  Snapdragon 8 Gen 5+, validating Samsung's 2nm GAA process alongside the
+  Tesla AI5/AI6 contract.
+source_url: https://www.qualcomm.com/news/releases/2022/03/qualcomm-and-samsung-collaborate-extend-multi-decade-relationship-mobile

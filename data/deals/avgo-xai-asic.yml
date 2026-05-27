@@ -1,0 +1,12 @@
+id: avgo-xai-asic
+source_slug: broadcom
+source_name: Broadcom
+target_slug: xai
+target_name: xAI
+deal_type: custom_asic
+value_billions: null
+value_display: Undisclosed
+date: 2025-01
+date_display: Ongoing
+description: Custom silicon customer; confirmed by Broadcom and Futurum Group analysis
+source_url: https://futurumgroup.com/insights/anthropics-gigawatt-scale-tpu-deal-with-broadcom-creates-a-structural-advantage/

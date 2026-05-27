@@ -1,0 +1,12 @@
+id: samsung-tesla-foundry
+source_slug: samsung-foundry
+source_name: Samsung Foundry
+target_slug: tesla
+target_name: Tesla
+deal_type: custom_asic
+value_billions: 16.5
+value_display: $16.5B
+date: 2025-07
+date_display: Jul 2025
+description: 2nm GAA fab of Tesla AI6 at Taylor, TX. Through 2033. Powers FSD, Cybercab, Optimus, AI DCs.
+source_url: https://www.cnbc.com/2025/07/28/samsung-electronics-new-chip-supply-contract.html

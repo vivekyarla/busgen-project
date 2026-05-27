@@ -1,0 +1,18 @@
+id: amat-samsung-taylor-2024
+source_slug: applied-materials
+source_name: Applied Materials
+target_slug: samsung-foundry
+target_name: Samsung Foundry
+deal_type: equipment_supply
+value_billions: null
+value_display: 2nm GAA tooling
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  Applied Materials is a primary equipment supplier to Samsung's $17B+ Taylor,
+  Texas fab, which received $6.4B in direct CHIPS Act funding in April 2024 to
+  build 2nm gate-all-around logic capacity. AMAT provides deposition, etch,
+  implant, CMP, and thermal processing platforms for GAA transistor integration
+  alongside fellow suppliers ASML, Lam, KLA, and Tokyo Electron. Tesla is the
+  fab's first major chip customer via a $16.5B contract.
+source_url: https://manufacturingdigest.com/news/inside-samsung-electronics-taylor-texas-semiconductor-fab

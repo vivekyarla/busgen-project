@@ -1,0 +1,19 @@
+id: foxconn-nvda-rubin-2026
+source_slug: foxconn
+source_name: Foxconn (Hon Hai)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: Vera Rubin NVL72 lead mfg partner
+date: "2026-03"
+date_display: Mar 2026
+description: >-
+  At NVIDIA GTC 2026, Foxconn confirmed it is the lead manufacturing partner
+  for NVIDIA's Vera Rubin NVL72 MGX-generation open-architecture rack servers,
+  with mass production targeted for H2 2026. Foxconn is also building
+  Kaohsiung-1, a 40 MW Taiwan AI data center running 800 VDC power distribution
+  spec'd for Rubin-class racks. Extends the Foxconn-NVIDIA Blackwell GB200
+  partnership into the next platform generation and cements Foxconn as the
+  largest NVIDIA AI-server ODM.
+source_url: https://www.honhai.com/en-us/press-center/press-releases/latest-news/1975

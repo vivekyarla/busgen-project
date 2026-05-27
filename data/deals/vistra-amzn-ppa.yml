@@ -1,0 +1,14 @@
+id: vistra-amzn-ppa
+source_slug: vistra
+source_name: Vistra
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: power_ppa
+value_billions: null
+value_display: 1,200MW / 20-yr
+date: 2025-09
+date_display: Sep 2025
+description: >-
+  20-year PPA for up to 1,200MW of carbon-free nuclear power from Comanche Peak (TX). Deliveries Q4 2027 ramping to full
+  by 2032, with options for 20 additional years.
+source_url: https://investor.vistracorp.com/2025-09-29-Vistra-Announces-Long-Term-Power-Purchase-Agreement-with-Amazon

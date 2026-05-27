@@ -1,0 +1,17 @@
+id: samsung-memory-nvda-hbm3e-2025
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: 12-layer HBM3E qualified
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  Samsung cleared NVIDIA's qualification for 12-layer HBM3E after failing
+  earlier thermal/performance tests -- third supplier approved after SK Hynix
+  and Micron. Initial volumes constrained; shipments expected to scale into DGX
+  B300 builds. Stock jumped 5% on news. Samsung had already been supplying AMD
+  with HBM3E but NVIDIA validation carried far greater commercial weight.
+source_url: https://www.tomshardware.com/tech-industry/samsung-earns-nvidias-certification-for-its-hbm3-memory-stock-jumps-5-percent-as-company-finally-catches-up-to-sk-hynix-and-micron-in-hbm3e-production

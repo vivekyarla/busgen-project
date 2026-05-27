@@ -1,0 +1,14 @@
+id: openai-msft-azure
+source_slug: openai
+source_name: OpenAI
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 250
+value_display: $250B
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Part of MSFT-OpenAI restructuring. OpenAI committed $250B to Azure cloud services. API products sold exclusively on
+  Azure.
+source_url: https://siliconangle.com/2025/10/28/newly-completed-openai-restructuring-gives-microsoft-135b-stake/

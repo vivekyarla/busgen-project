@@ -1,0 +1,14 @@
+id: entergy-meta-la
+source_slug: entergy
+source_name: Entergy
+target_slug: meta
+target_name: Meta
+deal_type: power_ppa
+value_billions: null
+value_display: 2,250MW
+date: 2024-12
+date_display: Dec 2024
+description: >-
+  Entergy Louisiana to power Meta's $10B Richland Parish AI data center via ~2.25GW of new combined-cycle gas generation
+  (LPSC approved Aug 2025), with optional nuclear uprates and up to 2.5GW solar.
+source_url: https://www.entergy.com/news/entergy-louisiana-power-meta-s-data-center-in-richland-parish

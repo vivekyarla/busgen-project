@@ -1,0 +1,17 @@
+id: cisco-msft-networking-2024
+source_slug: cisco
+source_name: Cisco Systems
+target_slug: microsoft
+target_name: Microsoft
+deal_type: equipment_supply
+value_billions: null
+value_display: Hyperscale switching
+date: "2024-08"
+date_display: Aug 2024
+description: >-
+  Cisco partnered with Microsoft to extend Cisco AI infrastructure (Silicon
+  One, Nexus, optical) into Azure for AI fabric scale-out. Cisco crossed $3B
+  in AI orders in FY2025 driven by hyperscaler demand including Microsoft.
+  Cisco also supplies enterprise/edge networking embedded in Azure Stack and
+  Azure Local deployments.
+source_url: https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2024/m08/cisco-and-microsoft-announce-expanded-strategic-partnership.html

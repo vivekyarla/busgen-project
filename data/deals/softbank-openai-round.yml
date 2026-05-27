@@ -1,0 +1,12 @@
+id: softbank-openai-round
+source_slug: softbank
+source_name: SoftBank
+target_slug: openai
+target_name: OpenAI
+deal_type: equity_investment
+value_billions: 30
+value_display: $30B
+date: 2026-03
+date_display: Mar 2026
+description: Co-led OpenAI $122B round with $30B (3x $10B tranches). Adds to $19B Stargate for ~$64.6B total (~13% ownership).
+source_url: https://openai.com/index/accelerating-the-next-phase-ai/

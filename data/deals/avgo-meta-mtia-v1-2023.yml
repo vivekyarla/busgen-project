@@ -1,0 +1,18 @@
+id: avgo-meta-mtia-v1-2023
+source_slug: broadcom
+source_name: Broadcom
+target_slug: meta
+target_name: Meta
+deal_type: custom_asic
+value_billions: null
+value_display: MTIA v1 inference
+date: "2023-05"
+date_display: May 2023
+description: >-
+  Meta unveiled MTIA v1 -- its first in-house AI inference accelerator --
+  co-designed with Broadcom. Built on TSMC 7nm, targeted ranking and
+  recommendation models across Instagram/Facebook. Initiated in 2020, taped out
+  2021, deployed 2023. Origin of the Broadcom-Meta MTIA partnership that later
+  scaled to 1GW+ custom training silicon (2026) and the multi-GW 2nm roadmap
+  through 2029.
+source_url: https://ai.meta.com/blog/meta-training-inference-accelerator-AI-MTIA/

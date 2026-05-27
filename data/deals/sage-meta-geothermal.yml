@@ -1,0 +1,14 @@
+id: sage-meta-geothermal
+source_slug: sage-geosystems
+source_name: Sage Geosystems
+target_slug: meta
+target_name: Meta
+deal_type: power_ppa
+value_billions: null
+value_display: 150MW geothermal
+date: 2024-08
+date_display: Aug 2024
+description: >-
+  150MW next-gen geopressured geothermal PPA - first geothermal east of the Rockies. Phase 1 operational by 2027 to
+  power Meta US data centers.
+source_url: https://about.fb.com/news/2024/08/new-geothermal-energy-project-to-support-our-data-centers/

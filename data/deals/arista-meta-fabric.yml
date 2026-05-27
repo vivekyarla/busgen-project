@@ -1,0 +1,14 @@
+id: arista-meta-fabric
+source_slug: arista
+source_name: Arista Networks
+target_slug: meta
+target_name: Meta
+deal_type: custom_asic
+value_billions: null
+value_display: AI Ethernet fabric
+date: 2024-10
+date_display: Oct 2024
+description: >-
+  Meta deploys Arista 7700R4 Distributed Etherlink Switches (Broadcom Jericho3-AI based) as the Ethernet fabric for its
+  large-scale AI training clusters, co-developed with Meta.
+source_url: https://blogs.arista.com/blog/meta-and-arista-build-ai-at-scale

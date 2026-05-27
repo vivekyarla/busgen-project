@@ -1,0 +1,14 @@
+id: google-anthropic-tpu
+source_slug: google
+source_name: Google
+target_slug: anthropic
+target_name: Anthropic
+deal_type: cloud_capacity
+value_billions: 50
+value_display: ~$50B (1GW+)
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Access to up to 1M TPUs delivering 1+ GW of compute in 2026. Google's largest TPU commitment. Industry est. ~$50B for
+  1GW data center
+source_url: https://www.cnbc.com/2025/10/23/anthropic-google-cloud-deal-tpu.html

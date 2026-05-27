@@ -1,0 +1,17 @@
+id: samsung-foundry-nvda-ampere-2020
+source_slug: samsung-foundry
+source_name: Samsung Foundry
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: RTX 30 series volume
+date: "2020-09"
+date_display: Sep 2020
+description: >-
+  NVIDIA confirmed Samsung's 8nm (8N) custom process for all Ampere consumer
+  GPUs -- GA102 (RTX 3090/3080), GA104 (3070), GA106 (3060) -- marking the first
+  time NVIDIA's flagship gaming silicon moved off TSMC. Split allocation
+  reportedly driven by TSMC 7nm capacity constraints and Samsung's aggressive
+  pricing. Datacenter A100 stayed on TSMC 7nm.
+source_url: https://www.pcgamer.com/nvidia-ampere-samsung-8nm-process/

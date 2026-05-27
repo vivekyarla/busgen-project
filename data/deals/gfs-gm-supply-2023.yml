@@ -1,0 +1,18 @@
+id: gfs-gm-supply-2023
+source_slug: globalfoundries
+source_name: GlobalFoundries
+target_slug: multiple
+target_name: Multiple
+deal_type: equipment_supply
+value_billions: null
+value_display: Multi-year
+date: "2023-02"
+date_display: Feb 2023
+description: >-
+  GlobalFoundries and General Motors announced a strategic long-term direct
+  supply agreement establishing a dedicated US capacity corridor for GM's chip
+  supply, with chips manufactured at GF's Malta, New York fab. First-of-its-kind
+  auto-to-foundry deal aims to reduce GM's chip SKU count and secure resilient
+  US-based supply for increasingly technology-laden vehicles. (Note: GM not in
+  this dataset; mapped to "multiple" as downstream customer.)
+source_url: https://www.automotiveworld.com/news-releases/globalfoundries-and-gm-announce-long-term-direct-supply-agreement-for-u-s-production-of-semiconductor-chips

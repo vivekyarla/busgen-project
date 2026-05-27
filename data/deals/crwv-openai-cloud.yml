@@ -1,0 +1,15 @@
+id: crwv-openai-cloud
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: 22.4
+value_display: $22.4B
+date: 2025-03
+date_display: 2025-2026
+description: >-
+  Expanded from $11.9B (Mar 2025) to $22.4B total over 5 years. GPU compute for training + inference. CRWV issued $350M
+  in OAI shares.
+source_url: >-
+  https://www.reuters.com/technology/artificial-intelligence/coreweave-strikes-12-billion-contract-with-openai-ahead-ipo-sources-say-2025-03-10/

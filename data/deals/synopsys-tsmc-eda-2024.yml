@@ -1,0 +1,17 @@
+id: synopsys-tsmc-eda-2024
+source_slug: synopsys
+source_name: Synopsys
+target_slug: tsmc
+target_name: TSMC
+deal_type: custom_asic
+value_billions: null
+value_display: EDA + IP for N2/A16
+date: "2024-12"
+date_display: 2024-2026
+description: >-
+  Synopsys provides EDA tools, foundation IP, and AI-driven design optimization
+  (DSO.ai) certified on TSMC's N2 and A16 nodes. Every advanced-node tape-out
+  at TSMC -- NVIDIA, Apple, AMD, Broadcom, Google -- runs through Synopsys or
+  Cadence flows. Multi-year reference flow agreements; Synopsys announced
+  certification for TSMC N2 GAA in early 2025.
+source_url: https://www.synopsys.com/company/newsroom/news-releases.html

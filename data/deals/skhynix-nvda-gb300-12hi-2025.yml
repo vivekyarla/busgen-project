@@ -1,0 +1,18 @@
+id: skhynix-nvda-gb300-12hi-2025
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: Exclusive 12-Hi HBM3E
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  SK Hynix reportedly locked in an exclusive 12-high HBM3E supply deal with
+  NVIDIA for the GB300 Blackwell Ultra platform, which features 288 GB of
+  HBM3E per GPU. SK Hynix began HBM3E 8-layer mass production in Mar 2024 and
+  12-layer in Sep 2024; Samsung's HBM3E 12-layer qualification was expected
+  late May/Jun 2025, and Micron failed to secure initial 12-Hi GB300 orders
+  despite completing development in Sep 2024.
+source_url: https://www.trendforce.com/news/2025/03/18/news-sk-hynix-reportedly-locks-in-exclusive-12h-hbm3e-deal-for-nvidias-gb300/

@@ -1,0 +1,15 @@
+id: nvda-mrvl-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: marvell
+target_name: Marvell
+deal_type: equity_investment
+value_billions: 2
+value_display: $2B
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  NVLink Fusion partnership. Marvell provides custom XPUs; NVIDIA supplies CPUs, NICs, DPUs, switches. Every rack must
+  include NVIDIA.
+source_url: >-
+  https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-whose-biggest-clients-are-trying-to-replace-nvidia-chips

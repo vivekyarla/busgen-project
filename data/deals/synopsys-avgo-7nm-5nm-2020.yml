@@ -1,0 +1,17 @@
+id: synopsys-avgo-7nm-5nm-2020
+source_slug: synopsys
+source_name: Synopsys
+target_slug: broadcom
+target_name: Broadcom
+deal_type: custom_asic
+value_billions: null
+value_display: Fusion Design Platform 7nm/5nm
+date: "2020-04"
+date_display: Apr 2020
+description: >-
+  Synopsys and Broadcom expanded their collaboration to use Synopsys' Fusion
+  Design Platform across Broadcom's 7nm production designs and next-generation
+  5nm designs, building on multiple successful 7nm tape-outs. Underpins the EDA
+  flow behind Broadcom's hyperscaler ASICs (Google TPU, Meta MTIA), custom
+  NICs, and networking silicon.
+source_url: https://news.synopsys.com/2020-04-02-Synopsys-Expands-Collaboration-with-Broadcom-for-7nm-and-5nm-Designs

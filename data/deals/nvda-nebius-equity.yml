@@ -1,0 +1,12 @@
+id: nvda-nebius-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: nebius
+target_name: Nebius
+deal_type: equity_investment
+value_billions: 2
+value_display: $2B
+date: 2026-03
+date_display: Mar 2026
+description: Strategic partnership for 5GW+ capacity by 2030; full-stack AI cloud co-development
+source_url: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Nebius-Partner-to-Scale-Full-Stack-AI-Cloud/

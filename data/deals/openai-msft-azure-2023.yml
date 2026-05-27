@@ -1,0 +1,18 @@
+id: openai-msft-azure-2023
+source_slug: openai
+source_name: OpenAI
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: null
+value_display: Exclusive cloud provider
+date: "2023-01"
+date_display: Jan 2023
+description: >-
+  Microsoft and OpenAI extended their partnership -- Microsoft became OpenAI's
+  exclusive cloud provider via Azure, deploying specialized supercomputing
+  systems for GPT-4 training and ChatGPT inference. Multi-year, multibillion
+  commitment alongside the $10B equity tranche. Origin of the exclusive Azure
+  arrangement that scaled to $250B by the Oct 2025 restructuring. Azure OpenAI
+  Service gave enterprises direct API access to GPT models.
+source_url: https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/

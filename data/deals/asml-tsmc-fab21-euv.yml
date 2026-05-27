@@ -1,0 +1,16 @@
+id: asml-tsmc-fab21-euv
+source_slug: asml
+source_name: ASML
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: null
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  TSMC's rare Fab 21 Phoenix flyby confirmed ASML TWINSCAN NXE:3600D EUV scanners
+  as the crown-jewel tools etching Blackwell B300 wafers in Arizona. Phase-1 capacity
+  ~24K wafers/month on N5/N4, with NXE:3600D (13.5nm source, 1.1nm overlay) handling
+  the most critical layers.
+source_url: https://www.tomshardware.com/tech-industry/semiconductors/tsmc-gives-an-ultra-rare-video-look-inside-its-fabs-silver-highway-and-fab-tools-revealed-in-flyby-video-of-companys-us-arizona-fab-21

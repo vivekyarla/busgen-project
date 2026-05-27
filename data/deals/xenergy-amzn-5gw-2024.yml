@@ -1,0 +1,18 @@
+id: xenergy-amzn-5gw-2024
+source_slug: x-energy
+source_name: X-Energy
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: power_ppa
+value_billions: null
+value_display: 5 GW SMR deployment
+date: "2024-10"
+date_display: Oct 2024
+description: >-
+  Amazon signed an agreement to back the deployment of more than 5 GW of
+  X-Energy Xe-100 advanced small modular reactors by 2039, Amazon's largest
+  nuclear commitment. Paired with Energy Northwest (Washington State) for up
+  to 960 MW at an initial four-pack of Xe-100 reactors on the Columbia
+  Generating Station site, plus a Dominion Energy MOU for a 300 MW SMR near
+  North Anna Power Station in Virginia.
+source_url: https://www.powermag.com/amazon-backs-massive-nuclear-smr-deployment-5-gw-with-x-energy-agreements-with-energy-northwest-dominion

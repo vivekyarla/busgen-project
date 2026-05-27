@@ -1,0 +1,17 @@
+id: intel-google-xeon6-2026
+source_slug: intel
+source_name: Intel
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: Multi-year Xeon 6 collab
+date: "2026-04"
+date_display: Apr 2026
+description: >-
+  Intel and Google announced a multi-year collaboration to deploy multiple
+  generations of Intel Xeon 6 across Google Cloud infrastructure (C4 and N4
+  VMs) for AI training, inference, and general workloads, plus co-development
+  of custom ASIC-based Infrastructure Processing Units. Intel's first outgoing
+  edge in the graph.
+source_url: https://newsroom.intel.com/data-center/intel-google-deepen-collaboration-to-advance-ai-infrastructure

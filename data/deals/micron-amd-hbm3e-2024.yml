@@ -1,0 +1,17 @@
+id: micron-amd-hbm3e-2024
+source_slug: micron
+source_name: Micron Technology
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: 256GB HBM3E (MI325X)
+date: "2024-10"
+date_display: Oct 2024
+description: >-
+  AMD launched Instinct MI325X with 256GB of HBM3E (8x 12-layer stacks) -- a
+  33% memory uplift over MI300X. Micron is one of two HBM3E suppliers (alongside
+  Samsung, which was already validated). First MI325X shipments Q4 2024 to Dell,
+  HPE, Lenovo, Super Micro. Extends the memory-bound LLM inference advantage
+  AMD uses to challenge NVIDIA H200/B200.
+source_url: https://www.datacenterdynamics.com/en/news/amd-details-instinct-mi325x-gpu-with-256gb-of-hbm3e/

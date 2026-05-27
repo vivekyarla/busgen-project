@@ -1,0 +1,12 @@
+id: msft-anthropic-equity
+source_slug: microsoft
+source_name: Microsoft
+target_slug: anthropic
+target_name: Anthropic
+deal_type: equity_investment
+value_billions: 5
+value_display: $5B
+date: 2025-11
+date_display: Nov 2025
+description: Equity alongside $30B Azure compute commitment from Anthropic. Claude on Azure Foundry. Tri-party deal with NVIDIA.
+source_url: https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/

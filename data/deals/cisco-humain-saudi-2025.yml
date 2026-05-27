@@ -1,0 +1,18 @@
+id: cisco-humain-saudi-2025
+source_slug: cisco
+source_name: Cisco Systems
+target_slug: amd
+target_name: AMD
+deal_type: equipment_supply
+value_billions: null
+value_display: 1 GW Saudi JV
+date: "2025-11"
+date_display: Nov 2025
+description: >-
+  AMD and Cisco formed a joint venture with Saudi state-backed Humain to
+  deliver 1 GW of AI infrastructure in Saudi Arabia by 2030. AMD supplies
+  Instinct MI450 Series GPUs; Cisco provides AI networking fabric. First
+  100 MW phase targeted for Riyadh/Dammam sites in Q2 2026. Builds on
+  Humain's earlier $10B AMD deal (May 2025) and Cisco partnership, backed by
+  PIF's ambition for 6.6 GW of data-center capacity by 2035.
+source_url: https://www.datacenterdynamics.com/en/news/amd-cisco-and-humain-set-up-jv-for-1gw-of-ai-infrastructure-in-saudi-arabia/

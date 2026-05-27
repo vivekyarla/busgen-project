@@ -1,0 +1,18 @@
+id: micron-nvda-socamm-2025
+source_slug: micron
+source_name: Micron Technology
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: 600K-800K SOCAMMs
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  NVIDIA selected Micron as a primary SOCAMM (System on Chip Advanced Memory
+  Module) supplier for 2025, with a planned deployment of 600,000-800,000
+  modules for its GB300 "Blackwell" platform and AI PC Digits system. SOCAMMs
+  use LPDDR DRAM and offer ~2.5x the bandwidth of a standard server RDIMM
+  while reducing size and power by a third. Samsung and SK Hynix also
+  co-developed, but Micron got the initial order share.
+source_url: https://www.techpowerup.com/339183/nvidia-selects-micron-for-large-scale-socamm-deployment

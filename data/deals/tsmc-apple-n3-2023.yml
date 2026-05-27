@@ -1,0 +1,17 @@
+id: tsmc-apple-n3-2023
+source_slug: tsmc
+source_name: TSMC
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: ~$17B (23% of TSMC 2022 rev)
+date: "2023-09"
+date_display: "2023"
+description: >-
+  Apple locked up 100% of TSMC's first-gen N3 (3nm) capacity for roughly a year
+  -- exclusive for A17 Pro (iPhone 15 Pro) and M3 silicon. The Information
+  reported Apple negotiated terms where TSMC absorbs the cost of defective dies.
+  Apple was ~23% of TSMC's $72B 2022 revenue, making it TSMC's largest customer
+  by a wide margin and effectively subsidizing N3 ramp.
+source_url: https://arstechnica.com/gadgets/2023/08/report-apple-is-saving-billions-on-chips-thanks-to-unique-deal-with-tsmc/

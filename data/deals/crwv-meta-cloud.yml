@@ -1,0 +1,12 @@
+id: crwv-meta-cloud
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: meta
+target_name: Meta
+deal_type: cloud_capacity
+value_billions: 35
+value_display: $35B
+date: 2025-09
+date_display: Sep 2025 – Apr 2026
+description: $14.2B initial + $21B expansion through 2032. Largest single AI cloud commitment of 2026. Vera Rubin chip systems
+source_url: https://augment.market/pulse/coreweave-has-now-signed-the-four-biggest-ai-labs

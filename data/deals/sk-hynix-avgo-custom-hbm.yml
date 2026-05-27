@@ -1,0 +1,18 @@
+id: sk-hynix-avgo-custom-hbm
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: broadcom
+target_name: Broadcom
+deal_type: equipment_supply
+value_billions: null
+value_display: Customized HBM for custom AI ASICs
+date: "2024-12"
+date_display: Dec 2024
+description: >-
+  SK Hynix secured customized HBM orders from Broadcom (alongside NVIDIA and
+  Microsoft), pulling ahead of Samsung in the race to supply AI-optimized
+  memory. Broadcom uses custom HBM as part of its hyperscaler ASIC programs
+  (Google TPU, Meta MTIA, OpenAI custom silicon). Marks the shift from
+  off-the-shelf HBM to workload-tailored HBM as customized HBM is forecast to
+  dominate a $130B market by 2033.
+source_url: https://www.digitimes.com/news/a20241224PD218/broadcom-sk-hynix-hbm-nvidia-ai-chip.html

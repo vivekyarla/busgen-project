@@ -1,0 +1,14 @@
+id: openai-aws-cloud
+source_slug: openai
+source_name: OpenAI
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: cloud_capacity
+value_billions: 38
+value_display: $38B
+date: 2025-11
+date_display: Nov 2025
+description: >-
+  $38B over 7 years. 100Ks of GB200/GB300 GPUs on EC2 UltraServers. First major cloud deal outside MSFT, enabled by Oct
+  2025 restructuring.
+source_url: https://techcrunch.com/2025/11/03/openai-and-amazon-ink-38b-cloud-computing-deal/

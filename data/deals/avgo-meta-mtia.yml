@@ -1,0 +1,14 @@
+id: avgo-meta-mtia
+source_slug: broadcom
+source_name: Broadcom
+target_slug: meta
+target_name: Meta
+deal_type: custom_asic
+value_billions: null
+value_display: 1GW+
+date: 2026-04
+date_display: Apr 2026
+description: >-
+  Extended through 2029. 1+ GW initial MTIA commitment, multi-GW XPU deployment from 2027. Hock Tan exits Meta board for
+  advisory role.
+source_url: https://www.marketscreener.com/news/meta-inks-deal-with-broadcom-for-custom-ai-chips-ce7e50dfd18cf221

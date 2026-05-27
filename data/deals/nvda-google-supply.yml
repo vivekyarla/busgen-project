@@ -1,0 +1,12 @@
+id: nvda-google-supply
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: google
+target_name: Google
+deal_type: gpu_purchase
+value_billions: null
+value_display: Multi-$10B/yr
+date: 2025-01
+date_display: Ongoing
+description: Top-4 capex buyer; NVIDIA passed Apple as TSMC's largest customer in 2025
+source_url: https://blog.siebert.com/nvidias-57-billion-flex-and-the-death-of-the-ai-bubble-call

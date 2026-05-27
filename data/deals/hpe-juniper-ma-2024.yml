@@ -1,0 +1,18 @@
+id: hpe-juniper-ma-2024
+source_slug: hpe
+source_name: Hewlett Packard Enterprise
+target_slug: multiple
+target_name: Multiple
+deal_type: m_and_a
+value_billions: 14.0
+value_display: ~$14B all-cash
+date: "2024-01"
+date_display: Jan 2024
+description: >-
+  HPE announced agreement to acquire Juniper Networks for $40/share in cash,
+  equity value ~$14B. The deal roughly doubles HPE's networking business and
+  adds Juniper's Mist AI-native networking and cloud-delivered solutions. CEO
+  Rami Rahim became head of the combined networking unit under Antonio Neri.
+  Closed in 2025 after DOJ settlement. (Juniper not in dataset; mapped to
+  "multiple".)
+source_url: https://www.industryleadersmagazine.com/juniper-networks-acquisition-announced-by-hpe-for-14-billion

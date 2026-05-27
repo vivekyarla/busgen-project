@@ -1,0 +1,17 @@
+id: ase-nvda-packaging-2024
+source_slug: ase-group
+source_name: ASE Technology Holding
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: Advanced packaging (FOPLP)
+date: "2024-12"
+date_display: 2024-2025
+description: >-
+  ASE Technology, the world's largest OSAT (Outsourced Semiconductor Assembly
+  and Test), provides advanced packaging for NVIDIA AI GPUs alongside TSMC's
+  CoWoS. ASE is scaling Fan-Out Panel-Level Packaging (FOPLP) capacity to meet
+  Blackwell/Rubin demand and ease the CoWoS bottleneck. Also packages for AMD,
+  Broadcom, Marvell custom ASICs.
+source_url: https://www.aseglobal.com/en/investor-relations/

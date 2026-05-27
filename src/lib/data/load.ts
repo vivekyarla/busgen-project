@@ -2,19 +2,19 @@ import fs from "node:fs";
 import path from "node:path";
 import yaml from "js-yaml";
 import { CompanySchema, DealSchema, type Company, type Deal } from "./types";
-import { layerForCategory, layerY, type Layer } from "./layers";
+import { layerForCategory, layerY, LAYER_META, type Layer } from "./layers";
 import { monthIndex } from "./time";
 
 /**
- * Build-time loader. Reads the curated dataset from the git submodule at
- * data/source (vivekyarla/compute-deal-map-data), validates it, and joins
- * companies + deals into a graph shape ready for react-force-graph.
+ * Build-time loader. Reads the curated dataset from /data (companies.yml +
+ * deals/*.yml), validates it, and joins companies + deals into a graph shape
+ * ready for react-force-graph. See data/AGENTS.md for the contribution guide.
  *
  * Runs on the server only (uses node:fs). The result is plain-serializable so
  * it can be handed to a Client Component as props.
  */
 
-const DATA_DIR = path.join(process.cwd(), "data", "source");
+const DATA_DIR = path.join(process.cwd(), "data");
 
 export interface GraphNode {
   id: string; // company slug
@@ -113,7 +113,14 @@ export function loadGraph(): GraphData {
     company?: Company,
   ): GraphNode => {
     const category = company?.category ?? "unknown";
-    const layer = company ? layerForCategory(company.category) : "capital";
+    // Explicit `layer` on the company wins (if valid); else derive from category.
+    const explicit = company?.layer;
+    const layer: Layer =
+      explicit && explicit in LAYER_META
+        ? (explicit as Layer)
+        : company
+          ? layerForCategory(company.category)
+          : "capital";
     return {
       id: slug,
       name: company?.name ?? fallbackName ?? slug,

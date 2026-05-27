@@ -1,0 +1,19 @@
+id: cadence-intel-18a-2024
+source_slug: cadence
+source_name: Cadence Design Systems
+target_slug: intel
+target_name: Intel
+deal_type: custom_asic
+value_billions: null
+value_display: IP + EDA for Intel 18A
+date: "2024-02"
+date_display: Feb 2024
+description: >-
+  Intel Foundry Services and Cadence signed a multiyear strategic agreement to
+  jointly develop customized IP, design flows, and techniques for Intel 18A
+  (RibbonFET gate-all-around, PowerVia backside power). Cadence later
+  announced a complete EMIB 2.5D advanced-packaging flow plus digital and
+  custom/analog flows for Intel 18A in June 2024. Opens the second EDA stack
+  (alongside Synopsys) for Intel Foundry customers designing AI, HPC, and
+  mobile SoCs.
+source_url: https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2024/intel-and-cadence-expand-partnership-to-enable-best-in-class-soc.html

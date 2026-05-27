@@ -1,0 +1,18 @@
+id: avgo-openai-10gw-2025
+source_slug: broadcom
+source_name: Broadcom
+target_slug: openai
+target_name: OpenAI
+deal_type: custom_asic
+value_billions: 10.0
+value_display: ~$10B chip order
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  OpenAI and Broadcom announced a multi-year partnership to co-design and
+  deploy 10 gigawatts of custom OpenAI AI accelerators with Broadcom's
+  Ethernet-based networking. OpenAI designs the hardware; Broadcom handles
+  manufacturing. Racks ship 2H2026 with full deployment by end-2029. Media
+  linked a $10B custom AI chip order disclosed by Broadcom in Sep 2025 to this
+  OpenAI program.
+source_url: https://opendatascience.com/openai-partners-with-broadcom-to-build-10-gigawatt-ai-chip-network

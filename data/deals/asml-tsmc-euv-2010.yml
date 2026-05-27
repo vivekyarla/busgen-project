@@ -1,0 +1,16 @@
+id: asml-tsmc-euv-2010
+source_slug: asml
+source_name: ASML
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: null
+date: "2010-02"
+date_display: Feb 2010
+description: >-
+  TSMC placed its first EUV order -- ASML TWINSCAN NXE:3100 -- installed at Fab 12
+  GigaFab in Hsinchu for advanced-node R&D. One of six NXE:3100 systems shipped
+  globally. First foundry EUV deployment and the foundation for TSMC's eventual
+  N7+/N5/N3 EUV leadership.
+source_url: https://www.asml.com/news/press-releases/2010/tsmc-to-take-delivery-of-an-asml-euv-lithography-system

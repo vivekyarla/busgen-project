@@ -1,0 +1,14 @@
+id: multiple-nscale-series-b
+source_slug: multiple
+source_name: Multiple
+target_slug: nscale
+target_name: Nscale
+deal_type: equity_investment
+value_billions: 1.1
+value_display: $1.1B Series B
+date: 2025-09
+date_display: Sep 2025
+description: >-
+  Largest Series B ever in UK/Europe. Led by Aker ASA with NVIDIA, Nokia, Dell, Blue Owl, Fidelity, G Squared, Point72,
+  T.Capital, Sandton. Funds Stargate UK/Norway buildouts.
+source_url: https://www.cnbc.com/2025/09/25/nvidia-backed-uk-ai-firm-nscale-raises-1point1-billion-funding-round.html

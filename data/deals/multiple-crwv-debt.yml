@@ -1,0 +1,14 @@
+id: multiple-crwv-debt
+source_slug: multiple
+source_name: Multiple
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: equity_investment
+value_billions: 7.5
+value_display: $7.5B debt
+date: 2024-05
+date_display: May 2024
+description: >-
+  $7.5B debt facility led by Blackstone and Magnetar with BlackRock, Coatue, Carlyle, CDPQ, DigitalBridge Credit,
+  Eldridge, Great Elm; one of the largest private credit facilities in tech.
+source_url: https://www.coreweave.com/news/coreweave-secures-7-5-billion-debt-financing-facility-led-by-blackstone-and-magnetar

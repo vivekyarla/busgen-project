@@ -1,0 +1,14 @@
+id: google-anthropic-equity
+source_slug: google
+source_name: Google
+target_slug: anthropic
+target_name: Anthropic
+deal_type: equity_investment
+value_billions: 3
+value_display: $3B
+date: 2025-01
+date_display: Jan 2025
+description: >-
+  Cumulative $3B ($2B in 2023 + $1B Jan 2025). Separate from GCP TPU capacity deal. Google Cloud is Anthropic primary
+  TPU provider.
+source_url: https://www.cnbc.com/2025/01/22/google-agrees-to-new-1-billion-investment-in-anthropic.html

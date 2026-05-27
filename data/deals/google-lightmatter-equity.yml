@@ -1,0 +1,14 @@
+id: google-lightmatter-equity
+source_slug: google
+source_name: Google
+target_slug: lightmatter
+target_name: Lightmatter
+deal_type: equity_investment
+value_billions: 0.4
+value_display: $400M Series D (participation)
+date: 2024-10
+date_display: Oct 2024
+description: >-
+  GV (Google Ventures) participates in Lightmatter's $400M Series D at a $4.4B valuation, led by T. Rowe Price. Photonic
+  interconnect for AI data centers.
+source_url: https://www.businesswire.com/news/home/20241016498931/en/Lightmatter-Raises-$400M-Series-D-Quadruples-Valuation-to-$4.4B-as-Photonics-Leader-for-Next-Gen-AI-Data-Centers

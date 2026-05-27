@@ -1,0 +1,18 @@
+id: nvda-crusoe-dgx-lepton-2025
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: crusoe
+target_name: Crusoe
+deal_type: cloud_capacity
+value_billions: null
+value_display: DGX Cloud Lepton NCP
+date: "2025-05"
+date_display: May 2025
+description: >-
+  NVIDIA named Crusoe as a launch NVIDIA Cloud Partner (NCP) for DGX Cloud
+  Lepton at Computex 2025, alongside CoreWeave, Firmus, Foxconn, GMI Cloud,
+  Lambda, Nebius, Nscale, SoftBank, and Yotta. NCPs offer NVIDIA Blackwell and
+  other architecture GPUs through Lepton's compute marketplace, formalizing
+  Crusoe's role as a primary NVIDIA-GPU cloud supplier for agentic and
+  physical AI workloads.
+source_url: https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-DGX-Cloud-Lepton-to-Connect-Developers-to-NVIDIAs-Global-Compute-Ecosystem/default.aspx

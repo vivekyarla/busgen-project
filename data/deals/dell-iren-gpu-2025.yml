@@ -1,0 +1,17 @@
+id: dell-iren-gpu-2025
+source_slug: dell
+source_name: Dell Technologies
+target_slug: iren
+target_name: IREN (Iris Energy)
+deal_type: equipment_supply
+value_billions: 5.8
+value_display: ~$5.8B
+date: "2025-11"
+date_display: Nov 2025
+description: >-
+  Alongside IREN's $9.7B GPU-cloud contract with Microsoft, IREN agreed to
+  purchase ~$5.8B of NVIDIA GB300 GPUs and ancillary equipment from Dell
+  Technologies for deployment across its 750 MW Childress, TX campus through
+  2026. The deal extends Dell's role as a top AI infrastructure integrator
+  for neocloud and hyperscaler customers.
+source_url: https://stocktwits.com/news-articles/markets/equity/microsoft-taps-iren-for-9-7-b-ai-cloud-services-partnership/cL2NceMR3zI

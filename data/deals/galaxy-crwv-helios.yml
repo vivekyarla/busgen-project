@@ -1,0 +1,14 @@
+id: galaxy-crwv-helios
+source_slug: galaxy
+source_name: Galaxy Digital
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: cloud_capacity
+value_billions: 4.5
+value_display: ~$4.5B / 15-yr
+date: 2025-03
+date_display: Mar 2025
+description: >-
+  15-year lease with CoreWeave for 200MW of critical IT load at Galaxy's Helios campus (Dickens County, TX), ~$4.5B
+  contracted revenue; option for additional 260MW expanded May 2025.
+source_url: https://investors.galaxy.com/news-releases/news-release-details/galaxy-signs-long-term-lease-agreement-coreweave-host-high

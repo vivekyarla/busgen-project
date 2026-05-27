@@ -1,0 +1,18 @@
+id: amkor-nvda-us-packaging-2025
+source_slug: amkor
+source_name: Amkor Technology
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: US back-end capacity
+date: "2025-11"
+date_display: Nov 2025
+description: >-
+  NVIDIA announced partnerships with Amkor, Taiwan-based SPIL, and Menlo Micro
+  to expand U.S. IC back-end capacity for Blackwell and next-gen AI chips. The
+  program leverages Amkor's Peoria, Arizona fab (adjacent to TSMC Arizona)
+  for CoWoS-derivative and fan-out flows. Complements NVIDIA's ~80,000
+  non-TSMC CoWoS wafer booking with ASE and Amkor out of ~595K total wafers
+  for 2026.
+source_url: https://www.digitimes.com/news/a20251120PD218/nvidia-amkor-spil-capacity-supply-chain-usa.html

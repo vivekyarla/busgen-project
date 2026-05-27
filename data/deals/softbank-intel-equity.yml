@@ -1,0 +1,14 @@
+id: softbank-intel-equity
+source_slug: softbank
+source_name: SoftBank
+target_slug: intel
+target_name: Intel
+deal_type: equity_investment
+value_billions: 2
+value_display: $2B
+date: 2025-09
+date_display: "2025"
+description: >-
+  $2B makes SoftBank a top-10 Intel shareholder. Aligns with AI infra strategy and Intel foundry revival (book value
+  $108B).
+source_url: https://www.reuters.com/business/autos-transportation/companies-pouring-billions-advance-ai-infrastructure-2026-04-09/

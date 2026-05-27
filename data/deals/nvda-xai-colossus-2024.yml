@@ -1,0 +1,17 @@
+id: nvda-xai-colossus-2024
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: 3
+value_display: ~$3B (100K H100)
+date: "2024-09"
+date_display: Sep 2024
+description: >-
+  xAI brought Colossus online in Memphis -- 100K NVIDIA H100 GPUs in 122 days,
+  the world's largest single-coherent AI training cluster at the time. Built
+  by Super Micro liquid-cooled 4U racks in a former appliance factory. Doubled
+  to 200K GPUs (150K H100 + 50K H200) within 92 more days. Musk diverted some
+  GPUs from Tesla's allocation. Predecessor to the Dec 2025 $20B Colossus 2 SPV.
+source_url: https://fortune.com/2024/09/03/elon-musk-xai-nvidia-colossus/

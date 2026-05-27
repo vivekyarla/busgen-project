@@ -1,0 +1,17 @@
+id: amd-google-genoa-2022
+source_slug: amd
+source_name: AMD
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: GCE C3D/H3 VMs
+date: "2022-11"
+date_display: Nov 2022
+description: >-
+  Google was a co-launch customer for AMD EPYC Genoa alongside Microsoft.
+  Google Cloud deployed Genoa in C3D general-purpose and H3 high-perf VMs.
+  First AMD-Google edge in the graph -- Google had been Intel-only for general
+  compute prior to Genoa. By 2024 AMD held ~33% of the x86 server market,
+  driven largely by hyperscaler adoption.
+source_url: https://www.reuters.com/technology/amd-launches-data-center-cpu-genoa-taps-google-microsoft-customers-2022-11-10/

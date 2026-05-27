@@ -1,0 +1,16 @@
+id: asml-samsung-memory-p5
+source_slug: asml
+source_name: ASML
+target_slug: samsung-memory
+target_name: Samsung (Memory)
+deal_type: equipment_supply
+value_billions: 6.7
+value_display: ~$6.7B (20 EUV + 50 DUV)
+date: "2026-04"
+date_display: Apr 2026
+description: >-
+  Samsung placed ~10 trillion won ($6.7B) in litho orders with ASML (and Canon for DUV)
+  for its Pyeongtaek P5 Phase-1 cleanroom -- ~20 EUV sub-10nm scanners plus ~50 DUV
+  tools. EUV slice backs the 1c (6th-gen 10nm-class) DRAM node powering HBM4 supply
+  to NVIDIA Rubin. Response to SK Hynix's $7.97B March 2026 ASML order.
+source_url: https://en.sedaily.com/news/2026/04/06/samsung-orders-20-euv-machines-for-p5-fab-in-over-10

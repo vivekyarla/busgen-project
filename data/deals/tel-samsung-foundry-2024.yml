@@ -1,0 +1,17 @@
+id: tel-samsung-foundry-2024
+source_slug: tokyo-electron
+source_name: Tokyo Electron
+target_slug: samsung-foundry
+target_name: Samsung Foundry
+deal_type: equipment_supply
+value_billions: null
+value_display: Coater/developer + etch
+date: "2024-12"
+date_display: FY2024
+description: >-
+  Tokyo Electron is the dominant supplier of coater/developer (CLEAN TRACK)
+  systems used with ASML EUV scanners, and a major etch supplier. Samsung
+  Foundry, TSMC, and Intel are TEL's largest logic customers. TEL's CLEAN TRACK
+  ACT systems pair with every ASML EXE:5200B High-NA EUV, including the 2 units
+  Samsung ordered for 2nm production in Oct 2025.
+source_url: https://www.tel.com/ir/library/integrated/index.html

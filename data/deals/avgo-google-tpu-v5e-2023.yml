@@ -1,0 +1,17 @@
+id: avgo-google-tpu-v5e-2023
+source_slug: broadcom
+source_name: Broadcom
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: TPU v5e / v5p volume
+date: "2023-08"
+date_display: Aug 2023
+description: >-
+  Google launched Cloud TPU v5e at Cloud Next 2023 -- 2.3x price-performance vs
+  v4 for LLM training, optimized for inference at half the cost. Co-designed
+  with Broadcom on TSMC N5. Anthropic used v5e to serve Claude; Bard team used
+  it for training. v5p (full training variant) followed in Dec 2023. Predecessor
+  to TPU v6 Trillium and v7 Ironwood.
+source_url: https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-in-ga

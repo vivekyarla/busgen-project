@@ -1,0 +1,14 @@
+id: avgo-apple-baltra
+source_slug: broadcom
+source_name: Broadcom
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: Undisclosed
+date: 2026-01
+date_display: "2026"
+description: >-
+  Codename 'Baltra' -- custom AI server chip for Apple's Private Cloud Compute. TSMC 3nm. Mass production H2 2026.
+  Internal use only
+source_url: https://www.androidheadlines.com/2026/01/apple-ai-server-chips-baltra-mass-production-2026-kuo.html

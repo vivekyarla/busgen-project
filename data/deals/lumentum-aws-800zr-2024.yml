@@ -1,0 +1,18 @@
+id: lumentum-aws-800zr-2024
+source_slug: lumentum
+source_name: Lumentum
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: equipment_supply
+value_billions: null
+value_display: 800ZR+ DCI modules
+date: "2024-03"
+date_display: Mar 2024
+description: >-
+  Lumentum unveiled enhanced 800ZR+ coherent transceiver performance at OFC
+  2024, pushing data-center-interconnect (DCI) bandwidth for cloud and telecom
+  operators including AWS. 800ZR+ modules pair with coherent DSPs to scale
+  800G AI/ML cluster interconnect; Lumentum's Cloud & Networking segment ramps
+  alongside 200G EML supply for 800G/1.6T optical transceivers used across
+  hyperscaler AI fabrics.
+source_url: https://opticalconnectionsnews.com/2024/04/ofc-2024-lumentum-boosts-800zr-transceiver-performance

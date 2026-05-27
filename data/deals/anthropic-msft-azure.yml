@@ -1,0 +1,13 @@
+id: anthropic-msft-azure
+source_slug: anthropic
+source_name: Anthropic
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 30
+value_display: $30B
+date: 2025-11
+date_display: Nov 2025
+description: Multi-year Azure compute commitment. Up to 1GW capacity with NVIDIA Grace Blackwell and Vera Rubin systems
+source_url: >-
+  https://www.geekwire.com/2025/microsoft-to-invest-5b-in-anthropic-as-claude-maker-commits-30b-to-azure-in-new-nvidia-alliance/

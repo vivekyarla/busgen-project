@@ -1,0 +1,12 @@
+id: nvda-anthropic-compute
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: anthropic
+target_name: Anthropic
+deal_type: gpu_purchase
+value_billions: null
+value_display: Up to 1GW
+date: 2026-01
+date_display: "2026"
+description: Grace Blackwell and Vera Rubin hardware for up to 1GW of training/inference compute
+source_url: https://www.reuters.com/business/autos-transportation/companies-pouring-billions-advance-ai-infrastructure-2026-04-09/

@@ -1,0 +1,14 @@
+id: mu-nvda-blackwell
+source_slug: micron
+source_name: Micron Technology
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: HBM3E 12H + SOCAMM
+date: 2025-03
+date_display: Mar 2025
+description: >-
+  Micron HBM3E 12-high 36GB designed into NVIDIA HGX B300 NVL16 and GB300 NVL72; co-developed SOCAMM LPDDR5X for the
+  GB300 Grace Blackwell Ultra Superchip.
+source_url: https://investors.micron.com/news-releases/news-release-details/micron-innovates-data-center-edge-nvidia

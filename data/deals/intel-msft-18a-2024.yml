@@ -1,0 +1,18 @@
+id: intel-msft-18a-2024
+source_slug: intel
+source_name: Intel
+target_slug: microsoft
+target_name: Microsoft
+deal_type: custom_asic
+value_billions: 15
+value_display: ~$15B lifetime
+date: "2024-02"
+date_display: Feb 2024
+description: >-
+  At IFS Direct Connect 2024, Satya Nadella announced Microsoft had selected a
+  chip design to produce on Intel's 18A process -- Intel Foundry's highest-profile
+  18A customer win alongside internal Intel products and the US DoD RAMP-C
+  program. Tom's Hardware pegged the program at roughly $15B over its lifetime.
+  Anchors Microsoft's custom-silicon roadmap (Maia, Cobalt) on a second advanced
+  foundry alongside TSMC.
+source_url: https://newsroom.intel.com/intel-foundry/foundry-news-roadmaps-updates

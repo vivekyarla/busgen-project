@@ -1,0 +1,14 @@
+id: nebius-meta-rubin
+source_slug: nebius
+source_name: Nebius
+target_slug: meta
+target_name: Meta
+deal_type: cloud_capacity
+value_billions: 27
+value_display: $27B
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  Five-year expansion: $12B dedicated NVIDIA Vera Rubin capacity starting early 2027 plus up to $15B additional compute
+  offtake. 1.2GW AI Factory in Missouri. Layered on top of the prior $3B 2025 deal.
+source_url: https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta

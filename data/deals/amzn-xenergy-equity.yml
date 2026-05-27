@@ -1,0 +1,14 @@
+id: amzn-xenergy-equity
+source_slug: amazon-aws
+source_name: Amazon/AWS
+target_slug: x-energy
+target_name: X-Energy
+deal_type: equity_investment
+value_billions: 0.5
+value_display: $500M Series C-1
+date: 2024-10
+date_display: Oct 2024
+description: >-
+  Amazon Climate Pledge Fund anchors $500M Series C-1 in X-Energy alongside Ken Griffin, Ares, NGP. Paired with 5+GW SMR
+  deployment target; initial 320MW Energy Northwest project expandable to 960MW.
+source_url: https://x-energy.com/media/news-releases/amazon-invests-in-x-energy-to-support-advanced-small-modular-nuclear-reactors-and-expand-carbon-free-power

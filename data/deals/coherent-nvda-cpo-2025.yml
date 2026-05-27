@@ -1,0 +1,18 @@
+id: coherent-nvda-cpo-2025
+source_slug: coherent
+source_name: Coherent
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: CPO Quantum-X/Spectrum-X
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  NVIDIA revealed at GTC 2025 its Quantum-X Photonics InfiniBand and
+  Spectrum-X Photonics Ethernet co-packaged optics (CPO) switches and named
+  Coherent, Lumentum, Corning, Fabrinet, Foxconn, and Broway Technologies as
+  silicon-photonics supply-chain partners. Coherent supplies the lasers and
+  photonic components for 1.6 Tbps CPO transceivers targeting AI factory
+  scale-out. Quantum-X ships 2H25; Spectrum-X ships 2026.
+source_url: https://senphoton.tech/nvidia-silicon-photonics-cpo-switch-tsmc

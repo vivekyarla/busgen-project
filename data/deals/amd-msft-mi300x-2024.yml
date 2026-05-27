@@ -1,0 +1,17 @@
+id: amd-msft-mi300x-2024
+source_slug: amd
+source_name: AMD
+target_slug: microsoft
+target_name: Microsoft
+deal_type: gpu_purchase
+value_billions: null
+value_display: Azure ND MI300X V5
+date: "2024-05"
+date_display: May 2024
+description: >-
+  AMD MI300X accelerators began powering Microsoft Azure OpenAI Service
+  workloads in production, achieving leading price-performance for GPT
+  inference. Azure launched ND MI300X V5 VMs. Microsoft also deployed AMD EPYC
+  and ROCm across Azure AI. Distinct from the Nov 2022 Genoa CPU deal and the
+  Feb 2026 MI450 expansion.
+source_url: https://www.amd.com/en/newsroom/press-releases/2024-5-21-amd-instinct-mi300x-accelerators-power-microsoft-a.html

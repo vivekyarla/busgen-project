@@ -1,0 +1,17 @@
+id: samsung-foundry-tesla-hw4-2023
+source_slug: samsung-foundry
+source_name: Samsung Foundry
+target_slug: tesla
+target_name: Tesla
+deal_type: custom_asic
+value_billions: null
+value_display: AI4 HW4 volume (7nm)
+date: "2023-01"
+date_display: "2023"
+description: >-
+  Samsung Foundry manufactured Tesla's HW4 (AI4) FSD SoC on its 7LPP 7nm process
+  -- the second generation Tesla FSD chip after HW3 (AI3) on Samsung 14nm (2019).
+  Powered Model S/X/3/Y refreshes and Cybertruck through 2025. Direct predecessor
+  to the $16.5B 2025 AI5/AI6 contract that moved Tesla silicon to Samsung's
+  Taylor TX fab.
+source_url: https://www.tomshardware.com/tech-industry/semiconductors/samsung-inks-usd16-5-billion-tesla-ai-chip-deal-elon-musk-says-samsung-will-produce-new-a16-chips-the-strategic-importance-of-this-is-hard-to-overstate

@@ -1,0 +1,12 @@
+id: softbank-openai-stargate
+source_slug: softbank
+source_name: SoftBank
+target_slug: openai
+target_name: OpenAI
+deal_type: equity_investment
+value_billions: 19
+value_display: $19B
+date: 2025-01
+date_display: Jan 2025
+description: Equity contribution to Stargate LLC ($500B JV). SoftBank CEO is chairman. Part of initial $100B deployment
+source_url: https://www.bloomberg.com/news/articles/2025-01-23/softbank-openai-plan-19-billion-each-for-stargate-information

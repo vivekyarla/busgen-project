@@ -1,0 +1,14 @@
+id: foxconn-nvda-mexico
+source_slug: foxconn
+source_name: Foxconn (Hon Hai)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: gpu_purchase
+value_billions: null
+value_display: World's largest GB200 plant
+date: 2024-10
+date_display: Oct 2024
+description: >-
+  Foxconn announces construction of the world's largest GB200 superchip assembly plant in Guadalajara, Mexico to build
+  NVIDIA GB200 NVL72 AI server racks.
+source_url: https://www.reuters.com/technology/foxconn-build-worlds-largest-gb200-plant-mexico-chairman-says-2024-10-08/

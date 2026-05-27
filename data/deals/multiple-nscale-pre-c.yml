@@ -1,0 +1,14 @@
+id: multiple-nscale-pre-c
+source_slug: multiple
+source_name: Multiple
+target_slug: nscale
+target_name: Nscale
+deal_type: equity_investment
+value_billions: 0.433
+value_display: $433M SAFE
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Pre-Series C SAFE from Blue Owl, Dell, NVIDIA, Nokia, and existing Series B investors; closed days after the Series B,
+  bringing total near-term raise past $1.5B.
+source_url: https://www.nscale.com/press-releases/nscale-pre-series-c-safe

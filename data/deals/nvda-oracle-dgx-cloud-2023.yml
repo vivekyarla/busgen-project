@@ -1,0 +1,17 @@
+id: nvda-oracle-dgx-cloud-2023
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: oracle
+target_name: Oracle
+deal_type: cloud_capacity
+value_billions: null
+value_display: DGX Cloud on OCI
+date: "2023-10"
+date_display: Oct 2023
+description: >-
+  NVIDIA DGX Cloud and NVIDIA AI Enterprise became available through Oracle
+  Cloud Marketplace, giving OCI customers access to AI supercomputing via
+  existing cloud credits. Oracle was the third DGX Cloud host (after Azure and
+  Google Cloud at GTC Mar 2023). OCI also launched bare-metal H100 GPU
+  instances alongside the DGX Cloud integration.
+source_url: https://www.oracle.com/news/announcement/oracle-continues-ai-momentum-with-nvidia-ai-enterprise-and-dgx-cloud-availability-in-the-oracle-cloud-marketplace-2023-10-19/

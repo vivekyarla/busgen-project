@@ -1,0 +1,17 @@
+id: intel-meta-xeon-2022
+source_slug: intel
+source_name: Intel
+target_slug: meta
+target_name: Meta
+deal_type: custom_asic
+value_billions: null
+value_display: Xeon for AI training infra
+date: "2022-01"
+date_display: Jan 2022
+description: >-
+  Intel confirmed Meta as a key deployment partner for 3rd Gen Xeon Scalable
+  (Ice Lake) across Meta's AI training and recommendation infrastructure. Meta
+  uses Intel Xeon CPUs as host processors alongside NVIDIA GPUs in its 24K and
+  129K GPU training clusters. Intel Habana Gaudi was also evaluated but Meta
+  opted for NVIDIA/AMD GPUs for AI acceleration.
+source_url: https://www.intel.com/content/www/us/en/customer-spotlight/stories/meta-3rd-gen-xeon.html

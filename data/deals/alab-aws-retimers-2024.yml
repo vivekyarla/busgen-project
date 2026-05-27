@@ -1,0 +1,17 @@
+id: alab-aws-retimers-2024
+source_slug: astera-labs
+source_name: Astera Labs
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: equipment_supply
+value_billions: null
+value_display: Aries PCIe retimers
+date: "2024-03"
+date_display: Mar 2024
+description: >-
+  Astera Labs shipped Aries PCIe Gen5 Smart DSP Retimers in volume to
+  hyperscalers including AWS for AI server fabrics, where they function as
+  high-speed PCIe signal repeaters on NVIDIA HGX/H100 boards. The Aries
+  product ramp anchored Astera's March 2024 IPO (~$10B initial market cap)
+  and funded the Scorpio switch fabric roadmap for rack-scale AI.
+source_url: https://www.servethehome.com/this-is-the-astera-labs-aries-6-pcie-gen6-and-cxl-retimer

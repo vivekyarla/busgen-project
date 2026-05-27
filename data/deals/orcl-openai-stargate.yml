@@ -1,0 +1,13 @@
+id: orcl-openai-stargate
+source_slug: oracle
+source_name: Oracle
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: 300
+value_display: $300B (5-year)
+date: 2025-09
+date_display: Sep 2025
+description: 5-year cloud infrastructure deal; part of $500B Stargate JV with SoftBank. $30B initial commitment
+source_url: >-
+  https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/

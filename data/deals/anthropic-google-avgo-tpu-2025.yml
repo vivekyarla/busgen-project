@@ -1,0 +1,17 @@
+id: anthropic-google-avgo-tpu-2025
+source_slug: google
+source_name: Google
+target_slug: anthropic
+target_name: Anthropic
+deal_type: cloud_capacity
+value_billions: null
+value_display: "3.5 GW TPU, 2027-2031"
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  Anthropic signed a multi-gigawatt TPU capacity deal with Google and Broadcom
+  for 3.5 GW of next-generation TPUs running 2027-2031, Anthropic's largest
+  compute commitment to date. Driven by run-rate revenue scaling from $1B
+  (Dec 2024) to $30B+ (2026) and enterprise customers >$1M/year doubling to
+  1,000+. Most compute is US-based.
+source_url: https://www.therift.ai/news-feed/anthropic-secures-multi-gigawatt-tpu-capacity-deal-with-google-and-broadcom-through-2027

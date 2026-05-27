@@ -1,0 +1,19 @@
+id: arista-meta-dsf
+source_slug: arista
+source_name: Arista Networks
+target_slug: meta
+target_name: Meta
+deal_type: equipment_supply
+value_billions: null
+value_display: 7700R4 DES for ~100k DPU fabric
+date: "2024-11"
+date_display: Nov 2024
+description: >-
+  Meta deployed Arista's 7700R4 Distributed Etherlink Switch (DES) in its
+  Disaggregated Scheduled Fabric (DSF), a multi-tier Ethernet network
+  supporting roughly 100,000 DPUs. The 7700R4 behaves as a single system with
+  deep buffers for lossless transport across the Ethernet AI fabric, alongside
+  Meta's own MiniPack 3 and Cisco 8501 switches. Builds on Meta's earlier
+  24,576-GPU H100 Ethernet cluster for Llama 3 training that used Arista 7800
+  spines and OCP leaf switches.
+source_url: https://www.networkworld.com/article/3566785/meta-taps-arista-for-ethernet-based-ai-clusters.html

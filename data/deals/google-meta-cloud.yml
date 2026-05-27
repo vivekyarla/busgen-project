@@ -1,0 +1,12 @@
+id: google-meta-cloud
+source_slug: google
+source_name: Google
+target_slug: meta
+target_name: Meta
+deal_type: cloud_capacity
+value_billions: 10
+value_display: $10B+
+date: 2025-08
+date_display: Aug 2025
+description: Six-year cloud computing deal; reported by Reuters
+source_url: https://www.reuters.com/business/autos-transportation/companies-pouring-billions-advance-ai-infrastructure-2026-04-09/

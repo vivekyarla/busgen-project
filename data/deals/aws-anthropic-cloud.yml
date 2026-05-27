@@ -1,0 +1,14 @@
+id: aws-anthropic-cloud
+source_slug: amazon-aws
+source_name: Amazon/AWS
+target_slug: anthropic
+target_name: Anthropic
+deal_type: cloud_capacity
+value_billions: 11
+value_display: $11B
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Project Rainier: $11B campus in Indiana for Anthropic. 500K Trainium2 chips scaling to 1M. Separate from Amazon $8B
+  equity.
+source_url: https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/

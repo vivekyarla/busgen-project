@@ -1,0 +1,18 @@
+id: amd-oracle-mi450-2026
+source_slug: amd
+source_name: AMD
+target_slug: oracle
+target_name: Oracle
+deal_type: gpu_purchase
+value_billions: null
+value_display: 50K MI450 (Q3 2026)
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  AMD and Oracle co-announced OCI as launch partner for the first publicly
+  available AI supercluster powered by AMD Instinct MI450 Series GPUs. Initial
+  deployment of 50,000 MI450 GPUs starts in Q3 2026, with further expansion
+  through 2027 and beyond. Counterpart to NVIDIA GB300/Vera Rubin rollouts on
+  OCI; positions AMD's Helios rack-scale platform as a second source for
+  frontier training customers on Oracle.
+source_url: https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/

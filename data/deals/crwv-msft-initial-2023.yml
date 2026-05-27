@@ -1,0 +1,17 @@
+id: crwv-msft-initial-2023
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: null
+value_display: multi-year, multi-billion
+date: "2023-06"
+date_display: Jun 2023
+description: >-
+  Microsoft signed its first multi-year GPU cloud deal with CoreWeave --
+  "potentially billions of dollars" -- to handle overflow compute for OpenAI
+  workloads when Azure capacity ran short. Origin of the MSFT-CRWV relationship
+  that expanded to the ~$10B 2024-2025 envelope. Disclosed by CNBC alongside
+  CoreWeave's $200M Series B extension.
+source_url: https://www.cnbc.com/2023/06/01/microsoft-inks-deal-with-coreweave-to-meet-openai-cloud-demand.html

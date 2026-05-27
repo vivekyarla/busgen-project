@@ -1,0 +1,12 @@
+id: amzn-openai-equity
+source_slug: amazon-aws
+source_name: Amazon/AWS
+target_slug: openai
+target_name: OpenAI
+deal_type: equity_investment
+value_billions: 50
+value_display: $50B
+date: 2026-03
+date_display: Mar 2026
+description: $15B immediate, $35B contingent on IPO/AGI milestone. Largest in $122B round.
+source_url: https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html

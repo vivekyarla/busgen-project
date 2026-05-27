@@ -1,0 +1,13 @@
+id: nvda-intel-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: intel
+target_name: Intel
+deal_type: equity_investment
+value_billions: 5
+value_display: $5B
+date: 2025-09
+date_display: Sep 2025
+description: ~4% stake in Intel after new share issuance
+source_url: >-
+  https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/

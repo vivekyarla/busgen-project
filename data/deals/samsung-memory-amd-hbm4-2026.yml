@@ -1,0 +1,17 @@
+id: samsung-memory-amd-hbm4-2026
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: amd
+target_name: AMD
+deal_type: equipment_supply
+value_billions: null
+value_display: HBM4 MOU
+date: "2026-03"
+date_display: Mar 2026
+description: >-
+  Samsung Electronics and AMD signed a memorandum of understanding to expand
+  their strategic memory-supply partnership, under which Samsung will serve as
+  a key HBM4 supplier for AMD's upcoming AI GPUs. Follows Samsung's HBM3E
+  qualification for AMD's MI350 in 2025 and establishes a second-source HBM4
+  path alongside Micron for AMD Instinct accelerators.
+source_url: https://www.reuters.com/world/asia-pacific/samsung-elec-supply-hbm4-chips-openai-south-korean-paper-says-2026-03-19

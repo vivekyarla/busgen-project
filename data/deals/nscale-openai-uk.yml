@@ -1,0 +1,14 @@
+id: nscale-openai-uk
+source_slug: nscale
+source_name: Nscale
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: null
+value_display: Up to 31K GPUs
+date: 2025-09
+date_display: Sep 2025
+description: >-
+  Stargate UK sovereign compute platform with NVIDIA. OpenAI offtake up to 8K GPUs in Q1 2026, scalable to 31K. Paused
+  Apr 2026 over UK energy/regulation.
+source_url: https://openai.com/index/introducing-stargate-uk/

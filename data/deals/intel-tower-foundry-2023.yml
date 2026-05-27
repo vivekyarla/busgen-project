@@ -1,0 +1,17 @@
+id: intel-tower-foundry-2023
+source_slug: intel
+source_name: Intel
+target_slug: tower-semiconductor
+target_name: Tower Semiconductor
+deal_type: equipment_supply
+value_billions: 0.3
+value_display: Up to $300M equipment
+date: "2023-09"
+date_display: Sep 2023
+description: >-
+  Intel Foundry Services and Tower Semiconductor signed a foundry agreement
+  where Intel provides 300mm manufacturing capacity at Fab 11X in Rio Rancho,
+  New Mexico for Tower's 65nm power management BCD flows. Tower invests up to
+  $300M in equipment and fixed assets, unlocking a new capacity corridor of
+  600,000+ photo layers per month for Tower's specialty analog business.
+source_url: https://www.design-reuse.com/news/14720-intel-foundry-services-and-tower-semiconductor-announce-new-us-foundry-agreement

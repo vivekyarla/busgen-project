@@ -1,0 +1,17 @@
+id: smci-nvda-dgx-2025
+source_slug: super-micro
+source_name: Super Micro Computer
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: gpu_purchase
+value_billions: null
+value_display: DGX OEM partner
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  NVIDIA named Supermicro as a manufacturing partner for DGX Station (Grace
+  Blackwell personal AI supercomputer) at GTC 2025, alongside ASUS, Dell, HP,
+  and Lambda. Extends SMCI's long-standing role as NVIDIA's largest GPU server
+  OEM -- SMCI built the liquid-cooled 4U racks for xAI's 100K H100 Colossus
+  cluster and ships the majority of HGX H100/B200 systems globally.
+source_url: https://nvidianews.nvidia.com/news/nvidia-announces-dgx-spark-and-dgx-station-personal-ai-computers

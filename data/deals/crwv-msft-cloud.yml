@@ -1,0 +1,14 @@
+id: crwv-msft-cloud
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 10
+value_display: ~$10B
+date: 2025-12
+date_display: 2024-2025
+description: >-
+  MSFT is CoreWeave largest customer (62% of 2024, 67% of 2025 rev). Multi-year deal est. ~$10B by decade-end.
+  Supplements Azure.
+source_url: https://www.datacenterdynamics.com/en/news/microsoft-to-invest-10bn-in-coreweave-by-end-of-decade/

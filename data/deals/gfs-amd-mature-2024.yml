@@ -1,0 +1,17 @@
+id: gfs-amd-mature-2024
+source_slug: globalfoundries
+source_name: GlobalFoundries
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: 12nm IOD + WSA volume
+date: "2024-12"
+date_display: 2024-2028
+description: >-
+  GlobalFoundries supplies AMD with 12nm/14nm IOD (I/O Die) chiplets for EPYC
+  and Ryzen processors via a Wafer Supply Agreement extended through 2028.
+  Original WSA dates to AMD's 2009 spin-out of GlobalFoundries; current pact
+  covers ~$2B+ annual minimum purchase commitments. Ensures GF's leading
+  mature-node FinFET capacity.
+source_url: https://investors.gf.com/news-releases/news-release-details/globalfoundries-and-amd-extend-and-amend-wafer-supply

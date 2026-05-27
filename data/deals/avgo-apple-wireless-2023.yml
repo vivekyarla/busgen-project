@@ -1,0 +1,17 @@
+id: avgo-apple-wireless-2023
+source_slug: broadcom
+source_name: Broadcom
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: multi-$B (5G RF, FBAR)
+date: "2023-05"
+date_display: May 2023
+description: >-
+  Apple renewed its multiyear, multibillion-dollar agreement with Broadcom for
+  5G radio frequency components -- FBAR filters and wireless connectivity chips
+  -- designed and manufactured in the US (Fort Collins, CO). Extends a 2020
+  deal originally valued at $15B in wireless component purchases. Part of
+  Apple's $430B US investment commitment.
+source_url: https://www.apple.com/newsroom/2023/05/apple-announces-multibillion-dollar-deal-with-broadcom/

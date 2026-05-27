@@ -1,0 +1,14 @@
+id: skhynix-openai-stargate
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: openai
+target_name: OpenAI
+deal_type: custom_asic
+value_billions: null
+value_display: 900K wafer starts/mo (joint w/ Samsung)
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  LoI to supply HBM for OpenAI Stargate data centers, scaling DRAM wafer starts (jointly with Samsung) toward 900K/mo -
+  more than 2x current global HBM capacity.
+source_url: https://openai.com/index/samsung-and-sk-join-stargate/

@@ -1,0 +1,17 @@
+id: credo-msft-aec-2025
+source_slug: credo
+source_name: Credo Technology
+target_slug: microsoft
+target_name: Microsoft
+deal_type: equipment_supply
+value_billions: null
+value_display: ~$100M ARR ramp
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  Credo guided that Microsoft's active-electrical-cable (AEC) program would
+  ramp back to a ~$100M annualized run rate in FY26, becoming one of three
+  hyperscaler customers above 10% of revenue alongside Amazon (86% of Q3 FY25)
+  and a ramping fourth hyperscaler. Credo's AECs provide rack-to-rack and
+  intra-rack copper interconnect for AI clusters with lower power than optical.
+source_url: https://finance.yahoo.com/news/analysts-highlight-credo-hyperscaler-partnerships-191746184.html

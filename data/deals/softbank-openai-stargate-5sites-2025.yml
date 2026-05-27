@@ -1,0 +1,20 @@
+id: softbank-openai-stargate-5sites-2025
+source_slug: softbank
+source_name: SoftBank
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: null
+value_display: Lordstown OH + Milam TX sites
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  OpenAI, Oracle, and SoftBank announced five new U.S. Stargate sites on
+  Sep 23, 2025. SoftBank's share: Lordstown, Ohio (advanced-design DC already
+  under construction, operational 2026) and Milam County, Texas (SB Energy
+  fast-build powered-infrastructure site). Oracle leads the other three
+  (Shackelford TX, Doña Ana NM, Midwest). Combined with Abilene and Crusoe
+  work, total Stargate planned capacity hits ~7 GW and $400B+ through 2028 --
+  on track for the $500B / 10 GW full commitment. Distinct from SoftBank's
+  Jan 2025 $19B equity contribution to Stargate LLC.
+source_url: https://openai.com/index/five-new-stargate-sites/

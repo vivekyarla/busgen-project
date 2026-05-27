@@ -1,0 +1,17 @@
+id: avgo-google-tpu-ironwood-2025
+source_slug: broadcom
+source_name: Broadcom
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: TPU v7 Ironwood
+date: "2025-04"
+date_display: Apr 2025
+description: >-
+  Google unveiled Ironwood (TPU v7) at Cloud Next 2025 -- 7th-gen TPU optimized
+  for inference, ~700mm2 primary die on TSMC N3, 5x training and inference perf
+  vs TPU v5p, 2x perf/watt vs Trillium (v6). Broadcom co-designed. Scales to
+  9,216 chips per pod. Third Broadcom-Google TPU generation in the graph
+  (after v4 on N7 and v5e on N5).
+source_url: https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/

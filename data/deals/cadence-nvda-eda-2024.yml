@@ -1,0 +1,17 @@
+id: cadence-nvda-eda-2024
+source_slug: cadence
+source_name: Cadence Design Systems
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: EDA + IP partnership
+date: "2024-12"
+date_display: Ongoing
+description: >-
+  NVIDIA uses Cadence EDA tools (Cadence.AI, Allegro, Virtuoso) for Blackwell,
+  Rubin, and Grace silicon design and verification. Joint AI initiative
+  combines NVIDIA Grace CPUs with Cadence Cerebrus AI design optimization.
+  Cadence's IP portfolio (DDR/HBM PHY, PCIe, NVLink-Fusion-compatible
+  interconnect) ships in NVIDIA networking silicon.
+source_url: https://www.cadence.com/en_US/home/company/newsroom.html

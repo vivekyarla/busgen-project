@@ -1,0 +1,18 @@
+id: nebius-kc-cluster-2024
+source_slug: nebius
+source_name: Nebius
+target_slug: multiple
+target_name: Multiple
+deal_type: cloud_capacity
+value_billions: null
+value_display: First U.S. GPU cluster
+date: "2024-12"
+date_display: Dec 2024
+description: >-
+  Nebius announced its first U.S.-based GPU cluster in Kansas City, Missouri,
+  going live Q1 2025, and opened offices in San Francisco, Dallas, and New
+  York. The Kansas City cluster brings Nebius's AI-native cloud services
+  closer to its American customer base (which later included Microsoft and
+  Meta); expansion followed with nine new data-center sites announced across
+  the U.S., France, Israel, and the UK.
+source_url: https://deepnewz.com/startups/nebius-group-launches-first-u-s-gpu-cluster-kansas-city-offices-san-francisco-q1-5e2749fa

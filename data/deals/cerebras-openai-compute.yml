@@ -1,0 +1,12 @@
+id: cerebras-openai-compute
+source_slug: cerebras
+source_name: Cerebras
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: 10
+value_display: $10B+
+date: 2026-01
+date_display: Jan 2026
+description: 750MW wafer-scale compute through 2028. Cerebras builds DCs, OpenAI pays for inference.
+source_url: https://www.cnbc.com/2026/01/14/cerebras-scores-openai-deal-worth-over-10-billion.html

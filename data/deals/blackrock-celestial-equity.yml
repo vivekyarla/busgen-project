@@ -1,0 +1,14 @@
+id: blackrock-celestial-equity
+source_slug: blackrock
+source_name: BlackRock
+target_slug: celestial-ai
+target_name: Celestial AI
+deal_type: equity_investment
+value_billions: 0.25
+value_display: $250M Series C1 (participation)
+date: 2025-03
+date_display: Mar 2025
+description: >-
+  BlackRock-managed funds join Celestial AI's $250M Series C1 at $2.5B valuation (led by Fidelity). Photonic Fabric
+  optical interconnect for AI accelerators.
+source_url: https://www.businesswire.com/news/home/20250310333743/en/Celestial-AI-Secures-$250-Million-Funding-to-Revolutionize-AI-Infrastructure-with-Its-Photonic-Fabric

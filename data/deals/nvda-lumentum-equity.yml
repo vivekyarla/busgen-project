@@ -1,0 +1,14 @@
+id: nvda-lumentum-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: lumentum
+target_name: Lumentum
+deal_type: equity_investment
+value_billions: 2
+value_display: $2B
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  $2B equity plus multibillion-dollar purchase commitment for high-power lasers and optics powering NVIDIA Spectrum-X AI
+  networking; funds a new Lumentum US fab.
+source_url: https://investor.lumentum.com/financial-news-releases/news-details/2026/NVIDIA-Announces-Strategic-Partnership-With-Lumentum-to-Develop-State-of-the-Art-Optics-Technology/default.aspx

@@ -1,0 +1,17 @@
+id: nvda-tesla-a100-2021
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: tesla
+target_name: Tesla
+deal_type: gpu_purchase
+value_billions: null
+value_display: 5,760 A100 GPUs
+date: "2021-06"
+date_display: Jun 2021
+description: >-
+  Tesla disclosed at CVPR 2021 that its Autopilot/FSD neural network training
+  cluster ran on 5,760 NVIDIA A100 GPUs (720 nodes of 8x A100) achieving 1.8
+  exaflops -- roughly the No. 5 supercomputer in the world at the time. This
+  was before Tesla's custom Dojo initiative. NVIDIA's blog confirmed the
+  partnership. First NVIDIA-Tesla edge in the graph.
+source_url: https://blogs.nvidia.com/blog/tesla-av-training-supercomputer-nvidia-a100-gpus/

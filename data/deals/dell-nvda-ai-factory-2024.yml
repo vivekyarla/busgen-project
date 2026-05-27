@@ -1,0 +1,17 @@
+id: dell-nvda-ai-factory-2024
+source_slug: dell
+source_name: Dell Technologies
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: gpu_purchase
+value_billions: 15
+value_display: ~$15B AI server rev (FY2026E)
+date: "2024-05"
+date_display: May 2024
+description: >-
+  Dell and NVIDIA launched the "Dell AI Factory with NVIDIA" at Dell Technologies
+  World 2024 -- a full-stack AI server portfolio spanning PowerEdge XE9680 (H100),
+  XE7745 (Spectrum-X), and upcoming GB200 NVL4 systems. Jensen Huang appeared on
+  stage with Michael Dell. Dell projected ~$15B in AI server sales for FY2026
+  (ending Feb 2026), making it NVIDIA's largest OEM partner by revenue.
+source_url: https://blogs.nvidia.com/blog/dell-technologies-world-2024/

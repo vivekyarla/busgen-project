@@ -1,0 +1,17 @@
+id: nvda-meta-h100-2024
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: meta
+target_name: Meta
+deal_type: gpu_purchase
+value_billions: 15
+value_display: ~$15B (600K H100-equiv)
+date: "2024-01"
+date_display: Jan 2024
+description: >-
+  Zuckerberg announced Meta would acquire 350K H100 GPUs and reach 600K
+  H100-equivalent compute by end of 2024 for AGI research and Llama 3 training.
+  At ~$25K/chip average, analyst estimate ~$15B. Jensen Huang confirmed Meta as
+  one of NVIDIA's largest customers at SIGGRAPH 2024. Preceded the Feb 2026
+  multi-billion Blackwell/Vera Rubin follow-on.
+source_url: https://www.cnbc.com/2024/01/18/mark-zuckerberg-indicates-meta-is-spending-billions-on-nvidia-ai-chips.html

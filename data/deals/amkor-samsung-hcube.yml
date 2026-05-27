@@ -1,0 +1,17 @@
+id: amkor-samsung-hcube
+source_slug: amkor
+source_name: Amkor Technology
+target_slug: samsung-foundry
+target_name: Samsung Foundry
+deal_type: equipment_supply
+value_billions: null
+value_display: Joint 2.5D packaging platform
+date: "2021-06"
+date_display: Jun 2021
+description: >-
+  Amkor co-developed the Hybrid-Substrate Cube (H-Cube) 2.5D packaging
+  platform with Samsung Electronics and Samsung Electro-Mechanics (SEMCO).
+  H-Cube pairs a silicon interposer with a hybrid substrate to stack logic
+  chips and HBM in a small form factor with low signal loss, lowering barriers
+  to entry for HPC/AI integrated devices in Samsung Foundry's ecosystem.
+source_url: https://www.eenewseurope.com/en/samsung-announces-h-cube-2-5d-packaging

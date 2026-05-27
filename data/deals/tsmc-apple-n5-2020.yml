@@ -1,0 +1,17 @@
+id: tsmc-apple-n5-2020
+source_slug: tsmc
+source_name: TSMC
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: iPhone 12 A14 volume
+date: "2020-09"
+date_display: Sep 2020
+description: >-
+  Apple A14 Bionic in iPhone 12 was the industry's first commercial 5nm SoC,
+  launching TSMC's N5 node on a lead-customer-exclusive basis. Established the
+  N5/N4/N3 exclusive-window playbook that Apple has run every cycle since.
+  TSMC's N5 family also powered M1/M2 Macs and later fanned out to AMD/NVIDIA
+  datacenter silicon.
+source_url: https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/

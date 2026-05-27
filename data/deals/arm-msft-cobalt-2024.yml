@@ -1,0 +1,18 @@
+id: arm-msft-cobalt-2024
+source_slug: arm
+source_name: Arm Holdings
+target_slug: microsoft
+target_name: Microsoft
+deal_type: custom_asic
+value_billions: null
+value_display: Cobalt 100 Neoverse N2
+date: "2024-10"
+date_display: Oct 2024
+description: >-
+  Azure Cobalt 100 VMs reached general availability in October 2024, running on
+  Microsoft's first fully custom Arm CPU (128-core, based on Arm Neoverse N2).
+  Microsoft reports up to 1.4x CPU performance, 1.5x on Java, and 2x on web /
+  .NET / in-memory cache workloads versus the prior Arm-based Azure
+  generation. Deployed across 30+ Azure regions and expanding. Follow-on
+  Cobalt 200 announced later.
+source_url: https://azure.microsoft.com/en-us/blog/azure-cobalt-100-based-virtual-machines-are-now-generally-available/

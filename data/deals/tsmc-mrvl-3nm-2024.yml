@@ -1,0 +1,17 @@
+id: tsmc-mrvl-3nm-2024
+source_slug: tsmc
+source_name: TSMC
+target_slug: marvell
+target_name: Marvell
+deal_type: custom_asic
+value_billions: null
+value_display: 3nm custom ASICs
+date: "2024-10"
+date_display: Oct 2024
+description: >-
+  Marvell demonstrated PCIe Gen 7 connectivity and custom ASIC products
+  manufactured on TSMC 3nm at OCP Global Summit 2024, with plans to extend to
+  TSMC 2nm. Marvell's custom XPU platform on TSMC fabs the ASICs behind AWS
+  Trainium, Microsoft Maia, and other hyperscaler custom silicon. First
+  TSMC-Marvell edge in the graph.
+source_url: https://investor.marvell.com/news-events/press-releases/detail/123/marvell-demonstrates-industry-leading-3nm-pcie-gen-7-connectivity-for-accelerated-infrastructure-at-ocp-2024

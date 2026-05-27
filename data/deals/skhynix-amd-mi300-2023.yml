@@ -1,0 +1,17 @@
+id: skhynix-amd-mi300-2023
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: 192GB HBM3 exclusive
+date: "2023-12"
+date_display: Dec 2023
+description: >-
+  AMD launched Instinct MI300X with 192GB HBM3 (8 stacks), initially sourced
+  exclusively from SK Hynix. Samsung qualified later in 2024. MI300X targeted
+  LLM inference against NVIDIA H100 -- Microsoft, Meta, Oracle were launch
+  customers. HBM3 supply constraint meant SK Hynix HBM capacity became the
+  bottleneck for the first year of shipments.
+source_url: https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html

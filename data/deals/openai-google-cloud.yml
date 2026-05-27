@@ -1,0 +1,15 @@
+id: openai-google-cloud
+source_slug: openai
+source_name: OpenAI
+target_slug: google
+target_name: Google
+deal_type: cloud_capacity
+value_billions: null
+value_display: Undisclosed
+date: 2025-06
+date_display: Jun 2025
+description: >-
+  OpenAI using Google TPUs alongside Azure and AWS. First deal with a direct AI competitor. Blocked by MSFT exclusivity
+  until Jan 2025.
+source_url: >-
+  https://www.reuters.com/business/retail-consumer/openai-taps-google-unprecedented-cloud-deal-despite-ai-rivalry-sources-say-2025-06-10/

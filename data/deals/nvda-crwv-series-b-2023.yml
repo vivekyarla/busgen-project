@@ -1,0 +1,17 @@
+id: nvda-crwv-series-b-2023
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: equity_investment
+value_billions: 0.221
+value_display: $221M Series B (participation)
+date: "2023-04"
+date_display: Apr 2023
+description: >-
+  NVIDIA joined CoreWeave's $221M Series B round led by Magnetar Capital, with
+  Nat Friedman and Daniel Gross also participating. Seeded CoreWeave's H100
+  deployment that became the basis of the Microsoft contract two months later
+  and the broader OpenAI/CRWV buildout. NVIDIA's individual check size not
+  disclosed.
+source_url: https://www.businesswire.com/news/home/20230418006139/en/CoreWeave-Raises-%24221M-Series-B-to-Expand-Specialized-Cloud-Infrastructure-Powering-the-Generative-AI-and-Large-Language-Model-Boom

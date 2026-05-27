@@ -1,0 +1,14 @@
+id: avgo-google-tpu
+source_slug: broadcom
+source_name: Broadcom
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: 46
+value_display: ~$46B (2026E AI rev)
+date: 2026-04
+date_display: Apr 2026
+description: >-
+  TPU co-design through 2031: v7 Ironwood (3nm), v8/v9 roadmap. ~$8B/yr current run rate. SerDes IP, physical design,
+  integration
+source_url: https://www.reuters.com/business/broadcom-signs-long-term-deal-develop-googles-custom-ai-chips-2026-04-06/

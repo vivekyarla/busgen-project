@@ -1,0 +1,14 @@
+id: apld-crwv-lease
+source_slug: applied-digital
+source_name: Applied Digital
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: cloud_capacity
+value_billions: 7
+value_display: $7B (up to ~$11B w/ extensions)
+date: 2025-06
+date_display: Jun 2025
+description: >-
+  CoreWeave signs 15-year lease agreements for 250MW of critical IT load at Applied Digital's Polaris Forge 1 campus
+  (Ellendale, ND), with option for 150MW more. ~$7B base, up to ~$11B with extensions.
+source_url: https://ir.applieddigital.com/news-events/press-releases/detail/313/applied-digital-signs-two-15-year-lease-agreements-with

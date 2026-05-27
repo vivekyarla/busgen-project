@@ -1,0 +1,14 @@
+id: groq-meta-llama
+source_slug: groq
+source_name: Groq
+target_slug: meta
+target_name: Meta
+deal_type: cloud_capacity
+value_billions: null
+value_display: Official Llama API inference
+date: 2025-04
+date_display: Apr 2025
+description: >-
+  Groq named as official inference provider for Meta's Llama API, running Llama 4 on Groq LPUs as the first-party
+  developer entry point before Groq's NVIDIA acquisition.
+source_url: https://groq.com/meta-and-groq-collaborate-to-deliver-fast-inference-for-the-official-llama-api/

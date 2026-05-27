@@ -1,0 +1,14 @@
+id: multiple-cerebras-series-g
+source_slug: multiple
+source_name: Multiple
+target_slug: cerebras
+target_name: Cerebras
+deal_type: equity_investment
+value_billions: 1.1
+value_display: $1.1B Series G
+date: 2025-09
+date_display: Sep 2025
+description: >-
+  Oversubscribed Series G at $8.1B post-money. Led by Fidelity and Atreides with Tiger Global, Valor, 1789 Capital,
+  Altimeter, Alpha Wave, Benchmark. Funds US manufacturing and data-center expansion.
+source_url: https://www.cerebras.ai/press-release/series-g

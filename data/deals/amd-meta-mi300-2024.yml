@@ -1,0 +1,17 @@
+id: amd-meta-mi300-2024
+source_slug: amd
+source_name: AMD
+target_slug: meta
+target_name: Meta
+deal_type: gpu_purchase
+value_billions: null
+value_display: MI300X in production
+date: "2024-06"
+date_display: Jun 2024
+description: >-
+  AMD confirmed Meta as a key MI300X deployment customer at its Advancing AI
+  2024 event. Meta runs MI300X alongside NVIDIA H100s in its AI training
+  infrastructure. AMD also announced the MI325X (256GB HBM3E) and MI350
+  roadmap at the same event. Distinct from the Feb 2026 MI450 $60B expansion
+  with warrants.
+source_url: https://www.amd.com/en/newsroom/press-releases/2024-6-2-amd-accelerates-pace-of-data-center-ai-innovation-.html

@@ -1,0 +1,17 @@
+id: cadence-avgo-cerebrus-2023
+source_slug: cadence
+source_name: Cadence Design Systems
+target_slug: broadcom
+target_name: Broadcom
+deal_type: custom_asic
+value_billions: null
+value_display: Cerebrus AI-driven 3nm/5nm
+date: "2023-10"
+date_display: Oct 2023
+description: >-
+  Cadence and Broadcom announced a collaboration to apply Cadence Cerebrus
+  Intelligent Chip Explorer to Broadcom's 3nm and 5nm designs, yielding
+  performance-power-area benefits on aggressive tape-out schedules. Feeds the
+  EDA side of Broadcom's hyperscaler ASIC pipeline (Google TPU, Meta MTIA) and
+  custom networking silicon.
+source_url: https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2023/cadence-collaborates-with-broadcom-to-implement-ai-driven.html

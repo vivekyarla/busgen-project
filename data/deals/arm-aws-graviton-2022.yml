@@ -1,0 +1,17 @@
+id: arm-aws-graviton-2022
+source_slug: arm
+source_name: Arm Holdings
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: custom_asic
+value_billions: null
+value_display: Graviton Neoverse
+date: "2022-11"
+date_display: Nov 2022
+description: >-
+  AWS Graviton 3 (Nov 2022) and Graviton 4 (2024) use Arm Neoverse V1/V2 cores
+  under license. By 2024, more than 50% of new EC2 instance types launched at
+  AWS were Arm-based, displacing Intel Xeon and AMD EPYC for general-purpose
+  workloads. Arm's largest hyperscale royalty pool. Anthropic Claude served via
+  Trainium/Inferentia (also Arm-based) on AWS.
+source_url: https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-c7g-instances-powered-by-new-aws-graviton3-processors/

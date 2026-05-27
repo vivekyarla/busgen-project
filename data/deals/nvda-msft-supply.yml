@@ -1,0 +1,12 @@
+id: nvda-msft-supply
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: microsoft
+target_name: Microsoft
+deal_type: gpu_purchase
+value_billions: null
+value_display: Multi-$10B/yr
+date: 2025-01
+date_display: Ongoing
+description: Largest capex buyer of NVIDIA GPUs per Bloomberg supply chain analysis
+source_url: https://blog.siebert.com/nvidias-57-billion-flex-and-the-death-of-the-ai-bubble-call

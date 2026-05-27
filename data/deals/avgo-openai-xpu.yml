@@ -1,0 +1,12 @@
+id: avgo-openai-xpu
+source_slug: broadcom
+source_name: Broadcom
+target_slug: openai
+target_name: OpenAI
+deal_type: custom_asic
+value_billions: 175
+value_display: $150-200B (10GW)
+date: 2025-10
+date_display: Oct 2025
+description: 10GW custom Titan XPU w/ Broadcom. TSMC 3nm, Samsung HBM4. Est. $100-200B.
+source_url: https://www.tomshardware.com/openai-broadcom-to-co-develop-10gw-of-custom-ai-chips

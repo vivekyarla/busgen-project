@@ -1,0 +1,14 @@
+id: amd-zt-systems-ma
+source_slug: amd
+source_name: AMD
+target_slug: zt-systems
+target_name: ZT Systems
+deal_type: m_and_a
+value_billions: 4.9
+value_display: $4.9B
+date: 2024-08
+date_display: Aug 2024
+description: >-
+  AMD acquires hyperscale AI systems provider ZT Systems for $4.9B cash-and-stock (+ up to $400M contingent), adding
+  rack-scale design into AMD DCS. Closed Mar 2025; manufacturing unit later sold to Sanmina.
+source_url: https://www.amd.com/en/newsroom/press-releases/2024-8-19-amd-to-significantly-expand-data-center-ai-systems.html

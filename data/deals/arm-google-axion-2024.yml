@@ -1,0 +1,18 @@
+id: arm-google-axion-2024
+source_slug: arm
+source_name: Arm Holdings
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: Axion Neoverse V2
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  Google announced Axion, its first custom Arm-based data-center CPU, at Cloud
+  Next 2024. Axion is built on Arm's Neoverse V2 platform under an Arm
+  architecture license and claims ~30% better performance than the fastest
+  general-purpose Arm VMs in cloud and ~50% better than comparable x86 VMs.
+  Completes the hyperscaler triad on Neoverse V2 (AWS Graviton 4, Microsoft
+  Cobalt 100, Google Axion) and grows Arm's data-center royalty pool.
+source_url: https://newsroom.arm.com/blog/google-cloud-axion-arm-ai-performance

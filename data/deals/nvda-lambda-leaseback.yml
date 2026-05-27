@@ -1,0 +1,12 @@
+id: nvda-lambda-leaseback
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: lambda
+target_name: Lambda
+deal_type: cloud_capacity
+value_billions: 1.5
+value_display: $1.5B
+date: 2024-09
+date_display: Sep 2024
+description: NVIDIA leases 18K GPUs from Lambda over 4 years; NVIDIA researchers use the capacity
+source_url: https://saturncloud.io/reports/gpu-cloud-comparison-report/

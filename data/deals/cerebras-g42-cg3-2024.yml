@@ -1,0 +1,18 @@
+id: cerebras-g42-cg3-2024
+source_slug: cerebras
+source_name: Cerebras
+target_slug: multiple
+target_name: Multiple
+deal_type: cloud_capacity
+value_billions: null
+value_display: 8 exaFLOPs (CG-3)
+date: "2024-03"
+date_display: Mar 2024
+description: >-
+  Cerebras and G42 broke ground on Condor Galaxy 3, the third of nine planned
+  interconnected AI supercomputers. CG-3 uses 64 Cerebras CS-3 systems powered
+  by Wafer-Scale Engine 3 (WSE-3) chips to deliver 8 exaFLOPs of AI compute
+  and 58M AI-optimized cores. Available as a cloud service Q2 2024. Part of a
+  planned 36 exaFLOP constellation across U.S. sites funded by G42, one of
+  Cerebras' anchor customers.
+source_url: https://www.g42.ai/resources/news/g42-and-cerebras-break-ground-condor-galaxy-3-8-exaflops-ai-supercomputer

@@ -1,0 +1,17 @@
+id: tsmc-google-tpu-v4-2021
+source_slug: tsmc
+source_name: TSMC
+target_slug: google
+target_name: Google
+deal_type: custom_asic
+value_billions: null
+value_display: TPU v4 volume (N7)
+date: "2021-05"
+date_display: May 2021
+description: >-
+  Google announced TPU v4 at I/O 2021 -- 2.7x TPU v3 perf, deployed in 4,096-chip
+  pods at 1.1 exaflops each. Fabricated at TSMC on N7. Established the TSMC-Google
+  TPU manufacturing relationship that continued through v5 (N5/N4) and Ironwood
+  (N3). Broadcom co-designs, TSMC fabs -- confirmed in later Jon Peddie / industry
+  reporting.
+source_url: https://blog.google/technology/developers/io21-helpful-google/

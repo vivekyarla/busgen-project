@@ -1,0 +1,16 @@
+id: arista-msft-ethernet-2024
+source_slug: arista
+source_name: Arista Networks
+target_slug: microsoft
+target_name: Microsoft
+deal_type: equipment_supply
+value_billions: 1.4
+value_display: ~$1.4B/yr (20% of rev)
+date: "2024-12"
+date_display: FY2024
+description: >-
+  Arista's 10-K SEC filing discloses Microsoft as its largest end customer --
+  20% of total revenue in FY2024 (~$1.4B of $7.0B), up from 16% in 2022. Azure
+  data center Ethernet switching (100G/400G/800G). Microsoft and Meta together
+  represent ~35% of Arista's total revenue.
+source_url: https://www.sec.gov/Archives/edgar/data/1596532/000159653225000028/anet-20241231.htm

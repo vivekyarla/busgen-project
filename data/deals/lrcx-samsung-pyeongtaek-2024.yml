@@ -1,0 +1,18 @@
+id: lrcx-samsung-pyeongtaek-2024
+source_slug: lam-research
+source_name: Lam Research
+target_slug: samsung-memory
+target_name: Samsung (Memory)
+deal_type: equipment_supply
+value_billions: null
+value_display: Etch/deposition for 1c DRAM
+date: "2024-08"
+date_display: Aug 2024
+description: >-
+  Samsung confirmed equipment procurement for its Pyeongtaek P4 facility to
+  bring 6th-generation 10nm-class (1c) DRAM into production, with Lam Research
+  supplying critical etch and deposition platforms for NAND and DRAM lines.
+  Samsung plans to use 1c DRAM for HBM4 stacks. Equipment installation for the
+  P4 DRAM line began in mid-2025 with 1c nanometer DRAM mass production slated
+  for 2026.
+source_url: https://www.trendforce.com/news/2024/08/13/news-samsung-reportedly-confirms-investment-in-pyeongtaek-p4-plant-for-6th-generation-1c-dram

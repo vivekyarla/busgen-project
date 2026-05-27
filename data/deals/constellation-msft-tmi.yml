@@ -1,0 +1,14 @@
+id: constellation-msft-tmi
+source_slug: constellation
+source_name: Constellation Energy
+target_slug: microsoft
+target_name: Microsoft
+deal_type: power_ppa
+value_billions: null
+value_display: 20-yr, 835MW
+date: 2024-09
+date_display: Sep 2024
+description: >-
+  20-year PPA backing the restart of Three Mile Island Unit 1 (now Crane Clean Energy Center, 835MW) to match Microsoft
+  data-center load in PJM with carbon-free nuclear.
+source_url: https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html

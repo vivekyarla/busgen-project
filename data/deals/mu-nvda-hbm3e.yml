@@ -1,0 +1,14 @@
+id: mu-nvda-hbm3e
+source_slug: micron
+source_name: Micron Technology
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: HBM sold out 2024-2025
+date: 2024-02
+date_display: Feb 2024
+description: >-
+  Micron starts volume production of 24GB 8-high HBM3E for NVIDIA H200. 2024 HBM capacity fully booked; initial
+  several-hundred-million-dollar ramp.
+source_url: https://investors.micron.com/news-releases/news-release-details/micron-commences-volume-production-industry-leading-hbm3e

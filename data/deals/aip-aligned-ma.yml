@@ -1,0 +1,14 @@
+id: aip-aligned-ma
+source_slug: blackrock
+source_name: BlackRock
+target_slug: aligned-data-centers
+target_name: Aligned Data Centers
+deal_type: m_and_a
+value_billions: 40
+value_display: $40B
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  AIP consortium (BlackRock, MGX, MSFT, NVIDIA, xAI) acquires Aligned from Macquarie. 50 campuses, 5GW+ in US/LATAM.
+  Close H1 2026.
+source_url: https://www.cnbc.com/2025/10/15/nvidia-microsoft-blackrock-aligned-data-centers.html

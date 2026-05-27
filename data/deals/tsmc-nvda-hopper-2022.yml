@@ -1,0 +1,17 @@
+id: tsmc-nvda-hopper-2022
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: H100 volume (80B transistors)
+date: "2022-03"
+date_display: Mar 2022
+description: >-
+  NVIDIA H100 Hopper launched on TSMC's custom 4N process (optimized N4 variant)
+  -- 80B transistors, 814 mm2. First NVIDIA datacenter GPU on TSMC N4 and the
+  foundational node for the 2023-2024 generative AI buildout (Microsoft, Google,
+  Meta, CoreWeave all ran H100-dominated fleets). Relationship later expanded
+  to Blackwell on N4P and Rubin on N3.
+source_url: https://nvidianews.nvidia.com/news/nvidia-announces-hopper-architecture-the-next-generation-of-accelerated-computing

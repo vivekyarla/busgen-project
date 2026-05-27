@@ -1,0 +1,17 @@
+id: tsmc-amd-genoa-2022
+source_slug: tsmc
+source_name: TSMC
+target_slug: amd
+target_name: AMD
+deal_type: custom_asic
+value_billions: null
+value_display: EPYC Genoa volume (N5)
+date: "2022-11"
+date_display: Nov 2022
+description: >-
+  AMD launched 4th-gen EPYC Genoa (Zen 4) on TSMC N5 for the CCDs, with N6 IOD --
+  up to 96 cores, first DDR5/PCIe 5 server CPU. TSMC N5 also powered Zen 4
+  Ryzen and the later Zen 4c Bergamo (128 cores). Cemented AMD's multi-year
+  datacenter CPU ramp against Intel and set the foundation for MI300 (N5/N6)
+  and MI350 (N4P) AI accelerators.
+source_url: https://www.amd.com/en/newsroom/press-releases/2022-11-10-amd-unveils-4th-gen-epyc-cpus-delivering-leadership-ge.html

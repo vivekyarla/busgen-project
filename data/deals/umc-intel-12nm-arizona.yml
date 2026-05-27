@@ -1,0 +1,18 @@
+id: umc-intel-12nm-arizona
+source_slug: umc
+source_name: United Microelectronics
+target_slug: intel
+target_name: Intel
+deal_type: m_and_a
+value_billions: null
+value_display: JV process + Arizona fab capacity
+date: "2024-01"
+date_display: Jan 2024
+description: >-
+  UMC and Intel announced a joint 12 nm FinFET process to be installed in
+  Intel's Fabs 12, 22, and 32 at the Ocotillo site in Chandler, Arizona.
+  Targets communications, networking, and specialty chips. UMC engineers are
+  embedded in Intel's ecosystem; UMC committed NT$15.6B (~$490M) in 2024 R&D
+  largely supporting the project. Step toward Intel's goal of becoming the
+  world's second-largest foundry by 2030.
+source_url: https://www.electronicsweekly.com/uncategorised/intel-and-umc-combine-for-12nm-fab-in-arizona-2024-01

@@ -1,0 +1,17 @@
+id: asml-tsmc-highna-2024
+source_slug: asml
+source_name: ASML
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: null
+date: "2024-09"
+date_display: Sep 2024
+description: >-
+  TSMC took delivery of its first ASML TWINSCAN EXE:5000 High-NA (0.55 NA) EUV
+  R&D tool, installed at TSMC's Hsinchu R&D center. Third EXE:5000 shipped
+  globally (after 2 to Intel; a fourth went to Samsung in Mar 2025). Used to
+  evaluate High-NA for A14P / sub-2nm nodes -- TSMC has deferred High-NA HVM,
+  extending 0.33-NA multi-patterning through A14. Financial terms not disclosed.
+source_url: https://bits-chips.com/article/asml-ships-first-high-na-euv-production-scanner/

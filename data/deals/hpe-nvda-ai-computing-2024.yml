@@ -1,0 +1,17 @@
+id: hpe-nvda-ai-computing-2024
+source_slug: hpe
+source_name: Hewlett Packard Enterprise
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: gpu_purchase
+value_billions: null
+value_display: Full-stack AI partnership
+date: "2024-06"
+date_display: Jun 2024
+description: >-
+  HPE and NVIDIA announced "NVIDIA AI Computing by HPE" at HPE Discover 2024 --
+  a joint go-to-market covering ProLiant servers with H200/GH200/Blackwell GPUs,
+  HPE Private Cloud AI, and a global channel program with Deloitte, HCLTech,
+  Infosys, TCS, Wipro. Antonio Neri and Jensen Huang appeared jointly. First
+  HPE-NVIDIA edge beyond the existing xAI-specific server deal.
+source_url: https://www.hpe.com/us/en/newsroom/press-release/2024/06/hewlett-packard-enterprise-and-nvidia-announce-nvidia-ai-computing-by-hpe-to-accelerate-generative-ai-industrial-revolution.html

@@ -1,0 +1,14 @@
+id: hpe-xai-servers
+source_slug: hpe
+source_name: Hewlett Packard Enterprise
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: 1
+value_display: $1B+
+date: 2025-01
+date_display: Jan 2025
+description: >-
+  HPE secures a >$1B contract to supply AI-optimized servers to xAI/X, breaking Dell and Super Micro's prior grip on
+  xAI's server stack.
+source_url: https://www.reuters.com/markets/deals/hpe-secures-1-bln-ai-server-deal-elon-musks-x-bloomberg-news-reports-2025-01-10/

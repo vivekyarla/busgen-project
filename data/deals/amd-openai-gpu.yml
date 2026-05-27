@@ -1,0 +1,13 @@
+id: amd-openai-gpu
+source_slug: amd
+source_name: AMD
+target_slug: openai
+target_name: OpenAI
+deal_type: gpu_purchase
+value_billions: 100
+value_display: ~$100B (6GW)
+date: 2025-10
+date_display: Oct 2025
+description: 6GW MI450 GPUs, multi-gen. First 1GW H2 2026. OpenAI warrants for ~10% AMD stake.
+source_url: >-
+  https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus

@@ -1,0 +1,12 @@
+id: nvda-aws-supply
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: gpu_purchase
+value_billions: null
+value_display: Multi-$10B/yr
+date: 2025-01
+date_display: Ongoing
+description: Top-4 capex buyer of NVIDIA GPUs
+source_url: https://blog.siebert.com/nvidias-57-billion-flex-and-the-death-of-the-ai-bubble-call

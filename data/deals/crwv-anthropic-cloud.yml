@@ -1,0 +1,13 @@
+id: crwv-anthropic-cloud
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: anthropic
+target_name: Anthropic
+deal_type: cloud_capacity
+value_billions: null
+value_display: Undisclosed
+date: 2026-04
+date_display: Apr 2026
+description: Multi-year NVIDIA GPU access for production-scale Claude workloads at US data centers
+source_url: >-
+  https://thenextweb.com/news/coreweave-has-agreed-a-multi-year-gpu-cloud-deal-with-anthropic-to-power-claude-at-production-scale-its-second-major-ai-infrastructure-announcement-in-48-hours

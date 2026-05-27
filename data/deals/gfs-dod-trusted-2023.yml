@@ -1,0 +1,18 @@
+id: gfs-dod-trusted-2023
+source_slug: globalfoundries
+source_name: GlobalFoundries
+target_slug: multiple
+target_name: Multiple
+deal_type: equipment_supply
+value_billions: 3.1
+value_display: ~$3.1B, 10 years
+date: "2023-09"
+date_display: Sep 2023
+description: >-
+  U.S. Department of Defense awarded GlobalFoundries a 10-year, $3.1B contract
+  for securely manufactured U.S.-made semiconductors for aerospace and defense
+  applications. GF is the lead Trusted Foundry for DoD across its Malta NY,
+  Essex Junction VT, and other U.S. fabs - the only U.S.-based pure-play
+  foundry at scale. (DoD mapped to "multiple" as downstream government
+  counterparty.)
+source_url: https://gf.com/gf-press-release/globalfoundries-and-u-s-department-of-defense-showcase-secure-chip-manufacturing-at-2023-trusted-foundry-training

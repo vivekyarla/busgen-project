@@ -1,0 +1,17 @@
+id: amkor-avgo-osat-2025
+source_slug: amkor
+source_name: Amkor Technology
+target_slug: broadcom
+target_name: Broadcom
+deal_type: equipment_supply
+value_billions: null
+value_display: OSAT supply (Form 10-K)
+date: "2025-11"
+date_display: Nov 2025
+description: >-
+  Broadcom's FY2025 Form 10-K (filed 2025-11-02) lists Amkor Technology among
+  its third-party assembly and test contract manufacturers. Amkor provides
+  advanced-packaging and test services for Broadcom's AI networking silicon
+  and hyperscaler ASICs (Google TPU, Meta MTIA), with Peoria Arizona capacity
+  coming online adjacent to TSMC AZ.
+source_url: https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm

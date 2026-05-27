@@ -1,0 +1,14 @@
+id: amkor-apple-peoria
+source_slug: amkor
+source_name: Amkor Technology
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: 2
+value_display: $2B ($7B total plant, Apple anchor)
+date: 2024-11
+date_display: Nov 2024
+description: >-
+  Amkor finalizes CHIPS Act funding ($407M + $200M loan) for $2B first-phase advanced packaging facility in Peoria AZ;
+  Apple is anchor/lead customer for A-series/M-series silicon fabbed at TSMC Arizona.
+source_url: https://ir.amkor.com/news-releases/news-release-details/amkor-technology-signs-preliminary-memorandum-terms-us

@@ -1,0 +1,17 @@
+id: lumentum-nvda-spectrum-x
+source_slug: lumentum
+source_name: Lumentum
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: InP lasers for Spectrum-X Photonics
+date: "2025-03"
+date_display: Mar 2025
+description: >-
+  Lumentum selected as a silicon-photonics ecosystem partner for NVIDIA's
+  Spectrum-X Photonics networking switches, supplying high-power, high-
+  efficiency indium phosphide (InP) continuous-wave lasers. The partnership
+  targets the transition from copper to photonic interconnects in AI clusters,
+  reducing power consumption and improving resilience for scale-up AI fabrics.
+source_url: https://quantumzeitgeist.com/lumentum-selected-as-nvidia-silicon-photonics-partner-to-drive-scalable-ai-networking-solutions

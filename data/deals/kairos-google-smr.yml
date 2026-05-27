@@ -1,0 +1,14 @@
+id: kairos-google-smr
+source_slug: kairos
+source_name: Kairos Power
+target_slug: google
+target_name: Google
+deal_type: power_ppa
+value_billions: null
+value_display: 500MW by 2035
+date: 2024-10
+date_display: Oct 2024
+description: >-
+  First corporate SMR power-purchase agreement: Google to buy ~500MW from multiple Kairos Power small modular reactors,
+  first online late-2020s and additional units by 2035.
+source_url: https://blog.google/outreach-initiatives/sustainability/google-kairos-power-nuclear-energy-agreement/

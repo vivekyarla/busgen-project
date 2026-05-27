@@ -1,0 +1,16 @@
+id: amd-aws-epyc-2021
+source_slug: amd
+source_name: AMD
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: custom_asic
+value_billions: null
+value_display: M6a EC2 instances
+date: "2021-11"
+date_display: Nov 2021
+description: >-
+  AWS launched M6a instances powered by 3rd-gen AMD EPYC Milan, offering up to
+  35% better price-performance vs previous M5a. First general-purpose AMD Milan
+  instance family on AWS. AMD later expanded on AWS with EPYC Genoa (M7a, 2023)
+  and Turin (2025), reaching 5 generations of EPYC on AWS. First AMD-AWS edge.
+source_url: https://aws.amazon.com/blogs/aws/new-amazon-ec2-m6a-instances-powered-by-3rd-gen-amd-epyc-processors/

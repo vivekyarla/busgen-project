@@ -1,0 +1,14 @@
+id: nvda-samsung-ai-factory
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: samsung-foundry
+target_name: Samsung Foundry
+deal_type: gpu_purchase
+value_billions: null
+value_display: 50K+ GPUs
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Samsung deploys 50K+ NVIDIA GPUs across its semiconductor, mobile, and robotics fabs, with NVIDIA Omniverse digital
+  twins powering an AI-driven manufacturing network.
+source_url: https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-and-Samsung-Build-AI-Factory-to-Transform-Global-Intelligent-Manufacturing/default.aspx

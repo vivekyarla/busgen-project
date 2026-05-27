@@ -1,0 +1,19 @@
+id: nvda-xai-colossus-2-2025
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: 18
+value_display: ~$18B (555K GPUs)
+date: "2025-12"
+date_display: Dec 2025
+description: >-
+  Musk confirmed xAI's purchase of a third Memphis building to expand Colossus
+  to ~2 GW total site capacity, housing roughly 555,000 NVIDIA GPUs ordered for
+  approximately $18B -- making it the world's largest single-site AI training
+  installation. The expansion (branded Colossus 2) builds on the original 100K
+  H100 cluster brought online in Sep 2024 and the 200K-GPU upgrade that
+  followed. Paired with on-site natural-gas generation (~460 MW) to bridge grid
+  constraints.
+source_url: https://www.bloomberg.com/news/articles/2025-12-30/musk-s-xai-to-expand-colossus-data-center-information-reports

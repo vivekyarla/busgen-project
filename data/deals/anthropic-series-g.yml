@@ -1,0 +1,12 @@
+id: anthropic-series-g
+source_slug: anthropic
+source_name: Anthropic
+target_slug: anthropic
+target_name: Anthropic
+deal_type: funding_round
+value_billions: 30
+value_display: $30B
+date: 2026-02
+date_display: Feb 2026
+description: Series G at $380B post-money. Led by GIC and Coatue. Second-largest private tech round ever
+source_url: https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation

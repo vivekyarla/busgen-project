@@ -1,0 +1,18 @@
+id: arm-nvda-grace-2023
+source_slug: arm
+source_name: Arm Holdings
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: Grace CPU IP license
+date: "2023-05"
+date_display: May 2023
+description: >-
+  NVIDIA Grace CPU (72-core Arm Neoverse V2) shipped in Grace Hopper GH200 and
+  Grace Blackwell GB200 systems, all licensed from Arm. NVIDIA also licenses
+  Cortex/Neoverse cores for embedded and automotive (Drive). Arm's licensing
+  fees + per-chip royalties make NVIDIA one of Arm's largest customers as the
+  Grace platform scales across AI training/inference (Meta, Microsoft, OpenAI,
+  CoreWeave deployments).
+source_url: https://nvidianews.nvidia.com/news/nvidia-grace-cpu-superchip-built-from-the-ground-up-for-giant-scale-ai-and-high-performance-computing-applications

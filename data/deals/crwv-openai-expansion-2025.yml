@@ -1,0 +1,17 @@
+id: crwv-openai-expansion-2025
+source_slug: coreweave
+source_name: CoreWeave
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: 22.4
+value_display: ~$22.4B total
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  CoreWeave expanded its data-center capacity agreement with OpenAI by up to
+  $6.5B, bringing total contract value to ~$22.4B after initial $11.9B in Mar
+  2025 and a $4B top-up in May. Contract covers multi-year GPU cloud capacity
+  to train and serve OpenAI's frontier models, complementing OpenAI's parallel
+  Oracle ($300B) and NVIDIA ($100B) compute arrangements.
+source_url: https://www.wsj.com/finance/investing/coreweave-expands-openai-agreement-by-6-5-billion-3d39a214

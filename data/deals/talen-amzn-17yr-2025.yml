@@ -1,0 +1,17 @@
+id: talen-amzn-17yr-2025
+source_slug: talen
+source_name: Talen Energy
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: power_ppa
+value_billions: 18.0
+value_display: ~$18B, 1,920 MW
+date: "2025-06"
+date_display: Jun 2025
+description: >-
+  Talen Energy and AWS finalized a restructured 17-year nuclear power purchase
+  agreement totaling ~$18B, delivering up to 1,920 MW from the 2.5 GW
+  Susquehanna nuclear plant to Amazon's Pennsylvania data centers through 2042.
+  Deliveries ramp to 840-1,200 MW by 2029 and 1,680-1,920 MW by 2032. AWS gave
+  up its 480 MW cap option. Companies will also explore SMRs on Talen sites.
+source_url: https://www.powermag.com/talen-amazon-launch-18b-nuclear-ppa-a-grid-connected-ipp-model-for-the-data-center-era

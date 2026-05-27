@@ -1,0 +1,17 @@
+id: intel-aws-xeon-2021
+source_slug: intel
+source_name: Intel
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: custom_asic
+value_billions: null
+value_display: C6i/M6i EC2 instances
+date: "2021-06"
+date_display: Jun 2021
+description: >-
+  AWS launched C6i instances powered by 3rd Gen Intel Xeon Scalable (Ice Lake)
+  in June 2021, followed by M6i and R6i. Intel remains a major CPU supplier
+  for AWS alongside AMD EPYC and AWS's own Graviton ARM chips. AWS later
+  deployed Sapphire Rapids (2023) and Emerald Rapids (2024) across its fleet.
+  First Intel-AWS edge.
+source_url: https://aws.amazon.com/blogs/aws/new-amazon-ec2-c6i-instances-powered-by-the-latest-generation-intel-xeon-scalable-processors/

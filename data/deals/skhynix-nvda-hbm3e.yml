@@ -1,0 +1,14 @@
+id: skhynix-nvda-hbm3e
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: Lead HBM supplier
+date: 2024-09
+date_display: Sep 2024
+description: >-
+  SK Hynix begins mass production of the world's first 12-layer HBM3E (36GB) as the lead HBM supplier for NVIDIA's
+  Hopper and Blackwell GPUs. HBM revenue ~$6.9B in 2024, majority to NVIDIA.
+source_url: https://www.reuters.com/technology/sk-hynix-start-mass-producing-hbm3e-12-layer-chips-this-month-2024-09-04/

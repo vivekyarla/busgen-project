@@ -1,0 +1,14 @@
+id: msft-openai-equity
+source_slug: microsoft
+source_name: Microsoft
+target_slug: openai
+target_name: OpenAI
+deal_type: equity_investment
+value_billions: 13
+value_display: $13B
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Post restructuring, MSFT holds ~27% (~$135B value). Cumulative $13B across rounds. Model access through 2032 incl. AGI
+  models.
+source_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/

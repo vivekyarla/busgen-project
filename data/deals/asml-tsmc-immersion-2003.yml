@@ -1,0 +1,16 @@
+id: asml-tsmc-immersion-2003
+source_slug: asml
+source_name: ASML
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: null
+value_display: null
+date: "2003-12"
+date_display: Dec 2003
+description: >-
+  TSMC placed the industry's first-ever immersion lithography order -- ASML
+  TWINSCAN XT:1250i -- for Q3 2004 delivery. Seeded the 45nm/32nm node ramp and
+  started the ASML-TSMC co-development cadence that later produced EUV and High-NA.
+  Financial terms not disclosed.
+source_url: https://www.asml.com/news/press-releases/2003/tsmc-selects-asml-for-industry-first-immersion-tool-order

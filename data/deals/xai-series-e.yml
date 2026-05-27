@@ -1,0 +1,14 @@
+id: xai-series-e
+source_slug: multiple
+source_name: Multiple
+target_slug: xai
+target_name: xAI
+deal_type: equity_investment
+value_billions: 20
+value_display: $20B
+date: 2026-01
+date_display: Jan 2026
+description: >-
+  Upsized Series E. Valor, StepStone, Fidelity, QIA, MGX, Baron; strategic from NVIDIA (~$2B) + Cisco. Funds Colossus +
+  Grok 5.
+source_url: https://x.ai/news/series-e

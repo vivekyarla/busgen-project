@@ -1,0 +1,12 @@
+id: nvda-openai-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: openai
+target_name: OpenAI
+deal_type: equity_investment
+value_billions: 30
+value_display: $30B
+date: 2026-03
+date_display: Mar 2026
+description: Part of OpenAI's $122B round at $852B valuation. Co-invested alongside Amazon ($50B) and SoftBank ($30B)
+source_url: https://openai.com/index/accelerating-the-next-phase-ai/

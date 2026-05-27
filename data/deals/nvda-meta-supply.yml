@@ -1,0 +1,14 @@
+id: nvda-meta-supply
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: meta
+target_name: Meta
+deal_type: gpu_purchase
+value_billions: 50
+value_display: ~$50B
+date: 2026-02
+date_display: Feb 2026
+description: >-
+  Millions of Blackwell, Vera Rubin GPUs + Grace CPUs for Meta. First large-scale standalone Grace deployment. Analyst
+  est. $35-67B.
+source_url: https://siliconangle.com/2026/02/17/meta-agrees-buy-millions-ai-chips-nvidia-raising-doubts-house-hardware/

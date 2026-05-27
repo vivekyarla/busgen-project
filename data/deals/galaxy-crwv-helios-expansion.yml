@@ -1,0 +1,18 @@
+id: galaxy-crwv-helios-expansion
+source_slug: galaxy
+source_name: Galaxy Digital
+target_slug: coreweave
+target_name: CoreWeave
+deal_type: cloud_capacity
+value_billions: null
+value_display: +260 MW, 800 MW total, 15-yr
+date: "2025-08"
+date_display: Aug 2025
+description: >-
+  Galaxy closed a $1.4B project financing facility and executed a second-phase
+  lease with CoreWeave at the Helios campus in Dickens County, West Texas.
+  Adds 260 MW on top of prior commitments to lock in the full 800 MW of
+  approved capacity under a 15-year term. Galaxy expects >$1B average annual
+  revenue; campus pursues a further 2.7 GW of capacity under study
+  (potential 3.5 GW total).
+source_url: https://convergedigest.com/coreweave-locks-in-800-mw-at-galaxys-helios-campus-in-texas

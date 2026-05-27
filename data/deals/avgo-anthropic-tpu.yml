@@ -1,0 +1,12 @@
+id: avgo-anthropic-tpu
+source_slug: broadcom
+source_name: Broadcom
+target_slug: anthropic
+target_name: Anthropic
+deal_type: custom_asic
+value_billions: null
+value_display: 3.5GW capacity
+date: 2026-04
+date_display: Apr 2026
+description: "Triangular deal: Broadcom supplies TPU silicon, Google provides architecture, Anthropic gets 3.5GW compute from 2027"
+source_url: https://www.siliconrepublic.com/machines/anthropic-google-broadcom-announce-3-5gw-tpu-deal

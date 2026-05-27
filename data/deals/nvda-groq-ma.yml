@@ -1,0 +1,12 @@
+id: nvda-groq-ma
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: groq
+target_name: Groq
+deal_type: m_and_a
+value_billions: 20
+value_display: $20B
+date: 2025-12
+date_display: Dec 2025
+description: Non-exclusive LPU inference licensing + key hires incl. CEO Jonathan Ross.
+source_url: https://www.cnbc.com/2025/12/24/nvidia-buying-ai-chip-startup-groq-for-about-20-billion-biggest-deal.html

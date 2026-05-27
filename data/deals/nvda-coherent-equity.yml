@@ -1,0 +1,14 @@
+id: nvda-coherent-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: coherent
+target_name: Coherent
+deal_type: equity_investment
+value_billions: 2
+value_display: $2B
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  $2B equity investment plus multibillion-dollar purchase commitment for advanced laser and optical networking products;
+  funds Coherent's US silicon-photonics manufacturing buildout.
+source_url: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Coherent-Announce-Strategic-Partnership-to-Develop-Optics-Technology-to-Scale-Next-Generation-Data-Center-Architecture/default.aspx

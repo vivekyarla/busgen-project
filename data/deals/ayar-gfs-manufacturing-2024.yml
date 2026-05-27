@@ -1,0 +1,18 @@
+id: ayar-gfs-manufacturing-2024
+source_slug: globalfoundries
+source_name: GlobalFoundries
+target_slug: ayar-labs
+target_name: Ayar Labs
+deal_type: equipment_supply
+value_billions: null
+value_display: TeraPHY foundry
+date: "2024-12"
+date_display: Dec 2024
+description: >-
+  GlobalFoundries manufactures Ayar Labs' TeraPHY optical I/O chiplets and
+  SuperNova multi-wavelength light source at its fabs, enabling co-packaged
+  optics for AI GPU and switch interconnect. Partnership deepened with GF's
+  participation in Ayar's Dec 2024 $155M Series D alongside NVIDIA, AMD, Intel
+  Capital, HPE, and Lockheed Martin. TeraPHY delivers 2 Tbps bandwidth over
+  eight 256 Gbps channels for AI clusters.
+source_url: https://www.superbcrew.com/ayar-labs-raises-500-million-in-series-e-funding-round

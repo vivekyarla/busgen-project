@@ -1,0 +1,18 @@
+id: tel-tsmc-kumamoto-2025
+source_slug: tokyo-electron
+source_name: Tokyo Electron
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_billions: 0.314
+value_display: ~$314M R&D hub
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  Tokyo Electron completed a Y47B (~$314M) Process Development Building at its
+  Kumamoto subsidiary (Tokyo Electron Kyushu) to co-develop 1nm-class chip
+  equipment alongside TSMC's Kumamoto fabs. The 27,000-sqm facility focuses on
+  coater/developers, cleaning systems, and 3D packaging equipment and will
+  quadruple TEL's regional development capacity. TEL holds ~88% global share
+  in coater/developers.
+source_url: https://www.trendforce.com/news/2025/10/16/news-tokyo-electron-builds-major-kumamoto-rd-hub-near-tsmc-to-advance-1nm-chip-equipment

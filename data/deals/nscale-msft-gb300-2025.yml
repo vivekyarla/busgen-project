@@ -1,0 +1,18 @@
+id: nscale-msft-gb300-2025
+source_slug: nscale
+source_name: Nscale
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: 14.0
+value_display: ~$14B (200K GB300s)
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  Nscale signed a multi-billion-dollar deal with Microsoft to deliver up to
+  200,000 NVIDIA GB300 GPUs across the US, UK, Europe starting 2026. Largest
+  allocation is 104,000 GB300s at a Texas hyperscale AI campus (240 MW
+  initial, expanding to 1.2 GW) leased from Ionic Digital, with Q3 2026
+  delivery. Portugal Start AI campus gets 12,600 GPUs, Norway Narvik JV ~52K
+  GB300s, and Loughton UK ~23K GB300s by Q1 2027.
+source_url: https://cryptorank.io/news/feed/95c41-uks-nscale-signs-new-deal

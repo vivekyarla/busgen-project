@@ -1,0 +1,13 @@
+id: amd-msft-deploy
+source_slug: amd
+source_name: AMD
+target_slug: microsoft
+target_name: Microsoft
+deal_type: gpu_purchase
+value_billions: null
+value_display: Undisclosed
+date: 2025-06
+date_display: "2025"
+description: MI300X powering proprietary and open-source models in Azure production
+source_url: >-
+  https://ir.amd.com/news-events/press-releases/detail/1255/amd-unveils-vision-for-an-open-ai-ecosystem-detailing-new-silicon-software-and-systems-at-advancing-ai-2025

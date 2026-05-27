@@ -1,0 +1,17 @@
+id: nvda-msft-dgx-cloud-2023
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: microsoft
+target_name: Microsoft
+deal_type: cloud_capacity
+value_billions: null
+value_display: DGX Cloud on Azure
+date: "2023-03"
+date_display: Mar 2023
+description: >-
+  NVIDIA launched DGX Cloud at GTC 2023 with Azure as a launch partner --
+  bringing DGX H100 AI supercomputers to enterprises via browser. Also
+  announced Omniverse Cloud on Azure. Alongside Google Cloud and Oracle
+  Cloud as additional DGX Cloud hosts. Origin of the deep Azure-NVIDIA
+  integration that underpins OpenAI's training infra.
+source_url: https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Hopper-GPUs-Expand-Reach-as-Demand-for-AI-Grows/default.aspx

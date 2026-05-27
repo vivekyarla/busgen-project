@@ -1,0 +1,14 @@
+id: dell-xai-colossus
+source_slug: dell
+source_name: Dell Technologies
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: 5
+value_display: $5B+
+date: 2025-02
+date_display: Feb 2025
+description: >-
+  Dell supplies xAI with AI-optimized servers powered by NVIDIA GB200 Blackwell GPUs to expand the Colossus supercomputer
+  in Memphis.
+source_url: https://www.reuters.com/technology/artificial-intelligence/dell-nears-deal-sell-5-billion-ai-servers-xai-bloomberg-news-reports-2025-02-14/

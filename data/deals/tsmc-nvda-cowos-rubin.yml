@@ -1,0 +1,17 @@
+id: tsmc-nvda-cowos-rubin
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: ~60% of 150k/mo CoWoS capacity
+date: "2026-01"
+date_display: Jan 2026
+description: >-
+  By end-2026, TSMC is targeting 150,000 CoWoS wafers per month — a ~4x
+  increase over late 2024 — with NVIDIA effectively cornering ~60% of total
+  CoWoS capacity to support the Rubin generation. AMD, Broadcom, and Marvell
+  share the remaining capacity, turning advanced packaging into the binding
+  constraint for the AI accelerator market.
+source_url: https://markets.chroniclejournal.com/chroniclejournal/article/tokenring-2026-1-23-the-great-packaging-surge-tsmc-targets-150000-cowos-wafers-to-fuel-nvidias-rubin-revolution

@@ -1,0 +1,18 @@
+id: asml-intel-highna-portland-2024
+source_slug: asml
+source_name: ASML
+target_slug: intel
+target_name: Intel
+deal_type: equipment_supply
+value_billions: 0.6
+value_display: ~$600M (2 systems)
+date: "2024-04"
+date_display: Apr 2024
+description: >-
+  Intel completed installation of its second ASML Twinscan EXE:5000 High-NA EUV
+  lithography system at its Portland (Hillsboro), Oregon D1X facility, making
+  Intel the first chipmaker to take delivery of two High-NA systems. Each
+  system lists above $300M. Intel originally placed the initial High-NA pilot
+  order in 2022, committing to be lead customer alongside TSMC, Samsung, SK
+  Hynix, and Micron who later followed.
+source_url: https://telecomlead.com/semiconductor/asml-commences-shipment-of-high-na-euv-lithography-systems-to-intel-113903

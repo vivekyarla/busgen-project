@@ -1,0 +1,12 @@
+id: nvda-anthropic-equity
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: anthropic
+target_name: Anthropic
+deal_type: equity_investment
+value_billions: 10
+value_display: $10B
+date: 2025-11
+date_display: Nov 2025
+description: Strategic equity investment alongside engineering collaboration to optimize Claude for NVIDIA architectures
+source_url: https://www.cnbc.com/2025/11/18/anthropic-ai-azure-microsoft-nvidia.html

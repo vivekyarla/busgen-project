@@ -1,0 +1,14 @@
+id: orcl-nvda-gpu
+source_slug: oracle
+source_name: Oracle
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: gpu_purchase
+value_billions: 40
+value_display: $40B
+date: 2025-05
+date_display: May 2025
+description: >-
+  ~400K GB200 chips for first Stargate data center in Abilene, TX. Among the largest GPU orders ever. Supports $500B
+  Stargate JV.
+source_url: https://siliconangle.com/2025/05/23/oracle-reportedly-buying-400000-nvidia-chips-for-first-stargate-data-center/

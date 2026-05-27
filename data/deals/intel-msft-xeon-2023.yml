@@ -1,0 +1,17 @@
+id: intel-msft-xeon-2023
+source_slug: intel
+source_name: Intel
+target_slug: microsoft
+target_name: Microsoft
+deal_type: custom_asic
+value_billions: null
+value_display: 4th Gen Xeon on Azure
+date: "2023-01"
+date_display: Jan 2023
+description: >-
+  Intel launched 4th Gen Xeon Scalable (Sapphire Rapids) in January 2023 with
+  Microsoft Azure as a key deployment partner. Azure runs Intel Xeon across
+  dozens of VM families (D-series, E-series, F-series). Intel remains the
+  dominant CPU supplier for Azure general-purpose compute despite AMD's
+  datacenter share gains. First Intel-Microsoft edge.
+source_url: https://www.intel.com/content/www/us/en/newsroom/news/4th-gen-intel-xeon-scalable-processors.html

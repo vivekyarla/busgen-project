@@ -1,0 +1,14 @@
+id: amd-meta-gpu
+source_slug: amd
+source_name: AMD
+target_slug: meta
+target_name: Meta
+deal_type: gpu_purchase
+value_billions: 60
+value_display: Up to $60B
+date: 2026-02
+date_display: Feb 2026
+description: >-
+  6GW of custom MI450 chips starting H2 2026. AMD issued Meta warrants for up to 160M shares vesting with shipment
+  milestones
+source_url: https://www.amd.com/en/newsroom/press-releases/2026-2-24-amd-and-meta-announce-expanded-strategic-partnersh.html

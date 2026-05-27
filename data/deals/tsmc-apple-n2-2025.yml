@@ -1,0 +1,18 @@
+id: tsmc-apple-n2-2025
+source_slug: tsmc
+source_name: TSMC
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: ~50% of N2 capacity
+date: "2025-12"
+date_display: Dec 2025
+description: >-
+  TSMC began volume production of its 2nm (N2) GAA node in Q4 2025 at Fab 20
+  (Baoshan) and Fab 22 (Kaohsiung). Apple booked the majority of initial N2
+  capacity for the A20 Bionic (iPhone 18 family, fall 2026 launch) and M-series
+  silicon, pre-empting Qualcomm, MediaTek, AMD, and NVIDIA on the node. Monthly
+  output ramps from ~45-50K wafers by end-2025 to 100K+ in 2026. Repeats Apple's
+  N3 lead-customer playbook at the most advanced node.
+source_url: https://focustaiwan.tw/sci-tech/202512300026

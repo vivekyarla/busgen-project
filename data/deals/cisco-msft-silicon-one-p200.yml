@@ -1,0 +1,18 @@
+id: cisco-msft-silicon-one-p200
+source_slug: cisco
+source_name: Cisco Systems
+target_slug: microsoft
+target_name: Microsoft
+deal_type: equipment_supply
+value_billions: null
+value_display: Silicon One P200 + Cisco 8223
+date: "2025-10"
+date_display: Oct 2025
+description: >-
+  Microsoft (Azure Networking) named as a launch customer for Cisco's Silicon
+  One P200 chip and 8223 router — a 51.2 Tbps-class deep-buffer switching
+  platform built for AI data-center long-distance connectivity. Dave Maltz,
+  Corporate VP of Azure Networking, cited the need for "faster networks with
+  more buffering to absorb bursts of data" at AI cloud scale. Alibaba also
+  named as an initial customer.
+source_url: https://markets.financialcontent.com/poteaudailynews/article/tokenring-2025-10-8-cisco-unleashes-silicon-one-p200-a-new-era-for-long-distance-ai-data-center-connectivity

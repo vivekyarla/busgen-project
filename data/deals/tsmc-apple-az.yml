@@ -1,0 +1,14 @@
+id: tsmc-apple-az
+source_slug: tsmc
+source_name: TSMC
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: 100M+ chips
+date: 2026-02
+date_display: Feb 2026
+description: >-
+  Apple commits to buy 100M+ chips/year from TSMC Arizona (also reserved >50% of initial N2 capacity). Part of Apple's
+  $600B US investment pledge. Packaging via Amkor Peoria.
+source_url: https://www.azcentral.com/story/money/business/tech/2026/02/27/apple-to-buy-100-million-tsmc-arizona-chips-in-2026/88888519007/

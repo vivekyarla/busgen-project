@@ -1,0 +1,18 @@
+id: entergy-amzn-ms-2024
+source_slug: entergy
+source_name: Entergy
+target_slug: amazon-aws
+target_name: Amazon/AWS
+deal_type: power_ppa
+value_billions: 2.0
+value_display: $2B customer benefit
+date: "2024-01"
+date_display: Jan 2024
+description: >-
+  Entergy Mississippi is providing power to Amazon's $10B Madison County data
+  center campuses (1,000+ jobs) and $3B Warren County campus (200+ jobs).
+  Entergy quantified $2B in benefits for its MS customer base, including
+  $1.3B in savings from replacing 50+ year old generation and $700M from
+  future fuel-cost savings. Part of Entergy's multi-state data-center power
+  buildout alongside the Richland Parish Meta project in Louisiana.
+source_url: https://businessfacilities.com/amazon-to-invest-3b-in-mississippi-data-center-campus

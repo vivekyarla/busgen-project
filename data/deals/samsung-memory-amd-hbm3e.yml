@@ -1,0 +1,17 @@
+id: samsung-memory-amd-hbm3e
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: amd
+target_name: AMD
+deal_type: equipment_supply
+value_billions: null
+value_display: HBM3E 12-high for MI350
+date: "2025-06"
+date_display: Jun 2025
+description: >-
+  Samsung qualified HBM3E 12-high with AMD for the Instinct MI350 series
+  after failing NVIDIA's HBM3E qualification — a consolation that preserves
+  Samsung's spot in the AI memory supply chain alongside Micron. HBM3E 12-high
+  is the reference stack for 2025 accelerators (NVIDIA Blackwell uses
+  SK Hynix/Micron; AMD MI350 uses Micron and Samsung).
+source_url: https://techstock01.substack.com/p/sk-hynix-and-micron-hbm4-qualification

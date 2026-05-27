@@ -1,0 +1,18 @@
+id: qcom-apple-modem
+source_slug: qualcomm
+source_name: Qualcomm
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: 5G modem supply extended through 2026
+date: "2023-09"
+date_display: Sep 2023
+description: >-
+  Qualcomm and Apple extended their 5G modem supply agreement to cover iPhone
+  launches in 2024, 2025, and 2026 on terms similar to the prior deal.
+  Qualcomm expects to supply roughly 20% of the modems for the 2026 iPhone
+  lineup, with Apple's internally developed 5G modem expected to phase in over
+  the following generations. The original 2019 deal was estimated to represent
+  ~20% of Qualcomm's $44B FY2022 revenue.
+source_url: https://www.computerworld.com/article/1635031/apple-extends-qualcomm-iphone-5g-modem-supply-deal-into-2026.html

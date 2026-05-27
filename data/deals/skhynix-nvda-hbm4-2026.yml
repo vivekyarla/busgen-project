@@ -1,0 +1,17 @@
+id: skhynix-nvda-hbm4-2026
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: HBM4 for Vera Rubin
+date: "2026-03"
+date_display: Mar 2026
+description: >-
+  SK Hynix secured the lion's share of NVIDIA's initial HBM4 orders for Vera
+  Rubin, continuing its role as NVIDIA's primary HBM supplier across three
+  generations (HBM3 2022, HBM3E 2024, HBM4 2026). Samsung is the second
+  qualified supplier. Micron was excluded from the initial Vera Rubin HBM4
+  allocation per industry sources.
+source_url: https://www.kedglobal.com/korean-chipmakers/newsView/ked202602080008

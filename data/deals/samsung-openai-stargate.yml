@@ -1,0 +1,14 @@
+id: samsung-openai-stargate
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: openai
+target_name: OpenAI
+deal_type: custom_asic
+value_billions: null
+value_display: Joint 900K wafer starts/mo target
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Samsung Electronics joins OpenAI Stargate, committing to scale advanced memory (HBM) production alongside SK Hynix to
+  support global Stargate AI infrastructure.
+source_url: https://openai.com/index/samsung-and-sk-join-stargate/

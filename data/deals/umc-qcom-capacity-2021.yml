@@ -1,0 +1,17 @@
+id: umc-qcom-capacity-2021
+source_slug: umc
+source_name: United Microelectronics
+target_slug: qualcomm
+target_name: Qualcomm
+deal_type: equipment_supply
+value_billions: null
+value_display: 6-year capacity deal
+date: "2021-05"
+date_display: May 2021
+description: >-
+  Qualcomm signed a six-year long-term foundry capacity agreement with UMC,
+  involving multi-billion-dollar capacity reservations and prepayments at UMC's
+  mature 14nm/28nm fabs. The deal followed Qualcomm's loss of SMIC access under
+  U.S. export controls and was part of a broader set of Qualcomm prepayments to
+  lock in supply across Taiwan foundries during the chip shortage.
+source_url: https://www.digitimes.com/news/a20210525PD211.html

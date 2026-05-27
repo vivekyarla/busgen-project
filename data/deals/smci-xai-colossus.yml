@@ -1,0 +1,14 @@
+id: smci-xai-colossus
+source_slug: super-micro
+source_name: Super Micro Computer
+target_slug: xai
+target_name: xAI
+deal_type: gpu_purchase
+value_billions: null
+value_display: ~half of Colossus racks
+date: 2024-09
+date_display: Sep 2024
+description: >-
+  Super Micro supplied roughly half of the liquid-cooled 4U GPU server racks (NVIDIA HGX H100, 64 GPUs/rack) for xAI's
+  100K-GPU Colossus supercomputer in Memphis, built in 122 days. Expanded local Memphis ops for 1M-GPU scale-out.
+source_url: https://www.supermicro.com/en/featured/xai-colossus

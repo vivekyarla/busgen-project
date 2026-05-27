@@ -1,0 +1,17 @@
+id: synopsys-intel-ip-2023
+source_slug: synopsys
+source_name: Synopsys
+target_slug: intel
+target_name: Intel
+deal_type: custom_asic
+value_billions: null
+value_display: Multi-gen IP + EDA
+date: "2023-08"
+date_display: Aug 2023
+description: >-
+  Intel and Synopsys signed a definitive multi-generational agreement to develop
+  Synopsys IP portfolios on Intel 3 and Intel 18A for Intel Foundry Services
+  customers. Synopsys provides AI-driven EDA, implementation and signoff flows
+  optimized for SoC and multi-die designs on Intel's advanced nodes -- a central
+  pillar of Intel's IDM 2.0 foundry push. Extended to Intel 18A-P in 2025.
+source_url: https://www.intc.com/news-events/press-releases/detail/1641/intel-and-synopsys-expand-partnership-to-enable-leading-ip

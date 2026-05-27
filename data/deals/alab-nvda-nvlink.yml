@@ -1,0 +1,14 @@
+id: alab-nvda-nvlink
+source_slug: astera-labs
+source_name: Astera Labs
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: NVLink Fusion ecosystem
+date: 2025-05
+date_display: May 2025
+description: >-
+  Astera Labs joins NVIDIA's NVLink Fusion ecosystem to supply scale-up connectivity silicon (Scorpio fabric switches,
+  Aries retimers) for semi-custom rack-scale AI systems.
+source_url: https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Unveils-NVLink-Fusion-for-Industry-to-Build-Semi-Custom-AI-Infrastructure-With-NVIDIA-Partner-Ecosystem/default.aspx

@@ -1,0 +1,14 @@
+id: msft-dmatrix-equity
+source_slug: microsoft
+source_name: Microsoft
+target_slug: d-matrix
+target_name: d-Matrix
+deal_type: equity_investment
+value_billions: 0.275
+value_display: $275M Series C (participation)
+date: 2025-11
+date_display: Nov 2025
+description: >-
+  M12 (Microsoft's Venture Fund) joins d-Matrix's $275M Series C at $2B valuation, co-led by Bullhound Capital,
+  Triatomic, Temasek. Corsair digital in-memory inference platform.
+source_url: https://www.d-matrix.ai/announcements/d-matrix-raises-275-million-to-power-the-age-of-ai-inference/

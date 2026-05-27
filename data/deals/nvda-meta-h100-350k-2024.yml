@@ -1,0 +1,17 @@
+id: nvda-meta-h100-350k-2024
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: meta
+target_name: Meta
+deal_type: gpu_purchase
+value_billions: 10.5
+value_display: ~$10.5B (350K H100s)
+date: "2024-01"
+date_display: Jan 2024
+description: >-
+  Mark Zuckerberg disclosed Meta would acquire ~350,000 NVIDIA H100 GPUs in
+  2024, bringing total compute to ~600,000 H100-equivalents for AGI-focused
+  training (Llama 3 and beyond). At ~$30K-$35K per H100, the 350K order
+  represents roughly $10.5B of pure GPU spend within Meta's 2024 capex (then
+  guided at $94-99B).
+source_url: https://siliconangle.com/2024/01/18/meta-plans-buy-350k-nvidia-gpus-build-artificial-general-intelligence

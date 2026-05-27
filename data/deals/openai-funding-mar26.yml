@@ -1,0 +1,12 @@
+id: openai-funding-mar26
+source_slug: openai
+source_name: OpenAI
+target_slug: openai
+target_name: OpenAI
+deal_type: funding_round
+value_billions: 122
+value_display: $122B
+date: 2026-03
+date_display: Mar 2026
+description: $122B at $852B post-money. Amazon, NVIDIA, SoftBank, A16z, others.
+source_url: https://openai.com/index/accelerating-the-next-phase-ai/

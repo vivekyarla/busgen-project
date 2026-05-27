@@ -1,0 +1,18 @@
+id: foxconn-nvda-blackwell-2024
+source_slug: foxconn
+source_name: Foxconn (Hon Hai)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_billions: null
+value_display: Top server vendor 2024
+date: "2024-12"
+date_display: Dec 2024
+description: >-
+  Omdia projected Foxconn to overtake Dell as the world's largest server
+  vendor in 2024, driven by AI server ODM shipments to hyperscalers and its
+  close partnership with NVIDIA to manufacture GB200 Blackwell reference
+  designs. The four largest cloud providers (Microsoft, Amazon, Google, Meta)
+  comprise nearly half of 2024 data-center capex, fueling Foxconn's growth
+  alongside Quanta, ZT Systems, and Super Micro.
+source_url: https://www.prnewswire.com/news-releases/omdia-projects-foxconn-to-become-the-worlds-largest-server-vendor-302334019.html

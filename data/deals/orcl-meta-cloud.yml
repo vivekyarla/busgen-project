@@ -1,0 +1,12 @@
+id: orcl-meta-cloud
+source_slug: oracle
+source_name: Oracle
+target_slug: meta
+target_name: Meta
+deal_type: cloud_capacity
+value_billions: 20
+value_display: ~$20B
+date: 2026-01
+date_display: 2026 (in talks)
+description: Multi-year cloud computing deal under negotiation
+source_url: https://www.reuters.com/business/autos-transportation/companies-pouring-billions-advance-ai-infrastructure-2026-04-09/

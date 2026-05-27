@@ -1,0 +1,17 @@
+id: skhynix-nvda-hbm3-2022
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: custom_asic
+value_billions: null
+value_display: Industry-first HBM3
+date: "2022-06"
+date_display: Jun 2022
+description: >-
+  SK Hynix began mass production of industry-first HBM3 DRAM, with NVIDIA H100
+  as launch customer (shipping Q3 2022). 819 GB/s bandwidth per stack, 24GB
+  capacity. Established SK Hynix as NVIDIA's anchor HBM supplier -- the
+  relationship that later produced HBM3E (2024) and the $7.97B ASML EUV order
+  (2026) to scale HBM capacity.
+source_url: https://www.prnewswire.com/news-releases/sk-hynix-to-supply-industrys-first-hbm3-dram-to-nvidia-301563831.html

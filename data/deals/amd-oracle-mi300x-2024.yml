@@ -1,0 +1,17 @@
+id: amd-oracle-mi300x-2024
+source_slug: amd
+source_name: AMD
+target_slug: oracle
+target_name: Oracle
+deal_type: gpu_purchase
+value_billions: null
+value_display: OCI MI300X bare-metal
+date: "2024-09"
+date_display: Sep 2024
+description: >-
+  AMD Instinct MI300X accelerators became available on Oracle Cloud
+  Infrastructure as bare-metal GPU instances, supporting up to 16,384 GPUs per
+  OCI Supercluster. Fireworks AI among launch customers. OCI positioned MI300X
+  for inference-heavy workloads. Distinct from the Oct 2025 MI450/MI355X
+  zettascale cluster expansion.
+source_url: https://www.amd.com/en/newsroom/press-releases/2024-9-26-amd-instinct-mi300x-accelerators-available-on-orac.html

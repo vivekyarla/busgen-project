@@ -1,0 +1,14 @@
+id: tsmc-intel-tiles
+source_slug: tsmc
+source_name: TSMC
+target_slug: intel
+target_name: Intel
+deal_type: custom_asic
+value_billions: null
+value_display: N3B compute tiles
+date: 2024-02
+date_display: Feb 2024
+description: >-
+  Intel confirms at IFS Direct Connect 2024 that TSMC fabs the compute tiles of Lunar Lake and Arrow Lake client CPUs on
+  N3B - Intel's first outsourced mainstream CPU cores.
+source_url: https://www.techpowerup.com/323700/tsmc-begins-3-nm-production-for-intels-lunar-lake-and-arrow-lake-tiles

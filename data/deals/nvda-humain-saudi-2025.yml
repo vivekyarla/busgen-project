@@ -1,0 +1,18 @@
+id: nvda-humain-saudi-2025
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: multiple
+target_name: Multiple
+deal_type: gpu_purchase
+value_billions: null
+value_display: Up to 600K GPUs, 500 MW
+date: "2025-05"
+date_display: May 2025
+description: >-
+  NVIDIA and Saudi Arabia's PIF-backed Humain announced a partnership to deploy
+  up to 500 MW of AI factories powered by "several hundred thousand" NVIDIA
+  GPUs over five years. Expanded in November 2025 to "up to 600,000 of NVIDIA's
+  latest AI infrastructure technologies over three years" following U.S.
+  Commerce approval of advanced chip exports to Humain. Kingdom's sovereign AI
+  infrastructure program, positioned alongside Oracle/Cisco/AMD deals.
+source_url: https://economymiddleeast.com/news/pifs-humain-and-nvidia-to-launch-18000-gpu-ai-supercomputer

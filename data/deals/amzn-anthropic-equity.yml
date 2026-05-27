@@ -1,0 +1,12 @@
+id: amzn-anthropic-equity
+source_slug: amazon-aws
+source_name: Amazon/AWS
+target_slug: anthropic
+target_name: Anthropic
+deal_type: equity_investment
+value_billions: 8
+value_display: $8B
+date: 2025-03
+date_display: 2023-2025
+description: Cumulative equity, multiple tranches. Convertible notes. Amazon stake $60.6B (Feb 2026).
+source_url: https://techfundingnews.com/amazon-anthropic-ai-investment-strategy/

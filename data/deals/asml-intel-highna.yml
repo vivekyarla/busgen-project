@@ -1,0 +1,14 @@
+id: asml-intel-highna
+source_slug: asml
+source_name: ASML
+target_slug: intel
+target_name: Intel
+deal_type: equipment_supply
+value_billions: 2
+value_display: ~$2B (5-6 tools)
+date: 2024-04
+date_display: Apr 2024
+description: >-
+  Intel took delivery of ASML's first commercial High-NA EUV scanner (EXE:5000) at Fab D1X Hillsboro and locked all
+  5-6 High-NA units produced in 2024 at ~$380M per tool for Intel 18A/14A.
+source_url: https://newsroom.intel.com/intel-foundry/intel-foundry-opens-new-frontier-chipmaking

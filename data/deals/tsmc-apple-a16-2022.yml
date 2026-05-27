@@ -1,0 +1,16 @@
+id: tsmc-apple-a16-2022
+source_slug: tsmc
+source_name: TSMC
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_billions: null
+value_display: A16 Bionic + M2 (N4P)
+date: "2022-09"
+date_display: Sep 2022
+description: >-
+  Apple launched the A16 Bionic (iPhone 14 Pro) on TSMC N4P -- bridging the gap
+  between N5 (A14/M1 in 2020) and N3 (A17/M3 in 2023). M2 chip for MacBook Air
+  also used a TSMC 5nm variant. TSMC later moved A16 production to Fab 21
+  Arizona, making it the first chip manufactured in the US for Apple.
+source_url: https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-pro-and-iphone-14-pro-max/

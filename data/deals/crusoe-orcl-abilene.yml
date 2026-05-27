@@ -1,0 +1,14 @@
+id: crusoe-orcl-abilene
+source_slug: crusoe
+source_name: Crusoe
+target_slug: oracle
+target_name: Oracle
+deal_type: cloud_capacity
+value_billions: 3.4
+value_display: ~$3.4B (Stargate Abilene Phase 1)
+date: 2024-07
+date_display: Jul 2024
+description: >-
+  Crusoe JV with Blue Owl builds 1.2GW Abilene TX campus leased to Oracle, which subleases GPU capacity to OpenAI
+  (Stargate site). Initial 200MW phase ~$3.4B; total financing grew to $15B by 2025.
+source_url: https://www.crusoe.ai/company/newsroom/crusoe-announces-abilene-texas-data-center/
