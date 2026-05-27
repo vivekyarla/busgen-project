@@ -43,7 +43,7 @@ export default function ControlPanel({
                   : "text-zinc-400 hover:text-zinc-200"
               }`}
             >
-              {m === "heat" ? "Deal heat" : "Layer"}
+              {m === "heat" ? "Deal heat" : "Plain"}
             </button>
           ))}
         </div>

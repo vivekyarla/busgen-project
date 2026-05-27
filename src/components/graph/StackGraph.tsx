@@ -28,14 +28,17 @@ const DIM_LINK = "rgba(82,82,91,0.05)";
 const IDLE_LINK = "rgba(161,161,170,0.16)";
 const HOT_LINK = "rgba(244,244,245,0.6)";
 const PLANE_HALF_W = 760; // x half-extent for planes + layer labels
-// Reference distances for constant-on-screen label sizing (smaller = bigger).
-const NODE_LABEL_REF = 380;
+const NODE_COLOR = "#fafafa"; // white nodes by default (no layer color-coding)
+const LABEL_COLOR = "#f4f4f5";
+const LABEL_FONT = "Helvetica Neue, Helvetica, Arial, sans-serif";
+// Reference distances for constant-on-screen label sizing (larger = smaller text).
+const NODE_LABEL_REF = 560;
 const LAYER_LABEL_REF = 2600;
 // Level-of-detail: at the overview only high-activity hubs are labeled; as the
 // camera nears, the activity cutoff drops toward 0 and every label appears.
-const LOD_NEAR = 340; // camera distance at/below which all labels show
-const LOD_FAR = 1050; // camera distance at/above which only top hubs show
-const LOD_MAX_CUTOFF = 9; // min deal-activity to be labeled at the overview
+const LOD_NEAR = 320; // camera distance at/below which all labels show
+const LOD_FAR = 1080; // camera distance at/above which only top hubs show
+const LOD_MAX_CUTOFF = 16; // min deal-activity to be labeled at the overview
 
 function lodCutoff(camDist: number): number {
   const t = (camDist - LOD_NEAR) / (LOD_FAR - LOD_NEAR);
@@ -105,32 +108,46 @@ export default function StackGraph({
   const buildNodeObject = useCallback(
     (n: GraphNode): THREE.Object3D => {
       const dim = selectedId != null && !hiNodes.has(n.id);
-      const color =
-        colorMode === "heat"
+      const color = dim
+        ? DIM_NODE
+        : colorMode === "heat"
           ? heatColor(maxActivity > 0 ? nodeActivity(n) / maxActivity : 0)
-          : (LAYER_META[n.layer]?.color ?? "#888888");
+          : NODE_COLOR;
 
       const group = new THREE.Group();
-      const r = nodeRadius(n.val);
+      const orad = nodeRadius(n.val) * 1.7;
 
-      const sphere = new THREE.Mesh(
-        new THREE.SphereGeometry(r, 18, 14),
-        new THREE.MeshLambertMaterial({
-          color: new THREE.Color(dim ? DIM_NODE : color),
+      // Faceted octahedron ("crystal") — flat-shaded for a modern, geometric read.
+      const mesh = new THREE.Mesh(
+        new THREE.OctahedronGeometry(orad, 0),
+        new THREE.MeshStandardMaterial({
+          color: new THREE.Color(color),
+          emissive: new THREE.Color(color),
+          emissiveIntensity: dim ? 0.05 : 0.18,
+          roughness: 0.42,
+          metalness: 0.12,
+          flatShading: true,
           transparent: true,
-          opacity: dim ? 0.45 : 0.95,
+          opacity: dim ? 0.4 : 0.95,
         }),
       );
-      group.add(sphere);
+      mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+      mesh.userData.kind = "nodeMesh";
+      group.add(mesh);
 
       const label = new SpriteText(n.name);
-      label.color = dim ? "#52525b" : "#e4e4e7";
-      label.textHeight = 6.5;
-      label.fontWeight = "500";
-      label.strokeColor = "#09090b";
-      label.strokeWidth = 0.8;
+      label.color = dim ? "#52525b" : LABEL_COLOR;
+      label.textHeight = 5;
+      label.fontFace = LABEL_FONT;
+      label.fontWeight = "400";
+      label.strokeWidth = 0; // no heavy outline — cleaner, less "glitchy"
       label.backgroundColor = false as unknown as string;
-      label.position.set(0, r + 5, 0);
+      label.padding = 0;
+      label.position.set(0, orad + 5, 0);
+      // Render labels on top, depth-test off, so overlapping sprites don't flicker.
+      label.material.depthTest = false;
+      label.material.depthWrite = false;
+      label.renderOrder = 10;
       // Captured base scale + reference distance drive constant-on-screen sizing;
       // kind/activity/nodeId drive level-of-detail visibility in the loop.
       label.userData.baseScale = label.scale.clone();
@@ -161,6 +178,11 @@ export default function StackGraph({
         const cutoff = lodCutoff(cam.position.length());
         const sel = selRef.current.ids;
         scene.traverse((obj: THREE.Object3D) => {
+          // Gentle idle spin on the node crystals.
+          if (obj.userData?.kind === "nodeMesh") {
+            obj.rotation.y += 0.004;
+            return;
+          }
           const base = obj.userData?.baseScale as THREE.Vector3 | undefined;
           const ref = obj.userData?.refDist as number | undefined;
           if (!base || !ref) return;
@@ -186,8 +208,8 @@ export default function StackGraph({
         return;
       }
 
-      fg.d3Force("charge")?.strength(-470);
-      fg.d3Force("link")?.distance(100).strength(0.2);
+      fg.d3Force("charge")?.strength(-600);
+      fg.d3Force("link")?.distance(115).strength(0.14);
       fg.d3ReheatSimulation?.();
 
       const scene = fg.scene();
@@ -205,9 +227,9 @@ export default function StackGraph({
           const plane = new THREE.Mesh(
             new THREE.PlaneGeometry(PLANE_HALF_W * 2, 320),
             new THREE.MeshBasicMaterial({
-              color: new THREE.Color(meta.color),
+              color: new THREE.Color("#ffffff"),
               transparent: true,
-              opacity: 0.04,
+              opacity: 0.025,
               side: THREE.DoubleSide,
               depthWrite: false,
             }),
@@ -218,15 +240,18 @@ export default function StackGraph({
           scene.add(plane);
 
           const text = new SpriteText(meta.label.toUpperCase());
-          text.color = meta.color;
-          text.textHeight = 24;
-          text.fontWeight = "700";
-          text.strokeColor = "#09090b";
-          text.strokeWidth = 0.6;
+          text.color = "#d4d4d8";
+          text.textHeight = 22;
+          text.fontFace = LABEL_FONT;
+          text.fontWeight = "600";
+          text.strokeWidth = 0;
           text.backgroundColor = false as unknown as string;
+          text.padding = 0;
           // Anchored to the right edge so it clears the left-side control panel.
           text.position.set(PLANE_HALF_W - 60, y + 30, 0);
-          text.renderOrder = 1;
+          text.material.depthTest = false;
+          text.material.depthWrite = false;
+          text.renderOrder = 9;
           text.userData.baseScale = text.scale.clone();
           text.userData.refDist = LAYER_LABEL_REF;
           text.userData.kind = "layerLabel";

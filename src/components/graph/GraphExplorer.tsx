@@ -101,10 +101,12 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
         />
       </div>
 
-      {/* Bottom-left: legend */}
-      <div className="pointer-events-none absolute bottom-0 left-0 z-10 p-4">
-        <Legend colorMode={colorMode} maxActivity={maxActivity} />
-      </div>
+      {/* Bottom-left: legend (only meaningful in heat mode; layers are labeled in-scene) */}
+      {colorMode === "heat" && (
+        <div className="pointer-events-none absolute bottom-0 left-0 z-10 p-4">
+          <Legend colorMode={colorMode} maxActivity={maxActivity} />
+        </div>
+      )}
 
       {/* Bottom-center: time slider */}
       <div className="pointer-events-none absolute bottom-0 left-1/2 z-10 -translate-x-1/2 p-4">
