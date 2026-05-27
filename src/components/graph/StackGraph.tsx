@@ -34,16 +34,9 @@ const LABEL_FONT = "Helvetica Neue, Helvetica, Arial, sans-serif";
 // Reference distances for constant-on-screen label sizing (larger = smaller text).
 const NODE_LABEL_REF = 560;
 const LAYER_LABEL_REF = 2600;
-// Level-of-detail: at the overview only high-activity hubs are labeled; as the
-// camera nears, the activity cutoff drops toward 0 and every label appears.
-const LOD_NEAR = 320; // camera distance at/below which all labels show
-const LOD_FAR = 1080; // camera distance at/above which only top hubs show
-const LOD_MAX_CUTOFF = 16; // min deal-activity to be labeled at the overview
-
-function lodCutoff(camDist: number): number {
-  const t = (camDist - LOD_NEAR) / (LOD_FAR - LOD_NEAR);
-  return Math.max(0, Math.min(1, t)) * LOD_MAX_CUTOFF;
-}
+// Screen-space label declutter: estimated on-screen label box (constant size).
+const LABEL_PX_PER_CHAR = 6.4;
+const LABEL_PX_HEIGHT = 13;
 
 /** Approximate sphere radius react-force-graph renders for a given val. */
 function nodeRadius(val: number): number {
@@ -158,6 +151,7 @@ export default function StackGraph({
       label.userData.kind = "nodeLabel";
       label.userData.activity = nodeActivity(n);
       label.userData.nodeId = n.id;
+      label.userData.textLen = n.name.length;
       group.add(label);
 
       return group;
@@ -172,18 +166,20 @@ export default function StackGraph({
     let loopRaf = 0;
     let tries = 0;
     const tmp = new THREE.Vector3();
+    const proj = new THREE.Vector3();
+    type Cand = { obj: THREE.Object3D; sx: number; sy: number; w: number; pr: number };
 
     const scaleLabels = () => {
       const fg = fgRef.current;
       const cam = fg?.camera?.();
       const scene = fg?.scene?.();
-      if (cam && scene) {
-        const tgt = fg.controls?.()?.target as THREE.Vector3 | undefined;
-        const camDist = tgt
-          ? cam.position.distanceTo(tgt)
-          : cam.position.length();
-        const cutoff = lodCutoff(camDist);
+      const cont = containerRef.current;
+      if (cam && scene && cont) {
+        const W = cont.clientWidth;
+        const H = cont.clientHeight;
         const sel = selRef.current.ids;
+        const cands: Cand[] = [];
+
         scene.traverse((obj: THREE.Object3D) => {
           // Gentle idle spin on the node crystals.
           if (obj.userData?.kind === "nodeMesh") {
@@ -193,17 +189,60 @@ export default function StackGraph({
           const base = obj.userData?.baseScale as THREE.Vector3 | undefined;
           const ref = obj.userData?.refDist as number | undefined;
           if (!base || !ref) return;
+
+          // Constant on-screen size: scale ∝ distance to camera.
           obj.getWorldPosition(tmp);
           const f = cam.position.distanceTo(tmp) / ref;
           obj.scale.set(base.x * f, base.y * f, base.z * f);
-          // Level-of-detail: hide minor node labels at the overview, always show
-          // selected/neighbor labels. Layer labels are exempt (always visible).
-          if (obj.userData.kind === "nodeLabel") {
-            const act = (obj.userData.activity as number) ?? 0;
-            const nid = obj.userData.nodeId as string;
-            obj.visible = act >= cutoff || sel.has(nid);
+
+          if (obj.userData.kind === "layerLabel") {
+            obj.visible = true;
+            return;
           }
+          if (obj.userData.kind !== "nodeLabel") return;
+
+          // Project to screen; cull off-screen / behind camera.
+          proj.copy(tmp).project(cam);
+          if (
+            proj.z >= 1 ||
+            proj.x < -1.1 ||
+            proj.x > 1.1 ||
+            proj.y < -1.1 ||
+            proj.y > 1.1
+          ) {
+            obj.visible = false;
+            return;
+          }
+          const act = (obj.userData.activity as number) ?? 0;
+          const nid = obj.userData.nodeId as string;
+          const tl = (obj.userData.textLen as number) ?? 6;
+          cands.push({
+            obj,
+            sx: (proj.x * 0.5 + 0.5) * W,
+            sy: (-proj.y * 0.5 + 0.5) * H,
+            w: Math.max(24, tl * LABEL_PX_PER_CHAR),
+            // Selected node + neighbors always win; otherwise rank by activity.
+            pr: sel.has(nid) ? 1e9 + act : act,
+          });
         });
+
+        // Greedy screen-space declutter: highest priority first, hide overlaps.
+        cands.sort((a, b) => b.pr - a.pr);
+        const placed: Cand[] = [];
+        for (const c of cands) {
+          let overlap = false;
+          for (const p of placed) {
+            if (
+              Math.abs(p.sx - c.sx) < (p.w + c.w) / 2 &&
+              Math.abs(p.sy - c.sy) < LABEL_PX_HEIGHT + 3
+            ) {
+              overlap = true;
+              break;
+            }
+          }
+          c.obj.visible = !overlap;
+          if (!overlap) placed.push(c);
+        }
       }
       loopRaf = requestAnimationFrame(scaleLabels);
     };

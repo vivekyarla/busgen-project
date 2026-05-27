@@ -63,15 +63,7 @@ export default function ControlPanel({
         onToggle={(v) =>
           setFilters({ ...filters, layers: toggle(filters.layers, v) })
         }
-        renderLabel={(l) => (
-          <span className="flex items-center gap-1.5">
-            <span
-              className="inline-block h-2 w-2 rounded-full"
-              style={{ background: LAYER_META[l as Layer].color }}
-            />
-            {LAYER_META[l as Layer].label}
-          </span>
-        )}
+        renderLabel={(l) => LAYER_META[l as Layer].label}
       />
 
       {/* Deal types */}
