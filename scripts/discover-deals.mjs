@@ -415,6 +415,23 @@ fs.mkdirSync("/tmp", { recursive: true });
 fs.writeFileSync("/tmp/pr-body.md", lines.join("\n"));
 console.log(`\n[discover] ${newDeals.length} deals added; PR body → /tmp/pr-body.md`);
 
+// Console diagnostics so the Actions log shows why items were skipped.
+{
+  const reasonCounts = new Map();
+  for (const s of skipped) {
+    const key = (s.reason || "unknown").split(":")[0].slice(0, 50);
+    reasonCounts.set(key, (reasonCounts.get(key) ?? 0) + 1);
+  }
+  console.log("[discover] skip reasons:");
+  for (const [r, n] of [...reasonCounts.entries()].sort((a, b) => b[1] - a[1])) {
+    console.log(`   ${n}× ${r}`);
+  }
+  console.log("[discover] sample skips:");
+  for (const s of skipped.slice(0, 8)) {
+    console.log(`   - "${(s.title || s.link || "").slice(0, 70)}" → ${s.reason}`);
+  }
+}
+
 // Write a run summary to GITHUB_STEP_SUMMARY (visible on the Actions run page
 // even when no PR is opened — so 0-deal weeks aren't silent).
 if (process.env.GITHUB_STEP_SUMMARY) {
