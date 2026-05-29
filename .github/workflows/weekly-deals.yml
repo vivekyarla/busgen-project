@@ -1,0 +1,59 @@
+name: Weekly deal discovery
+
+on:
+  # Sunday 14:00 UTC ≈ 6 AM PT (7 AM during PST)
+  schedule:
+    - cron: "0 14 * * 0"
+  # Manual trigger from the Actions tab
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  # Lets us call GitHub Models with the auto-provided GITHUB_TOKEN — no
+  # external API key required.
+  models: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Discover deals
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/discover-deals.mjs
+
+      - name: Validate dataset
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee /tmp/build.log
+          if grep -q "skipping malformed" /tmp/build.log; then
+            echo "::error::Loader skipped a malformed record — fix before merging."
+            exit 1
+          fi
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: auto/weekly-deals-${{ github.run_number }}
+          delete-branch: true
+          base: main
+          title: "Auto: weekly deal discovery — ${{ github.run_id }}"
+          body-path: /tmp/pr-body.md
+          commit-message: "Auto: weekly deal discovery"
+          labels: |
+            automation
+            needs-review
+          add-paths: |
+            data/deals/*.yml

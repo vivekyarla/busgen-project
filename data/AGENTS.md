@@ -125,3 +125,30 @@ double-check the new node landed where you expect.
   counts. If it builds clean and the node/edge appear, you're good to commit.
 - Keep `description` factual and sourced — this is a class project making an
   argument; credibility matters.
+
+---
+
+## Automated weekly discovery
+
+A GitHub Action (`.github/workflows/weekly-deals.yml`) runs every **Sunday at
+14:00 UTC (6 AM PT)** and:
+
+1. Pulls recent items from a curated set of tech-news RSS feeds.
+2. Calls GitHub Models (gpt-4o-mini, no API key needed — uses the workflow's
+   built-in token) to filter for AI-infra deals **between companies already in
+   `companies.yml`**.
+3. Writes valid new deals into `data/deals/*.yml`.
+4. Runs `npm run build` as a sanity check.
+5. Opens a **pull request** labeled `automation` + `needs-review`.
+
+The PR is **never auto-merged.** Every weekly run is a draft you read,
+fix/reject as needed, and merge if accurate. The PR body lists each added deal
+with its source URL + flags any news items that mention companies not yet in
+the dataset, so you can decide whether to add them manually.
+
+To trigger a run on-demand (e.g. before a class presentation): go to the
+repo's **Actions** tab → "Weekly deal discovery" → "Run workflow."
+
+**Tuning knobs** are at the top of `scripts/discover-deals.mjs`:
+`LOOKBACK_DAYS`, `MAX_NEW_DEALS`, the `FEEDS` list, and the `MODEL`. Add new
+RSS sources by appending to `FEEDS`.
