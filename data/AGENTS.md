@@ -135,16 +135,21 @@ A GitHub Action (`.github/workflows/weekly-deals.yml`) runs every **Sunday at
 
 1. Pulls recent items from a curated set of tech-news RSS feeds.
 2. Calls GitHub Models (gpt-4o-mini, no API key needed — uses the workflow's
-   built-in token) to filter for AI-infra deals **between companies already in
-   `companies.yml`**.
-3. Writes valid new deals into `data/deals/*.yml`.
+   built-in token) to judge each item on two things: *is it a real AI-stack
+   deal*, and *do the companies belong on the map*.
+3. Writes valid new deals into `data/deals/*.yml`. **If a deal involves a
+   company not yet in the dataset, the bot evaluates whether it genuinely
+   belongs on the AI-infra map and, if so, adds it to `companies.yml` on the
+   correct layer** (it picks the category + layer from the taxonomy above).
+   Companies that are merely tangential / non-infra are rejected.
 4. Runs `npm run build` as a sanity check.
 5. Opens a **pull request** labeled `automation` + `needs-review`.
 
 The PR is **never auto-merged.** Every weekly run is a draft you read,
 fix/reject as needed, and merge if accurate. The PR body lists each added deal
-with its source URL + flags any news items that mention companies not yet in
-the dataset, so you can decide whether to add them manually.
+with its source URL, and **separately highlights any newly-added companies**
+(slug, layer, category, source) so you can scrutinize those especially — a
+wrong new company is the most likely thing to need fixing.
 
 To trigger a run on-demand (e.g. before a class presentation): go to the
 repo's **Actions** tab → "Weekly deal discovery" → "Run workflow."
