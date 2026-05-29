@@ -23,7 +23,8 @@ const DEALS_DIR = path.join(DATA_DIR, "deals");
 
 // ─── Tuning knobs ─────────────────────────────────────────────────────────
 const LOOKBACK_DAYS = 7;
-const MAX_CANDIDATES_PER_RUN = 80; // RSS items considered after dedup
+const MAX_PER_FEED = 20; // per-feed cap so a high-volume feed can't crowd others out
+const MAX_CANDIDATES_PER_RUN = 150; // total RSS items considered after dedup
 const MAX_NEW_DEALS = 15; // hard cap on deals committed per run
 const MODEL = "gpt-4o-mini";
 const LLM_URL = "https://models.inference.ai.azure.com/chat/completions";
@@ -79,6 +80,7 @@ for (const feed of FEEDS) {
     let added = 0;
     for (const item of f.items) {
       if (candidates.length >= MAX_CANDIDATES_PER_RUN) break;
+      if (added >= MAX_PER_FEED) break; // fair share across feeds
       const isoDate = item.isoDate || item.pubDate;
       const t = isoDate ? new Date(isoDate).getTime() : NaN;
       if (!Number.isFinite(t) || t < cutoff) continue;
