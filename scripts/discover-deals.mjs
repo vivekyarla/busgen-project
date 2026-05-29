@@ -28,15 +28,17 @@ const MAX_NEW_DEALS = 15; // hard cap on deals committed per run
 const MODEL = "gpt-4o-mini";
 const LLM_URL = "https://models.inference.ai.azure.com/chat/completions";
 
-// RSS sources — curated AI-infra-relevant outlets. Keep this list small and
-// high-quality; expand as needed.
+// RSS sources — curated AI-infra-relevant outlets. Verified working as of the
+// last check. Add/remove freely; broken feeds are logged but don't fail the run.
 const FEEDS = [
   { name: "TechCrunch", url: "https://techcrunch.com/feed/" },
   { name: "The Verge", url: "https://www.theverge.com/rss/index.xml" },
-  { name: "AnandTech", url: "https://www.anandtech.com/rss/" },
   { name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all" },
-  { name: "Reuters Technology", url: "https://www.reuters.com/arc/outboundfeeds/rss/category/technology/" },
-  { name: "Business Wire — Technology", url: "https://www.businesswire.com/portal/site/home/?ndmViewId=news_view&ndmConfigId=1000700&newsId=20240101005000&newsLang=en&rss=1&category=technology" },
+  { name: "Ars Technica", url: "https://feeds.arstechnica.com/arstechnica/index" },
+  { name: "VentureBeat", url: "https://venturebeat.com/feed/" },
+  { name: "SemiWiki", url: "https://semiwiki.com/feed/" },
+  { name: "Data Center Knowledge", url: "https://www.datacenterknowledge.com/rss.xml" },
+  { name: "Engadget", url: "https://www.engadget.com/rss.xml" },
 ];
 
 const DEAL_TYPES = [
@@ -316,3 +318,54 @@ lines.push(
 fs.mkdirSync("/tmp", { recursive: true });
 fs.writeFileSync("/tmp/pr-body.md", lines.join("\n"));
 console.log(`\n[discover] ${newDeals.length} deals added; PR body → /tmp/pr-body.md`);
+
+// Write a run summary to GITHUB_STEP_SUMMARY (visible on the Actions run page
+// even when no PR is opened — so 0-deal weeks aren't silent).
+if (process.env.GITHUB_STEP_SUMMARY) {
+  const reasonCounts = new Map();
+  for (const s of skipped) {
+    const key = (s.reason || "unknown").split(":")[0].slice(0, 60);
+    reasonCounts.set(key, (reasonCounts.get(key) ?? 0) + 1);
+  }
+  const topReasons = [...reasonCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8);
+
+  const sum = [
+    `# Weekly deal discovery — ${today}`,
+    ``,
+    `| metric | count |`,
+    `|---|---|`,
+    `| RSS items considered | ${candidates.length} |`,
+    `| New deals added | **${newDeals.length}** |`,
+    `| Skipped (not a deal / not in scope) | ${skipped.length} |`,
+    `| Mentions of new companies (manual review) | ${candidatesForNewCompany.length} |`,
+    ``,
+  ];
+
+  if (newDeals.length > 0) {
+    sum.push(`## ✅ Added`);
+    for (const d of newDeals) {
+      sum.push(
+        `- \`${d.id}\` — ${d.source_name} → ${d.target_name} (${d.deal_type}) — ${d.value_display || "$$ undisclosed"}`,
+      );
+    }
+    sum.push(``);
+  }
+
+  if (topReasons.length > 0) {
+    sum.push(`## Top skip reasons`);
+    for (const [r, n] of topReasons) sum.push(`- **${n}×** ${r}`);
+    sum.push(``);
+  }
+
+  if (candidatesForNewCompany.length > 0) {
+    sum.push(`## 🆕 News mentioning new (out-of-dataset) companies`);
+    for (const c of candidatesForNewCompany.slice(0, 10)) {
+      sum.push(`- [${c.title}](${c.link})`);
+    }
+    sum.push(``);
+  }
+
+  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, sum.join("\n"));
+}
