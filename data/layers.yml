@@ -1,0 +1,111 @@
+# Editorial content for each layer's deep-dive pop-up. Edit freely — figures
+# are estimates; keep them sourced/reasonable. Keys must match the layer ids in
+# src/lib/data/layers.ts. Stats + the recent-developments feed are derived from
+# the deal data automatically; this file is the prose + market sizing.
+
+application:
+  tagline: The revenue tip of the stack
+  market_size: "$300B+"
+  market_size_note: AI software & services market (2026E)
+  summary: >-
+    Frontier labs and agentic-AI products — the layer end users and enterprises
+    actually pay. It converts raw compute into models and applications, and its
+    demand signals (token volume, enterprise contracts) are what ultimately
+    justify every dollar spent below it.
+  interconnect: >-
+    Sits at the top: it is the largest *buyer* of the Compute layer (cloud
+    capacity, GPU allocations) and the source of the demand narrative that
+    underwrites capex all the way down to Power and Raw Materials. When labs
+    pre-commit to multi-year cloud deals, the ripple reaches foundries within
+    quarters.
+  watch: >-
+    Watch the gap between announced compute commitments and realized
+    application revenue — the clearest tell for whether the buildout below is
+    demand-backed or speculative.
+
+compute:
+  tagline: Where AI actually runs
+  market_size: "$400B+"
+  market_size_note: annual AI data-center capex (2026E)
+  summary: >-
+    Chip designers, hyperscalers, neoclouds, data-center operators and server
+    OEMs — the layer that turns silicon into usable compute. The single largest
+    capital sink in the stack and the one the market watches most closely.
+  interconnect: >-
+    The central hub: it sells capacity *upward* to the Application layer and
+    buys *downward* from nearly everyone — accelerators and memory from Raw
+    Materials, interconnect from Networking, and electricity from Power. Most
+    cross-layer deals route through here.
+  watch: >-
+    Largely priced in at the top (Nvidia). The interesting movement is in
+    neoclouds and data-center operators racing to secure power and chips faster
+    than their valuations reflect.
+
+networking:
+  tagline: The fabric between the chips
+  market_size: "$40B+"
+  market_size_note: AI networking / interconnect (2026E)
+  summary: >-
+    Switching, optics and interconnect that stitch thousands of accelerators
+    into a single training cluster. As models scale, the network increasingly
+    decides effective throughput — making this an under-watched constraint.
+  interconnect: >-
+    Tightly coupled to Compute: every large cluster is a networking deal as
+    much as a chip deal. Draws on Raw Materials for optical components and
+    advanced packaging (co-packaged optics blurs the line with the chip
+    itself).
+  watch: >-
+    Optical interconnect and co-packaged optics are where bandwidth bottlenecks
+    are migrating next — a classic "next-GPUs" candidate hiding one layer down.
+
+raw_materials:
+  tagline: The deepest bottleneck
+  market_size: "$160B+ foundry · $130B equipment · $40B HBM"
+  market_size_note: 2026E across foundry, semicap & memory
+  summary: >-
+    Foundries, semiconductor equipment, memory and advanced packaging — the
+    physical substrate everything above depends on. The hardest capacity to add
+    quickly (a fab takes years), which makes it the structural choke point.
+  interconnect: >-
+    Supplies the Compute and Networking layers with the chips, memory and
+    packaging they resell as "AI." Long lead times mean deals here are the
+    earliest leading indicator of where the squeeze moves next.
+  watch: >-
+    HBM memory and advanced packaging (CoWoS) have repeatedly been the binding
+    constraint. Equipment order books are the most predictive — and least
+    priced — signal in the whole stack.
+
+power:
+  tagline: The new binding constraint
+  market_size: "$50B+"
+  market_size_note: annual AI data-center power buildout (2026E)
+  summary: >-
+    Generation, grid and power-purchase agreements feeding AI data centers.
+    Compute is increasingly gated not by chips but by megawatts — turning power
+    into the fastest-rising deal category in the stack.
+  interconnect: >-
+    Powers the Compute layer's data centers. Deals here (PPAs, nuclear
+    restarts, behind-the-meter gas) are surging as hyperscalers discover that
+    interconnection queues, not GPUs, set their build timelines.
+  watch: >-
+    The clearest current example of the thesis: enormous inbound deal velocity,
+    public-market response still catching up. Grid equipment and firm power are
+    prime next-bottleneck candidates.
+
+capital:
+  tagline: The money moving across layers
+  market_size: "$300B+"
+  market_size_note: committed capital across AI infra (cumulative)
+  summary: >-
+    Pure financiers and strategic investors with no operating role in the
+    stack. They appear wherever capital is being marshalled — often the first
+    visible sign that a layer is heating up.
+  interconnect: >-
+    Cross-cutting: capital flows into every layer, frequently in circular
+    patterns (a supplier invests in a customer who then buys the supplier's
+    product). Tracking who funds whom exposes the financing structure beneath
+    the buildout.
+  watch: >-
+    Concentrations of investment into a single layer — especially circular
+    financing — are an early, and easily missed, signal of where attention is
+    about to rush.

@@ -9,6 +9,7 @@ interface ControlPanelProps {
   dealTypes: string[];
   colorMode: ColorMode;
   setColorMode: (m: ColorMode) => void;
+  onLayerInfo: (l: Layer) => void;
 }
 
 function toggle<T>(set: Set<T>, value: T): Set<T> {
@@ -24,6 +25,7 @@ export default function ControlPanel({
   dealTypes,
   colorMode,
   setColorMode,
+  onLayerInfo,
 }: ControlPanelProps) {
   return (
     <div className="pointer-events-auto w-60 rounded-lg border border-zinc-800/80 bg-zinc-950/80 p-3 backdrop-blur-sm">
@@ -64,6 +66,7 @@ export default function ControlPanel({
           setFilters({ ...filters, layers: toggle(filters.layers, v) })
         }
         renderLabel={(l) => LAYER_META[l as Layer].label}
+        onInfo={(v) => onLayerInfo(v as Layer)}
       />
 
       {/* Deal types */}
@@ -93,6 +96,8 @@ interface FilterGroupProps {
   onToggle: (v: string) => void;
   onToggleAll: (all: boolean) => void;
   renderLabel: (v: string) => React.ReactNode;
+  /** When set, renders an info button per row (e.g. open a layer deep-dive). */
+  onInfo?: (v: string) => void;
 }
 
 function FilterGroup({
@@ -102,6 +107,7 @@ function FilterGroup({
   onToggle,
   onToggleAll,
   renderLabel,
+  onInfo,
 }: FilterGroupProps) {
   const allOn = allValues.every((v) => active.has(v));
   return (
@@ -121,26 +127,37 @@ function FilterGroup({
         {allValues.map((v) => {
           const on = active.has(v);
           return (
-            <button
-              key={v}
-              onClick={() => onToggle(v)}
-              className={`flex w-full items-center gap-2 text-left text-xs transition-opacity ${
-                on ? "text-zinc-300" : "text-zinc-600"
-              }`}
-            >
-              <span
-                className={`grid h-3 w-3 shrink-0 place-items-center rounded-sm border ${
-                  on
-                    ? "border-zinc-400 bg-zinc-400/20"
-                    : "border-zinc-700 bg-transparent"
+            <div key={v} className="flex items-center gap-1">
+              <button
+                onClick={() => onToggle(v)}
+                className={`flex min-w-0 flex-1 items-center gap-2 text-left text-xs transition-opacity ${
+                  on ? "text-zinc-300" : "text-zinc-600"
                 }`}
               >
-                {on && (
-                  <span className="h-1.5 w-1.5 rounded-[1px] bg-zinc-300" />
-                )}
-              </span>
-              <span className="truncate">{renderLabel(v)}</span>
-            </button>
+                <span
+                  className={`grid h-3 w-3 shrink-0 place-items-center rounded-sm border ${
+                    on
+                      ? "border-zinc-400 bg-zinc-400/20"
+                      : "border-zinc-700 bg-transparent"
+                  }`}
+                >
+                  {on && (
+                    <span className="h-1.5 w-1.5 rounded-[1px] bg-zinc-300" />
+                  )}
+                </span>
+                <span className="truncate">{renderLabel(v)}</span>
+              </button>
+              {onInfo && (
+                <button
+                  onClick={() => onInfo(v)}
+                  title="Layer details"
+                  aria-label="Layer details"
+                  className="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-zinc-700 text-[9px] text-zinc-500 hover:border-zinc-500 hover:text-zinc-200"
+                >
+                  i
+                </button>
+              )}
+            </div>
           );
         })}
       </div>

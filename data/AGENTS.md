@@ -128,6 +128,18 @@ double-check the new node landed where you expect.
 
 ---
 
+## Editing layer deep-dives
+
+Clicking a layer label (or its ⓘ in the control panel) opens a deep-dive
+pop-up. Its prose + market sizing live in **`data/layers.yml`** — one block per
+layer id (`application`, `compute`, `networking`, `raw_materials`, `power`,
+`capital`), each with `tagline`, `market_size`, `market_size_note`, `summary`,
+`interconnect`, and `watch`. The stats, cross-layer flow chips, and
+"recent developments" feed are derived from the deal data automatically — only
+the prose is hand-edited here. Edit, commit, push.
+
+---
+
 ## Automated weekly discovery
 
 A GitHub Action (`.github/workflows/weekly-deals.yml`) runs every **Sunday at

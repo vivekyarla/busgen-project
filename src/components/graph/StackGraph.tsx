@@ -51,6 +51,8 @@ interface StackGraphProps {
   onSelect: (id: string | null) => void;
   /** When this changes, fly the camera to the given coords. */
   focusTarget: { x: number; y: number; z: number; nonce: number } | null;
+  /** Fired when an in-scene layer label is clicked. */
+  onLayerClick: (layer: Layer) => void;
 }
 
 export default function StackGraph({
@@ -60,11 +62,16 @@ export default function StackGraph({
   selectedId,
   onSelect,
   focusTarget,
+  onLayerClick,
 }: StackGraphProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const [dims, setDims] = useState({ width: 0, height: 0 });
+
+  // Latest onLayerClick for the (deps-free) setup effect to call without stale closure.
+  const onLayerClickRef = useRef(onLayerClick);
+  onLayerClickRef.current = onLayerClick;
 
   useEffect(() => {
     // Fall back to window size when the container measures 0 (cold-load race),
@@ -316,6 +323,7 @@ export default function StackGraph({
           text.userData.baseScale = text.scale.clone();
           text.userData.refDist = LAYER_LABEL_REF;
           text.userData.kind = "layerLabel";
+          text.userData.layer = layer;
           scene.add(text);
         }
       }
@@ -334,6 +342,38 @@ export default function StackGraph({
       }
 
       fg.cameraPosition?.({ x: 0, y: 150, z: 1100 }, { x: 0, y: 0, z: 0 }, 0);
+
+      // Click an in-scene layer label → open its deep-dive (raycast the sprites).
+      const dom = fg.renderer?.().domElement as HTMLCanvasElement | undefined;
+      if (dom && !dom.dataset.layerClickBound) {
+        dom.dataset.layerClickBound = "1";
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        const hitLayerAt = (ev: MouseEvent): Layer | null => {
+          const cam = fgRef.current?.camera?.();
+          const sc = fgRef.current?.scene?.();
+          if (!cam || !sc) return null;
+          const rect = dom.getBoundingClientRect();
+          mouse.set(
+            ((ev.clientX - rect.left) / rect.width) * 2 - 1,
+            -((ev.clientY - rect.top) / rect.height) * 2 + 1,
+          );
+          raycaster.setFromCamera(mouse, cam);
+          const labels = sc.children.filter(
+            (o: THREE.Object3D) => o.userData?.kind === "layerLabel",
+          );
+          const hits = raycaster.intersectObjects(labels, false);
+          return (hits[0]?.object.userData?.layer as Layer) ?? null;
+        };
+        dom.addEventListener("click", (ev) => {
+          const layer = hitLayerAt(ev);
+          if (layer) onLayerClickRef.current?.(layer);
+        });
+        // Pointer cursor when hovering a label.
+        dom.addEventListener("mousemove", (ev) => {
+          dom.style.cursor = hitLayerAt(ev) ? "pointer" : "";
+        });
+      }
 
       // Kick off the constant-size label loop now that the instance is live.
       if (!loopRaf) loopRaf = requestAnimationFrame(scaleLabels);

@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { GraphData } from "@/lib/data/load";
-import { LAYER_ORDER } from "@/lib/data/layers";
+import { LAYER_ORDER, type Layer } from "@/lib/data/layers";
+import type { LayerContentMap } from "@/lib/data/layer-content";
 import {
   applyFilters,
   maxActivity as computeMaxActivity,
@@ -14,12 +15,19 @@ import StackGraph from "./StackGraph";
 import ControlPanel from "./ControlPanel";
 import Legend from "./Legend";
 import NodeDetailPanel from "./NodeDetailPanel";
+import LayerPanel from "./LayerPanel";
 import TimeBar from "./TimeBar";
 import SearchBox from "./SearchBox";
 
 const TIMELINE_FLOOR = 2020 * 12; // focus the slider on the AI-boom era
 
-export default function GraphExplorer({ data }: { data: GraphData }) {
+export default function GraphExplorer({
+  data,
+  layerContent,
+}: {
+  data: GraphData;
+  layerContent: LayerContentMap;
+}) {
   // Deal types ordered by frequency in the dataset.
   const dealTypes = useMemo(() => {
     const counts = new Map<string, number>();
@@ -51,9 +59,11 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
     z: number;
     nonce: number;
   } | null>(null);
+  const [activeLayer, setActiveLayer] = useState<Layer | null>(null);
 
-  // Select a node and fly the camera to it (used by search).
+  // Select a node and fly the camera to it (used by search + layer panel).
   const pickNode = (id: string) => {
+    setActiveLayer(null);
     setSelectedId(id);
     const n = data.nodes.find((node) => node.id === id) as
       | (typeof data.nodes)[number]
@@ -97,6 +107,7 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
         selectedId={selectedId}
         onSelect={setSelectedId}
         focusTarget={focusTarget}
+        onLayerClick={setActiveLayer}
       />
 
       {/* Top-center: search */}
@@ -130,6 +141,7 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
           dealTypes={dealTypes}
           colorMode={colorMode}
           setColorMode={setColorMode}
+          onLayerInfo={setActiveLayer}
         />
       </div>
 
@@ -166,6 +178,17 @@ export default function GraphExplorer({ data }: { data: GraphData }) {
             onSelect={setSelectedId}
           />
         </div>
+      )}
+
+      {/* Layer deep-dive modal */}
+      {activeLayer && (
+        <LayerPanel
+          layer={activeLayer}
+          content={layerContent[activeLayer]}
+          data={data}
+          onClose={() => setActiveLayer(null)}
+          onSelectNode={pickNode}
+        />
       )}
     </div>
   );
