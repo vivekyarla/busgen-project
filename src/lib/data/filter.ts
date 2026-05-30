@@ -1,6 +1,6 @@
 import type { GraphData, GraphNode, GraphLink } from "./load";
 
-export type ColorMode = "layer" | "heat";
+export type ColorMode = "layer" | "heat" | "bottleneck";
 
 /** Human labels for the raw deal_type slugs in the dataset. */
 export const DEAL_TYPE_META: Record<string, { label: string }> = {

@@ -10,23 +10,26 @@ export default function Legend({
   colorMode: ColorMode;
   maxActivity: number;
 }) {
-  if (colorMode === "heat") {
+  if (colorMode === "heat" || colorMode === "bottleneck") {
     const ramp = `linear-gradient(to right, ${heatColor(0)}, ${heatColor(
       0.45,
     )}, ${heatColor(0.75)}, ${heatColor(1)})`;
+    const isBottleneck = colorMode === "bottleneck";
     return (
       <div className="pointer-events-none rounded-lg border border-zinc-800/80 bg-zinc-950/70 p-3 backdrop-blur-sm">
         <p className="mb-1.5 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
-          Deal activity
+          {isBottleneck ? "Bottleneck score" : "Deal activity"}
         </p>
-        <div
-          className="h-2 w-40 rounded-full"
-          style={{ background: ramp }}
-        />
-        <div className="mt-1 flex w-40 justify-between text-[10px] text-zinc-500">
-          <span>quiet</span>
-          <span>{maxActivity} deals</span>
+        <div className="h-2 w-44 rounded-full" style={{ background: ramp }} />
+        <div className="mt-1 flex w-44 justify-between text-[10px] text-zinc-500">
+          <span>{isBottleneck ? "priced in" : "quiet"}</span>
+          <span>{isBottleneck ? "next bottleneck" : `${maxActivity} deals`}</span>
         </div>
+        {isBottleneck && (
+          <p className="mt-1.5 w-44 text-[10px] leading-snug text-zinc-600">
+            Deal velocity × how little the market has priced it in.
+          </p>
+        )}
       </div>
     );
   }

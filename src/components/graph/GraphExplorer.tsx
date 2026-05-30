@@ -145,8 +145,8 @@ export default function GraphExplorer({
         />
       </div>
 
-      {/* Bottom-left: legend (only meaningful in heat mode; layers are labeled in-scene) */}
-      {colorMode === "heat" && (
+      {/* Bottom-left: legend (heat/bottleneck only; layers are labeled in-scene) */}
+      {colorMode !== "layer" && (
         <div className="pointer-events-none absolute bottom-0 left-0 z-10 p-4">
           <Legend colorMode={colorMode} maxActivity={maxActivity} />
         </div>

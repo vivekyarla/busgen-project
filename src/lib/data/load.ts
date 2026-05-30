@@ -4,6 +4,7 @@ import yaml from "js-yaml";
 import { CompanySchema, DealSchema, type Company, type Deal } from "./types";
 import { layerForCategory, layerY, LAYER_META, type Layer } from "./layers";
 import { monthIndex } from "./time";
+import { loadPrices, gapFor, SCORE } from "./score";
 
 /**
  * Build-time loader. Reads the curated dataset from /data (companies.yml +
@@ -36,6 +37,22 @@ export interface GraphNode {
   val: number;
   /** True if this node was referenced by a deal but missing from companies.yml. */
   synthetic?: boolean;
+
+  // ── Opportunity Indicator (see src/lib/data/score.ts) ──
+  /** Earliest deal month touching this node (price-window start). */
+  firstMonth: number | null;
+  /** Recency-weighted inbound deal activity, normalized 0..1. */
+  dealVelocity: number;
+  /** 1 − market response since first deal, 0..1; null if unmeasured (no ticker). */
+  unrealizedGap: number | null;
+  /** DealVelocity × UnrealizedGap, normalized 0..1. The bottleneck score. */
+  bottleneckScore: number;
+  /** Stock return since firstMonth (fractional), null if unmeasured. */
+  priceReturn: number | null;
+  /** S&P return over the same window, null if unmeasured. */
+  benchmarkReturn: number | null;
+  /** True if the gap was computed from real price data. */
+  scoreMeasured: boolean;
 }
 
 export interface GraphLink {
@@ -135,6 +152,13 @@ export function loadGraph(): GraphData {
       inboundValue: 0,
       val: 2,
       synthetic: company ? undefined : true,
+      firstMonth: null,
+      dealVelocity: 0,
+      unrealizedGap: null,
+      bottleneckScore: 0,
+      priceReturn: null,
+      benchmarkReturn: null,
+      scoreMeasured: false,
     };
   };
 
@@ -192,6 +216,49 @@ export function loadGraph(): GraphData {
     .filter((m): m is number => m != null);
   const minMonth = months.length ? Math.min(...months) : 0;
   const maxMonth = months.length ? Math.max(...months) : 0;
+
+  // ── Opportunity Indicator: DealVelocity × UnrealizedGap per node ──
+  const prices = loadPrices();
+  const now = new Date();
+  const NOW_MONTH = maxMonth || now.getFullYear() * 12 + now.getMonth();
+  const velocityRaw = new Map<string, number>();
+  for (const l of links) {
+    const s = l.source as string;
+    const t = l.target as string;
+    if (l.month != null) {
+      const sN = nodeMap.get(s)!;
+      const tN = nodeMap.get(t)!;
+      sN.firstMonth = sN.firstMonth == null ? l.month : Math.min(sN.firstMonth, l.month);
+      tN.firstMonth = tN.firstMonth == null ? l.month : Math.min(tN.firstMonth, l.month);
+    }
+    // Inbound (target) demand, recency-weighted + value-boosted.
+    const w = l.month != null ? Math.exp(-(NOW_MONTH - l.month) / SCORE.TAU) : 0.3;
+    const v = w * (1 + Math.log1p(l.value_billions ?? 0));
+    velocityRaw.set(t, (velocityRaw.get(t) ?? 0) + v);
+  }
+
+  let maxVel = 0;
+  let maxScore = 0;
+  const rawScore = new Map<string, number>();
+  for (const n of nodes) {
+    const vr = velocityRaw.get(n.id) ?? 0;
+    const { gap, priceReturn, benchmarkReturn, measured } = gapFor(
+      { velocityRaw: vr, firstMonth: n.firstMonth, ticker: n.ticker },
+      prices,
+    );
+    n.unrealizedGap = gap;
+    n.priceReturn = priceReturn;
+    n.benchmarkReturn = benchmarkReturn;
+    n.scoreMeasured = measured;
+    const rs = vr * (gap ?? SCORE.UNMEASURED_GAP);
+    rawScore.set(n.id, rs);
+    maxVel = Math.max(maxVel, vr);
+    maxScore = Math.max(maxScore, rs);
+  }
+  for (const n of nodes) {
+    n.dealVelocity = maxVel > 0 ? (velocityRaw.get(n.id) ?? 0) / maxVel : 0;
+    n.bottleneckScore = maxScore > 0 ? (rawScore.get(n.id) ?? 0) / maxScore : 0;
+  }
 
   cached = {
     nodes,

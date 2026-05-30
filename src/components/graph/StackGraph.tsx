@@ -130,7 +130,9 @@ export default function StackGraph({
         ? DIM_NODE
         : colorMode === "heat"
           ? heatColor(maxActivity > 0 ? nodeActivity(n) / maxActivity : 0)
-          : NODE_COLOR;
+          : colorMode === "bottleneck"
+            ? heatColor(n.bottleneckScore)
+            : NODE_COLOR;
 
       const group = new THREE.Group();
       const orad = nodeRadius(n.val) * 1.7;

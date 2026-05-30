@@ -128,6 +128,30 @@ double-check the new node landed where you expect.
 
 ---
 
+## The Opportunity Indicator (bottleneck score)
+
+The "Bottleneck" color mode scores each node by `DealVelocity × UnrealizedGap`:
+- **DealVelocity** — recency-weighted inbound deal activity (from the deal data).
+- **UnrealizedGap** — `1 − (stock return vs S&P since the node's first deal)`,
+  clamped. Public companies with a `ticker` are measured; private / no-ticker
+  nodes are "unmeasured" and get a high default gap (the thesis: unpriced
+  concentration).
+
+Prices live in **`data/prices.json`** (monthly adjusted closes + S&P benchmark).
+Refresh them with:
+
+```
+npm run refresh-prices
+```
+
+That fetches every ticker in `companies.yml` from Yahoo Finance (no key) and
+rewrites the JSON — commit it. The app reads the cached file at build time, so
+scoring is deterministic (no live API on the demo). Re-run it periodically (or
+after adding tickers) to keep returns current. Tuning constants
+(`TAU`, `R_STAR`, `UNMEASURED_GAP`) live in `src/lib/data/score.ts`.
+
+---
+
 ## Editing layer deep-dives
 
 Clicking a layer label (or its ⓘ in the control panel) opens a deep-dive

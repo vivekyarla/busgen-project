@@ -34,18 +34,18 @@ export default function ControlPanel({
         <p className="mb-1.5 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
           Color by
         </p>
-        <div className="flex rounded-md border border-zinc-800 p-0.5 text-xs">
-          {(["layer", "heat"] as ColorMode[]).map((m) => (
+        <div className="flex rounded-md border border-zinc-800 p-0.5 text-[11px]">
+          {(["layer", "heat", "bottleneck"] as ColorMode[]).map((m) => (
             <button
               key={m}
               onClick={() => setColorMode(m)}
-              className={`flex-1 rounded px-2 py-1 capitalize transition-colors ${
+              className={`flex-1 rounded px-1.5 py-1 transition-colors ${
                 colorMode === m
                   ? "bg-zinc-200 text-zinc-900"
                   : "text-zinc-400 hover:text-zinc-200"
               }`}
             >
-              {m === "heat" ? "Deal heat" : "Plain"}
+              {m === "heat" ? "Heat" : m === "bottleneck" ? "Bottleneck" : "Plain"}
             </button>
           ))}
         </div>

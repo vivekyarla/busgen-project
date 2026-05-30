@@ -3,12 +3,24 @@
 import { useMemo } from "react";
 import type { GraphData, GraphLink } from "@/lib/data/load";
 import { LAYER_META, type Layer } from "@/lib/data/layers";
-import { dealsForNode, dealTypeLabel, endpointId } from "@/lib/data/filter";
+import {
+  dealsForNode,
+  dealTypeLabel,
+  endpointId,
+  heatColor,
+} from "@/lib/data/filter";
+import { monthLabel } from "@/lib/data/time";
 
 function fmtValue(v: number | null): string {
   if (v == null) return "—";
   if (v >= 1) return `$${v.toFixed(v >= 10 ? 0 : 1)}B`;
   return `$${Math.round(v * 1000)}M`;
+}
+
+function fmtPct(v: number | null): string {
+  if (v == null) return "—";
+  const p = Math.round(v * 100);
+  return `${p >= 0 ? "+" : ""}${p}%`;
 }
 
 export default function NodeDetailPanel({
@@ -120,6 +132,48 @@ export default function NodeDetailPanel({
         <Stat label="In value" value={fmtValue(node.inboundValue || null)} />
       </div>
 
+      {/* Opportunity Indicator breakdown (transparent inputs, not a black box) */}
+      <div className="border-b border-zinc-800/70 px-4 py-3">
+        <div className="flex items-baseline justify-between">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+            Opportunity indicator
+          </p>
+          <span
+            className="font-mono text-lg font-semibold"
+            style={{ color: heatColor(node.bottleneckScore) }}
+          >
+            {Math.round(node.bottleneckScore * 100)}
+          </span>
+        </div>
+        <div className="mt-2 space-y-2">
+          <Meter label="Deal velocity" frac={node.dealVelocity} />
+          <Meter
+            label="Unrealized gap"
+            frac={node.unrealizedGap}
+            unmeasured={!node.scoreMeasured}
+          />
+        </div>
+        <p className="mt-2 text-[11px] leading-snug text-zinc-500">
+          {node.scoreMeasured ? (
+            <>
+              Stock{" "}
+              <span className="text-zinc-300">{fmtPct(node.priceReturn)}</span>{" "}
+              vs S&amp;P{" "}
+              <span className="text-zinc-300">
+                {fmtPct(node.benchmarkReturn)}
+              </span>{" "}
+              since{" "}
+              {node.firstMonth != null
+                ? monthLabel(node.firstMonth)
+                : "its first deal"}
+              .
+            </>
+          ) : (
+            "No public ticker — market response unmeasured (private concentration)."
+          )}
+        </p>
+      </div>
+
       <div className="min-h-0 flex-1 overflow-y-auto p-2">
         {inbound.length > 0 && (
           <Section title={`Inbound · ${inbound.length}`}>
@@ -179,6 +233,36 @@ function Section({
         {title}
       </p>
       <ul>{children}</ul>
+    </div>
+  );
+}
+
+function Meter({
+  label,
+  frac,
+  unmeasured,
+}: {
+  label: string;
+  frac: number | null;
+  unmeasured?: boolean;
+}) {
+  const pct = Math.round((frac ?? 0) * 100);
+  return (
+    <div>
+      <div className="flex items-center justify-between text-[11px]">
+        <span className="text-zinc-400">{label}</span>
+        <span className="font-mono text-zinc-400">
+          {unmeasured ? "unmeasured" : pct}
+        </span>
+      </div>
+      <div className="mt-0.5 h-1 w-full overflow-hidden rounded-full bg-zinc-800">
+        {!unmeasured && (
+          <div
+            className="h-full rounded-full"
+            style={{ width: `${pct}%`, background: heatColor(frac ?? 0) }}
+          />
+        )}
+      </div>
     </div>
   );
 }
