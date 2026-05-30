@@ -97,10 +97,7 @@ export default function LayerPanel({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div
-          className="flex items-start justify-between gap-4 border-b border-zinc-800 p-5"
-          style={{ borderTop: `2px solid ${meta.color}` }}
-        >
+        <div className="flex items-start justify-between gap-4 border-b border-zinc-800 p-5">
           <div>
             <div className="flex items-center gap-2">
               <span

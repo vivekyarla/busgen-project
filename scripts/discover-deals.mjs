@@ -27,8 +27,23 @@ const MAX_PER_FEED = 20; // per-feed cap so a high-volume feed can't crowd other
 const MAX_CANDIDATES_PER_RUN = 150; // total RSS items considered after dedup
 const MAX_NEW_DEALS = 15; // hard cap on deals committed per run
 const MAX_NEW_COMPANIES = 12; // hard cap on companies added per run
+const MAX_LLM_CALLS = 45; // cap LLM calls/run (after keyword pre-filter)
+const CALL_SPACING_MS = 4500; // space calls to respect GitHub Models rate limits
+const MAX_LLM_RETRIES = 4; // retries on HTTP 429 with backoff
 const MODEL = "gpt-4o-mini";
 const LLM_URL = "https://models.inference.ai.azure.com/chat/completions";
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Cheap pre-filter: only spend an LLM call on items that look deal-ish. Cuts a
+// ~110-item firehose down to a few dozen, which keeps us under the free-tier
+// rate limit. The LLM still makes the real judgment on what survives.
+const DEAL_KEYWORDS =
+  /\b(deal|acqui|merger|buyout|invest|stake|funding|fundraise|raise[ds]?|round|series [a-f]|partnership|partner|supply|supplier|purchase|order|contract|capacity|data ?cent|gigawatt|megawatt|power purchase|ppa|wafer|foundry|fab\b|chips?|gpu|accelerator|asic|hbm|memory|interconnect|billion|\$\d)/i;
+
+function looksLikeDeal(item) {
+  return DEAL_KEYWORDS.test(`${item.title} ${item.summary}`);
+}
 
 const VALID_LAYERS = new Set([
   "application",
@@ -190,31 +205,48 @@ Summary: ${item.summary}
 
 Evaluate per the rules and respond with the JSON.`;
 
-  const res = await fetch(LLM_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: userPrompt },
-      ],
-      temperature: 0.1,
-      response_format: { type: "json_object" },
-      max_tokens: 600,
-    }),
-  });
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(LLM_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: userPrompt },
+        ],
+        temperature: 0.1,
+        response_format: { type: "json_object" },
+        max_tokens: 600,
+      }),
+    });
 
-  if (!res.ok) {
-    throw new Error(`LLM HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+    // Back off and retry on rate limit (429) — the main cause of LLM errors.
+    if (res.status === 429 && attempt < MAX_LLM_RETRIES) {
+      const retryAfter = Number(res.headers.get("retry-after")) || 0;
+      const waitMs = retryAfter
+        ? retryAfter * 1000
+        : Math.min(60000, 5000 * 2 ** attempt);
+      console.warn(
+        `[llm] 429 rate-limited; backing off ${Math.round(waitMs / 1000)}s (retry ${attempt + 1}/${MAX_LLM_RETRIES})`,
+      );
+      await sleep(waitMs);
+      continue;
+    }
+
+    if (!res.ok) {
+      throw new Error(
+        `LLM HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`,
+      );
+    }
+    const data = await res.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error("LLM returned no content");
+    return JSON.parse(content);
   }
-  const data = await res.json();
-  const content = data.choices?.[0]?.message?.content;
-  if (!content) throw new Error("LLM returned no content");
-  return JSON.parse(content);
 }
 
 const newDeals = [];
@@ -227,11 +259,30 @@ const resolves = (slug) => companyBySlug.has(slug) || addedBySlug.has(slug);
 const nameOf = (slug) =>
   companyBySlug.get(slug)?.name || addedBySlug.get(slug)?.name || slug;
 
+// Cheap keyword pre-filter before spending LLM calls (rate-limit friendly).
+const toEvaluate = [];
 for (const c of candidates) {
+  if (looksLikeDeal(c)) toEvaluate.push(c);
+  else skipped.push({ ...c, reason: "no deal keywords" });
+}
+console.log(
+  `[discover] ${toEvaluate.length}/${candidates.length} items passed the keyword pre-filter`,
+);
+
+let llmCalls = 0;
+for (const c of toEvaluate) {
   if (newDeals.length >= MAX_NEW_DEALS) {
     skipped.push({ ...c, reason: `deal cap reached (${MAX_NEW_DEALS})` });
     continue;
   }
+  if (llmCalls >= MAX_LLM_CALLS) {
+    skipped.push({ ...c, reason: `LLM-call cap reached (${MAX_LLM_CALLS})` });
+    continue;
+  }
+
+  // Space out calls to stay under the free-tier rate limit.
+  if (llmCalls > 0) await sleep(CALL_SPACING_MS);
+  llmCalls++;
 
   let result;
   try {
