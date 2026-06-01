@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import type { GraphData, GraphLink } from "@/lib/data/load";
+import type { NodeFinancials } from "@/lib/data/financials";
 import { LAYER_META, type Layer } from "@/lib/data/layers";
 import {
   dealsForNode,
@@ -21,6 +22,68 @@ function fmtPct(v: number | null): string {
   if (v == null) return "—";
   const p = Math.round(v * 100);
   return `${p >= 0 ? "+" : ""}${p}%`;
+}
+
+const CURRENCY_SYMBOL: Record<string, string> = {
+  USD: "$",
+  EUR: "€",
+  GBP: "£",
+  JPY: "¥",
+  KRW: "₩",
+  TWD: "NT$",
+  HKD: "HK$",
+};
+
+function curPrefix(code: string | null): string {
+  if (!code) return "";
+  return CURRENCY_SYMBOL[code] ?? "";
+}
+
+/** Compact price, e.g. "$211.14" or "₩317,000". */
+function fmtPrice(v: number | null, code: string | null): string {
+  if (v == null) return "—";
+  const sym = curPrefix(code);
+  const digits = v >= 1000 ? 0 : 2;
+  const num = v.toLocaleString("en-US", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  });
+  return sym ? `${sym}${num}` : `${num} ${code ?? ""}`.trim();
+}
+
+/** Market cap abbreviated to T/B/M in native currency, e.g. "$5.11T". */
+function fmtMarketCap(v: number | null, code: string | null): string {
+  if (v == null) return "—";
+  const sym = curPrefix(code);
+  const suffix = !sym && code ? ` ${code}` : "";
+  const abbr =
+    v >= 1e12
+      ? `${(v / 1e12).toFixed(2)}T`
+      : v >= 1e9
+        ? `${(v / 1e9).toFixed(1)}B`
+        : v >= 1e6
+          ? `${(v / 1e6).toFixed(0)}M`
+          : `${v}`;
+  return `${sym}${abbr}${suffix}`;
+}
+
+/** Signed percent at one decimal, e.g. "+58.6%". */
+function fmtSignedPct(frac: number | null): string {
+  if (frac == null) return "—";
+  const pct = frac * 100;
+  return `${pct >= 0 ? "+" : ""}${pct.toFixed(1)}%`;
+}
+
+function fmtEarnings(iso: string | null): string {
+  if (!iso) return "—";
+  const d = new Date(iso + "T00:00:00Z");
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export default function NodeDetailPanel({
@@ -199,6 +262,8 @@ export default function NodeDetailPanel({
         </p>
       </div>
 
+      {node.financial && <FinancialBadge fin={node.financial} />}
+
       <div className="min-h-0 flex-1 overflow-y-auto p-2">
         {inbound.length > 0 && (
           <Section title={`Inbound · ${inbound.length}`}>
@@ -241,6 +306,77 @@ function Stat({ label, value }: { label: string; value: string }) {
       <div className="mt-0.5 text-[10px] uppercase tracking-wider text-zinc-500">
         {label}
       </div>
+    </div>
+  );
+}
+
+function FinancialBadge({ fin }: { fin: NodeFinancials }) {
+  const asOf = fin.asOf
+    ? new Date(fin.asOf).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      })
+    : null;
+  const ret = fin.return1y;
+  const retColor =
+    ret == null
+      ? "text-zinc-400"
+      : ret >= 0
+        ? "text-emerald-400"
+        : "text-rose-400";
+
+  return (
+    <div className="border-b border-zinc-800/70 px-4 py-3">
+      <div className="mb-2 flex items-center justify-between">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+          Market data
+        </p>
+        {asOf && (
+          <span className="font-mono text-[10px] text-zinc-600">
+            as of {asOf}
+          </span>
+        )}
+      </div>
+      <div className="flex items-baseline gap-2">
+        <span className="font-mono text-lg text-zinc-100">
+          {fmtPrice(fin.price, fin.currency)}
+        </span>
+        {fin.changePct != null && (
+          <span
+            className={`font-mono text-xs ${
+              fin.changePct >= 0 ? "text-emerald-400" : "text-rose-400"
+            }`}
+          >
+            {fmtSignedPct(fin.changePct / 100)}
+          </span>
+        )}
+      </div>
+      <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
+        <FinRow label="Mkt cap" value={fmtMarketCap(fin.marketCap, fin.currency)} />
+        <FinRow label="1Y return" value={fmtSignedPct(ret)} valueClass={retColor} />
+        <FinRow
+          label="Fwd P/E"
+          value={fin.forwardPE != null ? fin.forwardPE.toFixed(1) : "—"}
+        />
+        <FinRow label="Next earnings" value={fmtEarnings(fin.nextEarnings)} />
+      </dl>
+    </div>
+  );
+}
+
+function FinRow({
+  label,
+  value,
+  valueClass = "text-zinc-200",
+}: {
+  label: string;
+  value: string;
+  valueClass?: string;
+}) {
+  return (
+    <div className="flex items-baseline justify-between gap-2">
+      <dt className="text-zinc-500">{label}</dt>
+      <dd className={`font-mono ${valueClass}`}>{value}</dd>
     </div>
   );
 }

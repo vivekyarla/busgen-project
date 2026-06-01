@@ -11,6 +11,7 @@ import {
   SCORE,
   isBottleneckCandidate,
 } from "./score";
+import { loadFinancials, type NodeFinancials } from "./financials";
 
 /**
  * Build-time loader. Reads the curated dataset from /data (companies.yml +
@@ -43,6 +44,8 @@ export interface GraphNode {
   val: number;
   /** True if this node was referenced by a deal but missing from companies.yml. */
   synthetic?: boolean;
+  /** Cached market data, joined by ticker. Absent if no snapshot/no ticker. */
+  financial?: NodeFinancials;
 
   // ── Opportunity Indicator (see src/lib/data/score.ts) ──
   /** Earliest deal month touching this node (price-window start). */
@@ -218,6 +221,12 @@ export function loadGraph(): GraphData {
   const nodes = [...nodeMap.values()];
   for (const n of nodes) {
     n.val = Math.max(2, n.inboundDeals + n.outboundDeals * 0.4);
+  }
+
+  // Join the cached market-data snapshot onto nodes by ticker.
+  const { quotes } = loadFinancials();
+  for (const n of nodes) {
+    if (n.ticker && quotes[n.ticker]) n.financial = quotes[n.ticker];
   }
 
   const months = links

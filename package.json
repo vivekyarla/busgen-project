@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "refresh-prices": "node scripts/refresh-prices.mjs"
+    "refresh-prices": "node scripts/refresh-prices.mjs",
+    "fetch:financials": "node scripts/fetch-financials.mjs",
+    "fetch:history": "node scripts/fetch-history.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -20,6 +22,7 @@
     "rss-parser": "^3.13.0",
     "three": "^0.184.0",
     "three-spritetext": "^1.10.0",
+    "yahoo-finance2": "^3.14.3",
     "zod": "^4.4.3"
   },
   "devDependencies": {

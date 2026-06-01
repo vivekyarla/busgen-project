@@ -68,6 +68,7 @@ export const LAYER_META: Record<
 
 const CATEGORY_TO_LAYER: Record<string, Layer> = {
   ai_lab: "application",
+  ai_software: "application",
   chip_designer: "compute",
   hyperscaler: "compute",
   neocloud: "compute",

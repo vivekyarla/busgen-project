@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { GraphData } from "@/lib/data/load";
 import { LAYER_ORDER, type Layer } from "@/lib/data/layers";
-import type { LayerContentMap } from "@/lib/data/layer-content";
 import {
   applyFilters,
   maxActivity as computeMaxActivity,
@@ -15,7 +15,6 @@ import StackGraph from "./StackGraph";
 import ControlPanel from "./ControlPanel";
 import Legend from "./Legend";
 import NodeDetailPanel from "./NodeDetailPanel";
-import LayerPanel from "./LayerPanel";
 import MethodologyPanel from "./MethodologyPanel";
 import TimeBar from "./TimeBar";
 import SearchBox from "./SearchBox";
@@ -24,11 +23,15 @@ const TIMELINE_FLOOR = 2020 * 12; // focus the slider on the AI-boom era
 
 export default function GraphExplorer({
   data,
-  layerContent,
+  focusSlug = null,
 }: {
   data: GraphData;
-  layerContent: LayerContentMap;
+  focusSlug?: string | null;
 }) {
+  const router = useRouter();
+  // Layer interactions (in-scene label click, ⓘ in the control panel) now route
+  // to that layer's section in the dashboard instead of an in-map pop-up.
+  const goToLayer = (l: Layer) => router.push(`/dashboard?layer=${l}`);
   // Deal types ordered by frequency in the dataset.
   const dealTypes = useMemo(() => {
     const counts = new Map<string, number>();
@@ -60,12 +63,10 @@ export default function GraphExplorer({
     z: number;
     nonce: number;
   } | null>(null);
-  const [activeLayer, setActiveLayer] = useState<Layer | null>(null);
   const [showMethodology, setShowMethodology] = useState(false);
 
   // Select a node and fly the camera to it (used by search + layer panel).
   const pickNode = (id: string) => {
-    setActiveLayer(null);
     setSelectedId(id);
     const n = data.nodes.find((node) => node.id === id) as
       | (typeof data.nodes)[number]
@@ -75,6 +76,15 @@ export default function GraphExplorer({
       setFocusTarget({ x: p.x!, y: p.y!, z: p.z!, nonce: Date.now() });
     }
   };
+
+  // Deep-link from the dashboard (?focus=slug): select the node + fly to it,
+  // after a beat so the force layout has positioned nodes to fly toward.
+  useEffect(() => {
+    if (!focusSlug) return;
+    const id = window.setTimeout(() => pickNode(focusSlug), 700);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusSlug]);
 
   // Advance the timeline while playing.
   useEffect(() => {
@@ -109,7 +119,7 @@ export default function GraphExplorer({
         selectedId={selectedId}
         onSelect={setSelectedId}
         focusTarget={focusTarget}
-        onLayerClick={setActiveLayer}
+        onLayerClick={goToLayer}
       />
 
       {/* Top-center: search */}
@@ -130,12 +140,20 @@ export default function GraphExplorer({
             {filtered.nodes.length}/{data.meta.companyCount} companies ·{" "}
             {filtered.links.length}/{data.meta.dealCount} deals
           </p>
-          <Link
-            href="/manifesto"
-            className="pointer-events-auto mt-2 inline-block text-xs text-zinc-400 underline-offset-4 transition-colors hover:text-zinc-100 hover:underline"
-          >
-            Read the manifesto →
-          </Link>
+          <div className="mt-2 flex flex-col gap-1">
+            <Link
+              href="/dashboard"
+              className="pointer-events-auto inline-block text-xs text-zinc-400 underline-offset-4 transition-colors hover:text-zinc-100 hover:underline"
+            >
+              Layer dashboard →
+            </Link>
+            <Link
+              href="/manifesto"
+              className="pointer-events-auto inline-block text-xs text-zinc-400 underline-offset-4 transition-colors hover:text-zinc-100 hover:underline"
+            >
+              Read the manifesto →
+            </Link>
+          </div>
         </div>
         <ControlPanel
           filters={filters}
@@ -143,7 +161,7 @@ export default function GraphExplorer({
           dealTypes={dealTypes}
           colorMode={colorMode}
           setColorMode={setColorMode}
-          onLayerInfo={setActiveLayer}
+          onLayerInfo={goToLayer}
         />
       </div>
 
@@ -189,17 +207,6 @@ export default function GraphExplorer({
 
       {showMethodology && (
         <MethodologyPanel onClose={() => setShowMethodology(false)} />
-      )}
-
-      {/* Layer deep-dive modal */}
-      {activeLayer && (
-        <LayerPanel
-          layer={activeLayer}
-          content={layerContent[activeLayer]}
-          data={data}
-          onClose={() => setActiveLayer(null)}
-          onSelectNode={pickNode}
-        />
       )}
     </div>
   );
