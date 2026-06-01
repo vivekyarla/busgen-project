@@ -21,39 +21,46 @@ export default function ManifestoBody() {
       <h1 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
         Situational Unawareness
       </h1>
+      <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+        By <Ext href="https://vivekyarla.com">Vivek</Ext>,{" "}
+        <Ext href="https://www.linkedin.com/in/kathyshaoo/?skipRedirect=true">
+          Kathy
+        </Ext>
+        , <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>,
+        and <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>
+        <br />
+        BUSGEN 116: Free Systems (Stanford; Spring 2026)
+      </p>
 
       {/* ── Intro ── */}
       <div className="mt-7 space-y-5 text-lg leading-relaxed text-zinc-300">
         <p>
-          In 2024, Leopold Aschenbrenner published <em>Situational Awareness</em>
-          , a 165-page case that the road to AGI was already visible to anyone
-          willing to read the scaling curves, and that only a few hundred people
-          in San Francisco truly saw it. He left OpenAI and turned the essay into
-          a hedge fund. The title was the whole argument: the edge is foresight,
-          and foresight means reading the frontier more honestly than everyone
-          else.
+          <em>Situational Awareness</em> pointed a whole industry at the same
+          horizon. Read the curves, trust the trendline, and the future of AI
+          compresses into a single variable worth underwriting: scale. Ever
+          since, the attention and the capital have pointed one way, up, at the
+          frontier and the race for AGI.
         </p>
         <p>
-          He was right about the part that mattered most. Scale kept working. But
-          situational awareness, as he framed it, is a thesis about the
-          destination, not the road. It treats compute as the one binding
-          constraint and the rest of the stack as detail that sorts itself out.
-          That is exactly where the foresight breaks. AGI, if it comes, does not
-          arrive as a trendline. It arrives as memory, power, packaging,
-          interconnect, and the capital that has to clear before any of it ships.
+          We think the view that matters is the other direction. Not the
+          frontier, but the floor it stands on. Every model anyone is pricing has
+          to run on memory that gets fabbed, power that gets permitted,
+          interconnect that gets designed, and capital that has to clear first,
+          and each of those layers binds on its own schedule, not the
+          model&rsquo;s. Intelligence keeps getting cheaper. The things holding it
+          up do not.
         </p>
         <p>
-          So the honest picture of AI is not one curve pointed up and to the
-          right. It is a stack, six layers deep, where the binding constraint
-          keeps moving. Last cycle it was GPUs. Then it was high-bandwidth
-          memory. Each time, the layer that decided everything was obvious in
-          hindsight and invisible in the consensus, because the consensus was
-          watching the frontier instead of the floor holding it up.
+          Seen plainly, AI is not a curve. It is a stack, and the binding
+          constraint keeps moving through it. Last cycle it was GPUs. Then it was
+          high-bandwidth memory. Each time, the layer that set the price was
+          obvious in hindsight and unwatched at the time, because the whole room
+          was looking up.
         </p>
         <p>
-          Situational Unawareness is that blind spot: what the most
-          situationally-aware people in the room miss precisely because they are
-          looking at the top of the stack. This is a map of the rest of it.
+          Situational Unawareness is the cost of that gaze: what the most
+          clear-eyed people in the room stop seeing precisely because it sits
+          below the frontier. This is a map of the floor.
         </p>
       </div>
 
@@ -224,17 +231,6 @@ export default function ManifestoBody() {
         financials from public market data. Numbers are estimates, the method is
         the message.
       </p>
-      <p className="mt-6 text-sm leading-relaxed text-zinc-500">
-        <Ext href="https://vivekyarla.com">Vivek</Ext>,{" "}
-        <Ext href="https://www.linkedin.com/in/kathyshaoo/?skipRedirect=true">
-          Kathy
-        </Ext>
-        , <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>,
-        and <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>
-        <br />
-        for BUSGEN 116: Free Systems (Stanford; Spring 2026)
-      </p>
-
       {showMethod && <MethodologyPanel onClose={() => setShowMethod(false)} />}
     </article>
   );
