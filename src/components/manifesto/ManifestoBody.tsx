@@ -29,17 +29,29 @@ export default function ManifestoBody() {
         , <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>,
         and <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>
         <br />
-        BUSGEN 116: Free Systems (Stanford; Spring 2026)
+        For BUSGEN 116: Free Systems
+        <br />
+        Stanford University
+        <br />
+        June 2026
       </p>
 
       {/* ── Intro ── */}
       <div className="mt-7 space-y-5 text-lg leading-relaxed text-zinc-300">
         <p>
-          <em>Situational Awareness</em> pointed a whole industry at the same
-          horizon. Read the curves, trust the trendline, and the future of AI
-          compresses into a single variable worth underwriting: scale. Ever
-          since, the attention and the capital have pointed one way, up, at the
-          frontier and the race for AGI.
+          Two years ago this month,{" "}
+          <a
+            href="https://situational-awareness.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="italic text-zinc-200 underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-400"
+          >
+            Situational Awareness
+          </a>{" "}
+          pointed a whole industry at the same horizon. Read the curves, trust
+          the trendline, and the future of AI compresses into a single variable
+          worth underwriting: scale. Ever since, the attention and the capital
+          have pointed one way, up, at the frontier and the race for AGI.
         </p>
         <p>
           We think the view that matters is the other direction. Not the
