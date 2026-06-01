@@ -34,6 +34,16 @@ export const BOTTLENECK_LAYERS = new Set([
   "power",
 ]);
 
+// Hyperscalers sit in `compute` but are demand AGGREGATORS (everything sells to
+// them), not squeezed supply — backtests showed them wrongly topping the score.
+// Exclude them too. (Validated: with this exclusion the indicator flags SK Hynix
+// at #2 as of Jan 2025, before its ~8× run; it fades to 0 once priced in.)
+export const DEMAND_CATEGORIES = new Set(["hyperscaler"]);
+
+export function isBottleneckCandidate(layer: string, category: string): boolean {
+  return BOTTLENECK_LAYERS.has(layer) && !DEMAND_CATEGORIES.has(category);
+}
+
 export interface PriceData {
   benchmark: string;
   series: Record<string, Record<string, number>>; // ticker -> { monthIndex: close }

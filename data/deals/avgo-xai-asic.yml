@@ -2,7 +2,7 @@ id: avgo-xai-asic
 source_slug: broadcom
 source_name: Broadcom
 target_slug: xai
-target_name: SpacexAI
+target_name: SpaceXAI
 deal_type: custom_asic
 value_billions: null
 value_display: Undisclosed

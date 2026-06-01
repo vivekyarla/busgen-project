@@ -136,10 +136,13 @@ The "Bottleneck" color mode scores each node by `DealVelocity × UnrealizedGap`:
   clamped. Public companies with a `ticker` are measured; private / no-ticker
   nodes are "unmeasured" and get a modest default gap.
 - **Supply-side only** — bottlenecks are supply constraints, so only the
-  `compute`, `networking`, `raw_materials`, and `power` layers are scored. The
-  `application` (demand) and `capital` (finance) layers score 0 even when their
-  deal velocity is high (so a hot demand sink like OpenAI isn't flagged as a
-  bottleneck). See `BOTTLENECK_LAYERS` in `src/lib/data/score.ts`.
+  `compute`, `networking`, `raw_materials`, and `power` layers are scored, and
+  the `hyperscaler` category is also excluded (hyperscalers are demand
+  aggregators that sit in `compute`). The `application` (demand) and `capital`
+  (finance) layers score 0 too. So hot demand sinks (OpenAI, Microsoft) aren't
+  flagged as bottlenecks. See `isBottleneckCandidate` in `src/lib/data/score.ts`.
+  Backtest (`node scripts/backtest.mjs`) validates this: it flags SK Hynix at
+  #2 as of Jan 2025 — before its ~8× run — then fades it to 0 once priced in.
 
 Prices live in **`data/prices.json`** (monthly adjusted closes + S&P benchmark).
 Refresh them with:

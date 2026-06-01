@@ -126,7 +126,7 @@
   subline: "$30B+ run-rate (2026)"
 
 - slug: xai
-  name: SpacexAI
+  name: SpaceXAI
   ticker: null
   category: ai_lab
   subline: "Memphis Colossus cluster"
@@ -203,7 +203,7 @@
   name: Dell Technologies
   ticker: DELL
   category: server_oem
-  subline: "SpacexAI Colossus primary integrator"
+  subline: "SpaceXAI Colossus primary integrator"
 
 - slug: hpe
   name: Hewlett Packard Enterprise
@@ -270,7 +270,7 @@
   name: Super Micro Computer
   ticker: SMCI
   category: server_oem
-  subline: "SpacexAI Colossus rack supplier"
+  subline: "SpaceXAI Colossus rack supplier"
 
 - slug: vistra
   name: Vistra

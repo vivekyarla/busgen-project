@@ -154,10 +154,16 @@ export default function NodeDetailPanel({
           />
         </div>
         <p className="mt-2 text-[11px] leading-snug text-zinc-500">
-          {node.layer === "application" || node.layer === "capital" ? (
+          {node.layer === "application" ||
+          node.layer === "capital" ||
+          node.category === "hyperscaler" ? (
             <>
-              {node.layer === "application" ? "Demand layer" : "Capital layer"} —
-              not scored as a bottleneck (bottlenecks are supply-side). Deal
+              {node.layer === "capital"
+                ? "Capital layer"
+                : node.category === "hyperscaler"
+                  ? "Hyperscaler (demand aggregator)"
+                  : "Demand layer"}{" "}
+              — not scored as a bottleneck (bottlenecks are supply-side). Deal
               velocity shown for reference.
             </>
           ) : node.scoreMeasured ? (
