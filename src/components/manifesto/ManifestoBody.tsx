@@ -25,26 +25,35 @@ export default function ManifestoBody() {
       {/* ── Intro ── */}
       <div className="mt-7 space-y-5 text-lg leading-relaxed text-zinc-300">
         <p>
-          The most load-bearing idea in AI right now is that the future is
-          already legible. <em>Situational Awareness</em>, the 2024 essay that
-          named the era, argued that a small circle in San Francisco could see
-          what was coming just by taking the compute trendlines seriously. On
-          the big thing, they were right. AI scaled, and believing the chart
-          paid.
+          In 2024, Leopold Aschenbrenner published <em>Situational Awareness</em>
+          , a 165-page case that the road to AGI was already visible to anyone
+          willing to read the scaling curves, and that only a few hundred people
+          in San Francisco truly saw it. He left OpenAI and turned the essay into
+          a hedge fund. The title was the whole argument: the edge is foresight,
+          and foresight means reading the frontier more honestly than everyone
+          else.
         </p>
         <p>
-          But reading the model is not the same as reading the supply chain.
-          Consensus prices AI&rsquo;s future off two variables, compute and
-          memory, and quietly assumes the rest of the stack shows up on time. It
-          won&rsquo;t, not all of it, not at once. The constraints that decide
-          the next phase are forming several layers down, in raw materials,
-          interconnect, power, and the capital that wires them together. Most of
-          them are sitting in public deal flow long before they reach a price.
+          He was right about the part that mattered most. Scale kept working. But
+          situational awareness, as he framed it, is a thesis about the
+          destination, not the road. It treats compute as the one binding
+          constraint and the rest of the stack as detail that sorts itself out.
+          That is exactly where the foresight breaks. AGI, if it comes, does not
+          arrive as a trendline. It arrives as memory, power, packaging,
+          interconnect, and the capital that has to clear before any of it ships.
         </p>
         <p>
-          We call that blind spot Situational Unawareness: what you miss when
-          you watch the frontier so closely you stop watching the ground it
-          stands on. This is a map of the blind spot.
+          So the honest picture of AI is not one curve pointed up and to the
+          right. It is a stack, six layers deep, where the binding constraint
+          keeps moving. Last cycle it was GPUs. Then it was high-bandwidth
+          memory. Each time, the layer that decided everything was obvious in
+          hindsight and invisible in the consensus, because the consensus was
+          watching the frontier instead of the floor holding it up.
+        </p>
+        <p>
+          Situational Unawareness is that blind spot: what the most
+          situationally-aware people in the room miss precisely because they are
+          looking at the top of the stack. This is a map of the rest of it.
         </p>
       </div>
 
@@ -176,23 +185,54 @@ export default function ManifestoBody() {
       {/* ── Close ── */}
       <Section title="The takeaway">
         <p>
-          Every buildout has a layer the story skips over until it&rsquo;s the
-          only thing that matters. Last cycle it was memory, and almost nobody
-          watching the frontier was looking at DRAM. This cycle the smart money
-          says compute. The deals say power.
+          The shift we&rsquo;re arguing for is easy to state and hard to
+          practice: stop reading AI as one curve and start reading it as a stack
+          where the binding constraint keeps moving. Last cycle it was GPUs, then
+          memory, and each time the layer that mattered was invisible in the
+          consensus until it wasn&rsquo;t. This cycle the smart money still says
+          compute. The deals say power.
+        </p>
+        <p>
+          That is the proof of concept. A map built only from public
+          announcements, scored with three transparent inputs and no private
+          data, would have put SK&nbsp;Hynix at the top of the memory layer in
+          early 2025, while the stock was flat and the story was still GPUs. It
+          then ran roughly twelvefold, and the score went quiet as the trade
+          became consensus. We are not claiming a crystal ball. We&rsquo;re
+          claiming something smaller and more useful: the information was already
+          public, and the only thing missing was a lens wide enough to hold the
+          whole stack at once.
+        </p>
+        <p>
+          What building it taught us is that the bottleneck is physical and
+          financial long before it is computational. The frontier needs memory it
+          can&rsquo;t buy, megawatts it can&rsquo;t build fast enough, and capital
+          that has to be structured before a chip ships. Map those dependencies
+          and you watch the next constraint form. Watch only the frontier and you
+          meet it at the price.
         </p>
         <p className="text-zinc-200">
-          Situational Awareness watches the frontier. We built this to watch the
-          floor it stands on, and to make the next bottleneck impossible to miss
-          while it&rsquo;s still cheap to see.
+          Situational awareness got the destination right. It&rsquo;s the road
+          that&rsquo;s mispriced. Read the whole stack, or keep getting surprised
+          by the layer you weren&rsquo;t looking at.
         </p>
       </Section>
 
       <hr className="my-14 border-zinc-900" />
       <p className="text-sm text-zinc-600">
-        A class project. Deal graph hand-curated from public announcements;
-        prices and per-layer financials from public market data. Numbers are
-        estimates, the method is the message.
+        Deal graph hand-curated from public announcements; prices and per-layer
+        financials from public market data. Numbers are estimates, the method is
+        the message.
+      </p>
+      <p className="mt-6 text-sm leading-relaxed text-zinc-500">
+        <Ext href="https://vivekyarla.com">Vivek</Ext>,{" "}
+        <Ext href="https://www.linkedin.com/in/kathyshaoo/?skipRedirect=true">
+          Kathy
+        </Ext>
+        , <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>,
+        and <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>
+        <br />
+        for BUSGEN 116: Free Systems (Stanford; Spring 2026)
       </p>
 
       {showMethod && <MethodologyPanel onClose={() => setShowMethod(false)} />}
@@ -397,6 +437,19 @@ function BacktestTable() {
 }
 
 /* ────────────────────────── layout helpers ────────────────────────── */
+
+function Ext({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-zinc-300 underline-offset-2 hover:text-zinc-100 hover:underline"
+    >
+      {children}
+    </a>
+  );
+}
 
 function Section({
   title,
