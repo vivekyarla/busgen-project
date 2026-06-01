@@ -126,7 +126,7 @@
   subline: "$30B+ run-rate (2026)"
 
 - slug: xai
-  name: xAI
+  name: SpacexAI
   ticker: null
   category: ai_lab
   subline: "Memphis Colossus cluster"
@@ -203,7 +203,7 @@
   name: Dell Technologies
   ticker: DELL
   category: server_oem
-  subline: "xAI Colossus primary integrator"
+  subline: "SpacexAI Colossus primary integrator"
 
 - slug: hpe
   name: Hewlett Packard Enterprise
@@ -270,7 +270,7 @@
   name: Super Micro Computer
   ticker: SMCI
   category: server_oem
-  subline: "xAI Colossus rack supplier"
+  subline: "SpacexAI Colossus rack supplier"
 
 - slug: vistra
   name: Vistra
@@ -503,3 +503,17 @@
   category: data_center
   layer: compute
   subline: "40MW AI DC for Cerebras"
+
+- slug: vantage
+  name: Vantage Data Centers
+  ticker: null
+  category: data_center
+  layer: compute
+  subline: "Stargate WI site (Port Washington)"
+
+- slug: sb-energy
+  name: SB Energy
+  ticker: null
+  category: power
+  layer: power
+  subline: "SoftBank energy arm; Stargate TX power"

@@ -1,0 +1,15 @@
+id: vantage-openai-stargate-wi-2025
+source_slug: vantage
+source_name: Vantage Data Centers
+target_slug: openai
+target_name: OpenAI
+deal_type: cloud_capacity
+value_billions: null
+value_display: Stargate WI site (part of 4.5GW)
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  OpenAI, Oracle and Vantage Data Centers announced a Stargate data-center
+  campus in Port Washington, Wisconsin — one of five new US sites under the
+  OpenAI–Oracle 4.5GW expansion.
+source_url: https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/

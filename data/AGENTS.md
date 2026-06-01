@@ -134,8 +134,12 @@ The "Bottleneck" color mode scores each node by `DealVelocity × UnrealizedGap`:
 - **DealVelocity** — recency-weighted inbound deal activity (from the deal data).
 - **UnrealizedGap** — `1 − (stock return vs S&P since the node's first deal)`,
   clamped. Public companies with a `ticker` are measured; private / no-ticker
-  nodes are "unmeasured" and get a high default gap (the thesis: unpriced
-  concentration).
+  nodes are "unmeasured" and get a modest default gap.
+- **Supply-side only** — bottlenecks are supply constraints, so only the
+  `compute`, `networking`, `raw_materials`, and `power` layers are scored. The
+  `application` (demand) and `capital` (finance) layers score 0 even when their
+  deal velocity is high (so a hot demand sink like OpenAI isn't flagged as a
+  bottleneck). See `BOTTLENECK_LAYERS` in `src/lib/data/score.ts`.
 
 Prices live in **`data/prices.json`** (monthly adjusted closes + S&P benchmark).
 Refresh them with:

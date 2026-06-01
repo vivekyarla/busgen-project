@@ -4,7 +4,7 @@ import yaml from "js-yaml";
 import { CompanySchema, DealSchema, type Company, type Deal } from "./types";
 import { layerForCategory, layerY, LAYER_META, type Layer } from "./layers";
 import { monthIndex } from "./time";
-import { loadPrices, gapFor, SCORE } from "./score";
+import { loadPrices, gapFor, SCORE, BOTTLENECK_LAYERS } from "./score";
 
 /**
  * Build-time loader. Reads the curated dataset from /data (companies.yml +
@@ -250,7 +250,11 @@ export function loadGraph(): GraphData {
     n.priceReturn = priceReturn;
     n.benchmarkReturn = benchmarkReturn;
     n.scoreMeasured = measured;
-    const rs = vr * (gap ?? SCORE.UNMEASURED_GAP);
+    // Only supply layers can be bottlenecks; demand (application) + capital are
+    // excluded so high-velocity sinks like OpenAI don't dominate the score.
+    const rs = BOTTLENECK_LAYERS.has(n.layer)
+      ? vr * (gap ?? SCORE.UNMEASURED_GAP)
+      : 0;
     rawScore.set(n.id, rs);
     maxVel = Math.max(maxVel, vr);
     maxScore = Math.max(maxScore, rs);

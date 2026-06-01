@@ -1,0 +1,15 @@
+id: sb-energy-openai-stargate-tx-2025
+source_slug: sb-energy
+source_name: SB Energy
+target_slug: openai
+target_name: OpenAI
+deal_type: power_ppa
+value_billions: null
+value_display: Stargate TX powered infrastructure
+date: "2025-09"
+date_display: Sep 2025
+description: >-
+  SB Energy (a SoftBank company) is providing powered infrastructure for a
+  fast-build Stargate data-center site in Milam County, Texas, part of the five
+  new US Stargate sites.
+source_url: https://openai.com/index/five-new-stargate-sites/

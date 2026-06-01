@@ -20,8 +20,19 @@ import path from "node:path";
 export const SCORE = {
   TAU: 18, // months; deal-velocity recency half-scale
   R_STAR: 2.0, // relative outperformance (×) that fully "closes" the gap
-  UNMEASURED_GAP: 0.85, // gap assigned when there's no public price window
+  UNMEASURED_GAP: 0.4, // gap when there's no public price window (don't let
+  // unmeasured private nodes ride deal velocity to the top of the score)
 };
+
+// Bottleneck = a SUPPLY-side constraint. The application layer (demand sinks
+// like the labs) and capital layer (financiers) are not bottlenecks, so they're
+// excluded from the score even when their deal velocity is high.
+export const BOTTLENECK_LAYERS = new Set([
+  "compute",
+  "networking",
+  "raw_materials",
+  "power",
+]);
 
 export interface PriceData {
   benchmark: string;

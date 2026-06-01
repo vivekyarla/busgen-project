@@ -1,6 +1,6 @@
 id: xai-anthropic-colossus-2026
 source_slug: xai
-source_name: xAI
+source_name: SpacexAI
 target_slug: anthropic
 target_name: Anthropic
 deal_type: cloud_capacity
@@ -9,7 +9,7 @@ value_display: ~$40B ($1.25B/mo through 2029)
 date: "2026-05"
 date_display: May 2026
 description: >-
-  Anthropic agreed to rent xAI's entire ~300MW Colossus 1 cluster (220k+ NVIDIA
+  Anthropic agreed to rent SpacexAI's entire ~300MW Colossus 1 cluster (220k+ NVIDIA
   GPUs), paying ~$1.25B per month through May 2029 — potentially $40B+ total,
-  marking xAI's emergence as a third-party compute provider.
+  marking SpacexAI's emergence as a third-party compute provider.
 source_url: https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/
