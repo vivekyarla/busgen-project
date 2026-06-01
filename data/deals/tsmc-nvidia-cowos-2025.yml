@@ -1,0 +1,14 @@
+value_billions: null
+id: tsmc-nvidia-cowos-2025
+source_slug: tsmc
+source_name: TSMC
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_display: Books >half of CoWoS 2026-27 (Rubin)
+date: 2025-12
+date_display: Dec 2025
+description: >-
+  NVIDIA booked over half of TSMC's CoWoS advanced-packaging capacity for 2026-27, largely for
+  next-gen Rubin chips (~510k of ~595k wafers).
+source_url: https://www.digitimes.com/news/a20251210PD218/tsmc-cowos-capacity-nvidia-equipment.html

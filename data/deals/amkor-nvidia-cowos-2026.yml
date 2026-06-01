@@ -1,0 +1,14 @@
+value_billions: null
+id: amkor-nvidia-cowos-2026
+source_slug: amkor
+source_name: Amkor
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_display: CoWoS for Vera CPU / automotive
+date: 2026-01
+date_display: Jan 2026
+description: >-
+  Amkor (with ASE/SPIL) shares ~80k wafers of NVIDIA CoWoS packaging, mainly for the Vera CPU and
+  automotive chips.
+source_url: https://eu.36kr.com/en/p/3580962946874242

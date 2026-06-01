@@ -1,0 +1,14 @@
+value_billions: null
+id: kairos-google-hermes2-2025
+source_slug: kairos
+source_name: Kairos Power
+target_slug: google
+target_name: Google
+deal_type: power_ppa
+value_display: Hermes 2 SMR, up to 500MW
+date: 2025-08
+date_display: Aug 2025
+description: >-
+  Google signed the first corporate SMR PPA with Kairos Power; the Hermes 2 molten-salt reactor
+  scales toward 500MW for Google's data centers.
+source_url: https://smrintel.com/nuclear-data-center-deals/

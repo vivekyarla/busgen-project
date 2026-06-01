@@ -231,10 +231,14 @@ export function loadGraph(): GraphData {
       sN.firstMonth = sN.firstMonth == null ? l.month : Math.min(sN.firstMonth, l.month);
       tN.firstMonth = tN.firstMonth == null ? l.month : Math.min(tN.firstMonth, l.month);
     }
-    // Inbound (target) demand, recency-weighted + value-boosted.
+    // Recency-weighted + value-boosted deal gravity. Credit BOTH endpoints: a
+    // supplier's bottleneck signal is demand pulling on its output (outbound),
+    // not just capital flowing in — otherwise supplier→customer deals credit
+    // only the (often compute) customer and supply layers never score.
     const w = l.month != null ? Math.exp(-(NOW_MONTH - l.month) / SCORE.TAU) : 0.3;
     const v = w * (1 + Math.log1p(l.value_billions ?? 0));
     velocityRaw.set(t, (velocityRaw.get(t) ?? 0) + v);
+    velocityRaw.set(s, (velocityRaw.get(s) ?? 0) + v);
   }
 
   let maxVel = 0;

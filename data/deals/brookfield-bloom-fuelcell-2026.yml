@@ -1,0 +1,14 @@
+value_billions: 5
+id: brookfield-bloom-fuelcell-2026
+source_slug: brookfield-renewable
+source_name: Brookfield
+target_slug: bloom-energy
+target_name: Bloom Energy
+deal_type: equity_investment
+value_display: $5B to deploy Bloom fuel cells
+date: 2026-02
+date_display: Feb 2026
+description: >-
+  Brookfield committed up to $5B to deploy Bloom Energy's natural-gas solid-oxide fuel cells for AI
+  data centers globally.
+source_url: https://introl.com/blog/fuel-cells-data-center-power-dark-horse-7-billion

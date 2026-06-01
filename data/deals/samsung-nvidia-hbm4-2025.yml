@@ -1,0 +1,14 @@
+value_billions: null
+id: samsung-nvidia-hbm4-2025
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_display: '>30% of NVIDIA HBM4 for 2026'
+date: 2025-12
+date_display: Dec 2025
+description: >-
+  Samsung neared a deal to supply over 30% of NVIDIA's HBM4 for 2026, allocating up to 150k
+  wafers/mo of 1c DRAM by year-end.
+source_url: https://www.digitimes.com/news/a20251216PD218/hbm4-samsung-nvidia-2026-sk-hynix.html

@@ -1,0 +1,14 @@
+value_billions: 16.5
+id: samsung-foundry-tesla-ai6-2025
+source_slug: samsung-foundry
+source_name: Samsung Foundry
+target_slug: tesla
+target_name: Tesla
+deal_type: custom_asic
+value_display: $16.5B (Tesla AI6, Taylor TX, thru 2033)
+date: 2025-07
+date_display: Jul 2025
+description: >-
+  Samsung signed a $16.5B foundry deal to make Tesla's next-gen AI6 inference chips at its Taylor,
+  Texas fab, running through 2033.
+source_url: https://techcrunch.com/2025/07/28/tesla-signs-16-5b-deal-with-samsung-to-make-ai-chips/

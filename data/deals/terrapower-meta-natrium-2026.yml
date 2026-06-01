@@ -1,0 +1,14 @@
+value_billions: null
+id: terrapower-meta-natrium-2026
+source_slug: terrapower
+source_name: TerraPower
+target_slug: meta
+target_name: Meta
+deal_type: power_ppa
+value_display: Natrium SFR (part of 6.6GW)
+date: 2026-01
+date_display: Jan 2026
+description: >-
+  TerraPower's Natrium sodium-cooled fast reactor is part of Meta's ~6.6GW nuclear portfolio for its
+  AI supercluster.
+source_url: https://www.latitudemedia.com/news/meta-strikes-6-6-gw-nuclear-deal-to-fuel-its-ai-supercluster/

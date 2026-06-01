@@ -1,0 +1,14 @@
+value_billions: null
+id: talen-aws-susquehanna-2025
+source_slug: talen
+source_name: Talen Energy
+target_slug: amazon-aws
+target_name: Amazon (AWS)
+deal_type: power_ppa
+value_display: 1.92GW Susquehanna, 17-yr ($20B PA)
+date: 2025-06
+date_display: Jun 2025
+description: >-
+  AWS and Talen Energy signed a 17-year PPA for 1.92GW from the Susquehanna nuclear plant, alongside
+  a $20B Pennsylvania investment and SMR exploration.
+source_url: https://smrintel.com/nuclear-data-center-deals/

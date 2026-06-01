@@ -35,6 +35,7 @@ function scoresAsOf(T) {
     for (const slug of [d.source_slug, d.target_slug]) first.set(slug, Math.min(first.get(slug) ?? Infinity, m));
     const w = Math.exp(-(T - m) / TAU) * (1 + Math.log1p(d.value_billions ?? 0));
     vel.set(d.target_slug, (vel.get(d.target_slug) ?? 0) + w);
+    vel.set(d.source_slug, (vel.get(d.source_slug) ?? 0) + w);
   }
   const bench = prices.series[prices.benchmark];
   const rows = [];
@@ -55,6 +56,16 @@ function scoresAsOf(T) {
   rows.forEach((r) => (r.score = Math.round((r.raw / maxRaw) * 100)));
   rows.sort((a, b) => b.score - a.score);
   return rows;
+}
+
+// Detailed CURRENT ranking (today's prices + all deals).
+console.log("=== CURRENT bottleneck ranking (latest data) ===");
+const now = scoresAsOf(mi("2026-05"));
+for (const r of now.filter((r) => r.score > 0).slice(0, 14)) {
+  const pr = r.measured ? `${(r.ret * 100).toFixed(0)}% vs S&P` : "unmeasured";
+  console.log(
+    `  ${String(r.score).padStart(3)} | ${r.name.padEnd(22)} [${r.layer}] vel ${r.v.toFixed(1).padStart(5)} | gap ${String(Math.round(r.gap * 100)).padStart(3)} | ${pr}`,
+  );
 }
 
 for (const label of ["2024-06", "2025-01", "2025-06", "2026-05"]) {

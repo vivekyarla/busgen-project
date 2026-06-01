@@ -1,0 +1,12 @@
+value_billions: null
+id: ase-tsmc-cowos-2026
+source_slug: ase-group
+source_name: ASE
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_display: CoWoS/SPIL outsourcing (60-80k wafers)
+date: 2026-01
+date_display: Jan 2026
+description: ASE/SPIL took ~60-80k wafers of TSMC's outsourced CoWoS advanced-packaging capacity for 2026.
+source_url: https://eu.36kr.com/en/p/3580962946874242

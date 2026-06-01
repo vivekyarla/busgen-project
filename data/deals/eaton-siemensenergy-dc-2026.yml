@@ -1,0 +1,15 @@
+value_billions: null
+id: eaton-siemensenergy-dc-2026
+source_slug: eaton
+source_name: Eaton
+target_slug: siemens-energy
+target_name: Siemens Energy
+deal_type: equipment_supply
+value_display: Integrated fast-build DC power partnership
+date: 2026-02
+date_display: Feb 2026
+description: >-
+  Eaton and Siemens Energy partnered on integrated on-site data-center power (transformers,
+  switchgear, turbines), cutting deployment timelines amid a multi-year electrical-gear shortage.
+source_url: >-
+  https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-to-provide-power-and-techno.html

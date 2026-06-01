@@ -38,8 +38,29 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Cheap pre-filter: only spend an LLM call on items that look deal-ish. Cuts a
 // ~110-item firehose down to a few dozen, which keeps us under the free-tier
 // rate limit. The LLM still makes the real judgment on what survives.
-const DEAL_KEYWORDS =
-  /\b(deal|acqui|merger|buyout|invest|stake|funding|fundraise|raise[ds]?|round|series [a-f]|partnership|partner|supply|supplier|purchase|order|contract|capacity|data ?cent|gigawatt|megawatt|power purchase|ppa|wafer|foundry|fab\b|chips?|gpu|accelerator|asic|hbm|memory|interconnect|billion|\$\d)/i;
+const DEAL_KEYWORDS = new RegExp(
+  [
+    // transaction verbs / sizing
+    "deal", "acqui", "merger", "buyout", "invest", "stake", "funding",
+    "fundraise", "raise[ds]?", "round", "series [a-f]", "partnership",
+    "partner", "supply", "supplier", "purchase", "order", "contract",
+    "offtake", "agreement", "billion", "\\$\\d",
+    // compute
+    "data ?cent", "capacity", "chips?", "gpu", "accelerator", "asic", "server",
+    // raw materials: foundry / equipment / memory / packaging / materials
+    "wafer", "foundry", "fab\\b", "lithography", "euv", "hbm", "dram", "memory",
+    "packaging", "cowos", "substrate", "photoresist", "semicap", "node\\b",
+    // networking / optical
+    "interconnect", "optical", "transceiver", "switch", "ethernet",
+    "infiniband", "co-packaged", "photonics",
+    // power / energy / grid / cooling
+    "gigawatt", "megawatt", "\\bMW\\b", "\\bGW\\b", "power purchase", "ppa",
+    "nuclear", "reactor", "\\bsmr\\b", "turbine", "grid", "substation",
+    "transformer", "interconnection", "electricity", "utility", "energy",
+    "solar", "geothermal", "battery", "storage", "cooling",
+  ].join("|"),
+  "i",
+);
 
 function looksLikeDeal(item) {
   return DEAL_KEYWORDS.test(`${item.title} ${item.summary}`);
@@ -65,14 +86,25 @@ const LAYER_TAXONOMY = `- application — AI model labs & agentic AI products (c
 // RSS sources — curated AI-infra-relevant outlets. Verified working as of the
 // last check. Add/remove freely; broken feeds are logged but don't fail the run.
 const FEEDS = [
+  // General tech / compute (kept, but balanced by the non-compute feeds below).
   { name: "TechCrunch", url: "https://techcrunch.com/feed/" },
   { name: "The Verge", url: "https://www.theverge.com/rss/index.xml" },
   { name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all" },
   { name: "Ars Technica", url: "https://feeds.arstechnica.com/arstechnica/index" },
   { name: "VentureBeat", url: "https://venturebeat.com/feed/" },
-  { name: "SemiWiki", url: "https://semiwiki.com/feed/" },
-  { name: "Data Center Knowledge", url: "https://www.datacenterknowledge.com/rss.xml" },
   { name: "Engadget", url: "https://www.engadget.com/rss.xml" },
+  // Semiconductors / materials / packaging (raw-materials layer).
+  { name: "SemiWiki", url: "https://semiwiki.com/feed/" },
+  { name: "Semiconductor Engineering", url: "https://semiengineering.com/feed/" },
+  { name: "EE Times", url: "https://www.eetimes.com/feed/" },
+  // Data centers, networking, cooling.
+  { name: "Data Center Knowledge", url: "https://www.datacenterknowledge.com/rss.xml" },
+  { name: "Data Center Dynamics", url: "https://www.datacenterdynamics.com/en/rss/" },
+  { name: "The Register", url: "https://www.theregister.com/headlines.atom" },
+  // Power / energy / grid (power layer).
+  { name: "Utility Dive", url: "https://www.utilitydive.com/feeds/news/" },
+  { name: "POWER Magazine", url: "https://www.powermag.com/feed/" },
+  { name: "Latitude Media", url: "https://www.latitudemedia.com/news/rss.xml" },
 ];
 
 const DEAL_TYPES = [

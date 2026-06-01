@@ -1,0 +1,15 @@
+value_billions: null
+id: skhynix-nvidia-hbm4-2025
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_display: HBM sold out thru 2026; HBM4 ramp
+date: 2025-12
+date_display: Dec 2025
+description: >-
+  SK Hynix sold out its DRAM/NAND/HBM through 2026, much of it to NVIDIA, and began HBM4 mass
+  production.
+source_url: >-
+  https://www.notebookcheck.net/SK-hynix-sells-out-its-DRAM-NAND-and-HBM-chip-supply-to-Nvidia-through-2026.1151402.0.html

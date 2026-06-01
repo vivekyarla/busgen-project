@@ -1,0 +1,13 @@
+value_billions: null
+id: micron-nvidia-hbm4-2026
+source_slug: micron
+source_name: Micron
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: equipment_supply
+value_display: HBM4 16-Hi; 2026 capacity sold out
+date: 2026-01
+date_display: Jan 2026
+description: Micron delivered 16-Hi HBM4 samples to NVIDIA and reported its full 2026 HBM4 capacity sold out.
+source_url: >-
+  https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html

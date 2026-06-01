@@ -1,0 +1,14 @@
+value_billions: null
+id: intel-microsoft-18a-2026
+source_slug: intel
+source_name: Intel
+target_slug: microsoft
+target_name: Microsoft
+deal_type: custom_asic
+value_display: Intel 18A foundry (Fab 52)
+date: 2026-01
+date_display: Jan 2026
+description: >-
+  Microsoft committed to Intel's 18A foundry process for next-generation AI silicon, fabbed at
+  Intel's Fab 52 in Arizona.
+source_url: https://www.sec.gov/Archives/edgar/data/50863/000005086326000060/intc014890-arsa.pdf

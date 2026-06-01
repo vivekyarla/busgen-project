@@ -1,0 +1,14 @@
+value_billions: null
+id: credo-dustphotonics-ma-2026
+source_slug: credo
+source_name: Credo
+target_slug: dustphotonics
+target_name: DustPhotonics
+deal_type: m_and_a
+value_display: Acquisition (SiPho PIC)
+date: 2026-04
+date_display: Apr 2026
+description: >-
+  Credo agreed to acquire DustPhotonics, a silicon-photonics PIC developer for optical transceivers,
+  expanding its optical-interconnect stack.
+source_url: https://www.sec.gov/Archives/edgar/data/1807794/000162828026024892/april20268-kex991.htm

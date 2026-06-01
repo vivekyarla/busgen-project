@@ -1,0 +1,14 @@
+value_billions: null
+id: intel-apple-foundry-2026
+source_slug: intel
+source_name: Intel
+target_slug: apple
+target_name: Apple
+deal_type: custom_asic
+value_display: Apple chips on Intel foundry
+date: 2026-05
+date_display: May 2026
+description: >-
+  Reports of an Apple chip deal on Intel's foundry sent Intel shares soaring — a key
+  external-customer signal for Intel Foundry.
+source_url: https://www.cnbc.com/2026/05/08/intel-stock-apple-chip-deal.html

@@ -517,3 +517,46 @@
   category: power
   layer: power
   subline: "SoftBank energy arm; Stargate TX power"
+
+- slug: bloom-energy
+  name: Bloom Energy
+  ticker: BE
+  category: power
+  layer: power
+  subline: Solid-oxide fuel cells for data centers
+- slug: ge-vernova
+  name: GE Vernova
+  ticker: GEV
+  category: power
+  layer: power
+  subline: Gas turbines + grid (Prolec transformers)
+- slug: terrapower
+  name: TerraPower
+  ticker: null
+  category: power
+  layer: power
+  subline: Natrium SFR nuclear
+- slug: oklo
+  name: Oklo
+  ticker: OKLO
+  category: power
+  layer: power
+  subline: Aurora SFR microreactors
+- slug: siemens-energy
+  name: Siemens Energy
+  ticker: ENR.DE
+  category: power
+  layer: power
+  subline: Grid, transformers, turbines
+- slug: eaton
+  name: Eaton
+  ticker: ETN
+  category: power
+  layer: power
+  subline: Transformers, switchgear, power distribution
+- slug: dustphotonics
+  name: DustPhotonics
+  ticker: null
+  category: networking
+  layer: networking
+  subline: Silicon photonics (acq. by Credo)

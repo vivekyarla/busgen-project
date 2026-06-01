@@ -1,0 +1,15 @@
+value_billions: 2
+id: nvidia-lumentum-cpo-2026
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: lumentum
+target_name: Lumentum
+deal_type: equity_investment
+value_display: ~$2B (of $4B CPO) + purchase commitments
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  NVIDIA invested ~$2B (part of a $4B split with Coherent) in Lumentum, tied to multi-year purchase
+  commitments and capacity for co-packaged optics.
+source_url: >-
+  https://siliconangle.com/2026/03/02/nvidia-invests-4b-co-packaged-optics-suppliers-lumentum-coherent/

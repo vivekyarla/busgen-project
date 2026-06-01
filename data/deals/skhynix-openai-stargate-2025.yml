@@ -1,0 +1,15 @@
+value_billions: null
+id: skhynix-openai-stargate-2025
+source_slug: sk-hynix
+source_name: SK Hynix
+target_slug: openai
+target_name: OpenAI
+deal_type: equipment_supply
+value_display: Stargate DRAM LOI (~900k wafers/mo)
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  SK Hynix (with Samsung) signed an LOI to supply OpenAI's Stargate with up to ~900k DRAM
+  wafers/month — roughly 35-40% of global DRAM capacity.
+source_url: >-
+  https://www.notebookcheck.net/SK-hynix-sells-out-its-DRAM-NAND-and-HBM-chip-supply-to-Nvidia-through-2026.1151402.0.html

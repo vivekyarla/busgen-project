@@ -1,0 +1,15 @@
+value_billions: null
+id: gevernova-crusoe-turbines-2026
+source_slug: ge-vernova
+source_name: GE Vernova
+target_slug: crusoe
+target_name: Crusoe
+deal_type: equipment_supply
+value_display: 29 aeroderivative gas turbines
+date: 2026-03
+date_display: Mar 2026
+description: >-
+  GE Vernova and Crusoe announced a 29-unit aeroderivative gas-turbine deal to deliver on-site power
+  to AI data centers.
+source_url: >-
+  https://www.crusoe.ai/resources/newsroom/ge-vernova-and-crusoe-announce-major-29-unit-gas-turbine-deal

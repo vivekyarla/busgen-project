@@ -1,0 +1,14 @@
+value_billions: 2
+id: amkor-tsmc-peoria-2026
+source_slug: amkor
+source_name: Amkor
+target_slug: tsmc
+target_name: TSMC
+deal_type: equipment_supply
+value_display: $2B Peoria AZ; MOU to package TSMC
+date: 2026-01
+date_display: Jan 2026
+description: >-
+  Amkor is investing $2B in a Peoria, AZ packaging facility under an MOU to package TSMC chips,
+  taking ~180-190k CoWoS wafers of TSMC's outsourcing.
+source_url: https://www.sec.gov/Archives/edgar/data/0001047127/000104712726000036/ex-991amkorinvestorprese.htm

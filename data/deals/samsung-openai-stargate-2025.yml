@@ -1,0 +1,15 @@
+value_billions: null
+id: samsung-openai-stargate-2025
+source_slug: samsung-memory
+source_name: Samsung (Memory)
+target_slug: openai
+target_name: OpenAI
+deal_type: equipment_supply
+value_display: Stargate DRAM LOI (~900k wafers/mo)
+date: 2025-10
+date_display: Oct 2025
+description: >-
+  Samsung (with SK Hynix) signed an LOI to supply OpenAI's Stargate project with up to ~900k DRAM
+  wafers per month.
+source_url: >-
+  https://www.datacenterdynamics.com/en/news/samsung-and-sk-hynix-to-scale-up-memory-production-capacity-in-2026-to-meet-ai-demand/
