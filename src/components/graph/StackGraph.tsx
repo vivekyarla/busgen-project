@@ -25,7 +25,7 @@ const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), {
 const NODE_REL_SIZE = 4;
 const DIM_NODE = "#3f3f46"; // zinc-700
 const DIM_LINK = "rgba(82,82,91,0.05)";
-const IDLE_LINK = "rgba(161,161,170,0.16)";
+const IDLE_LINK = "rgba(180,182,194,0.34)";
 const HOT_LINK = "rgba(244,244,245,0.6)";
 const PLANE_HALF_W = 760; // x half-extent for planes + layer labels
 const NODE_COLOR = "#fafafa"; // white nodes by default (no layer color-coding)
@@ -278,8 +278,22 @@ export default function StackGraph({
         return;
       }
 
-      fg.d3Force("charge")?.strength(-600);
-      fg.d3Force("link")?.distance(115).strength(0.14);
+      fg.d3Force("charge")?.strength(-360);
+      fg.d3Force("link")?.distance(95).strength(0.16);
+      // Gentle pull toward each plane's center axis (x=0,z=0) so weakly-linked
+      // nodes don't drift far off the visual planes. Relaxes as the sim cools.
+      if (!fg.d3Force("centerXZ")) {
+        let fnodes: { x: number; z: number; vx: number; vz: number }[] = [];
+        const centerXZ = (alpha: number) => {
+          for (const n of fnodes) {
+            n.vx -= n.x * 0.08 * alpha;
+            n.vz -= n.z * 0.08 * alpha;
+          }
+        };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (centerXZ as any).initialize = (ns: typeof fnodes) => (fnodes = ns);
+        fg.d3Force("centerXZ", centerXZ);
+      }
       fg.d3ReheatSimulation?.();
 
       const scene = fg.scene();
