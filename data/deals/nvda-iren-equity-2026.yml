@@ -1,0 +1,15 @@
+id: nvda-iren-equity-2026
+source_slug: nvidia
+source_name: NVIDIA
+target_slug: iren
+target_name: IREN
+deal_type: equity_investment
+value_billions: 2.1
+value_display: $2.1B (option on 30M shares @ $70)
+date: "2026-05"
+date_display: May 2026
+description: >-
+  NVIDIA took a strategic equity position in IREN worth up to $2.1B — an option
+  to buy up to 30M IREN shares over five years at $70 — to accelerate
+  deployment of up to 5GW of AI infrastructure.
+source_url: https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure

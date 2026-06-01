@@ -1,0 +1,14 @@
+id: iren-nvda-cloud-2026
+source_slug: iren
+source_name: IREN
+target_slug: nvidia
+target_name: NVIDIA
+deal_type: cloud_capacity
+value_billions: 3.4
+value_display: $3.4B (5-yr managed GPU cloud)
+date: "2026-05"
+date_display: May 2026
+description: >-
+  IREN signed a five-year, $3.4B agreement to supply NVIDIA with managed GPU
+  cloud capacity for NVIDIA's own internal AI and research workloads.
+source_url: https://www.cnbc.com/2026/05/07/iren-stock-ai-infrastructure-nvidia.html

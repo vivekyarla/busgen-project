@@ -1,0 +1,14 @@
+id: blackstone-google-tpu-jv-2026
+source_slug: blackstone
+source_name: Blackstone
+target_slug: google
+target_name: Google
+deal_type: equity_investment
+value_billions: 5
+value_display: $5B AI infra JV (Google TPUs)
+date: "2026-05"
+date_display: May 2026
+description: >-
+  Blackstone partnered with Google to launch a U.S. AI-infrastructure company
+  powered by Google's TPU chips, backed by a reported $5B investment.
+source_url: https://www.cnbc.com/2026/05/19/blackstone-google-ai-data-center-joint-venture-tpu.html

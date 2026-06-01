@@ -1,0 +1,14 @@
+id: digi-power-x-cerebras-2026
+source_slug: digi-power-x
+source_name: Digi Power X
+target_slug: cerebras
+target_name: Cerebras
+deal_type: cloud_capacity
+value_billions: 1.1
+value_display: $1.1B (up to $2.5B), 40MW
+date: "2026-05"
+date_display: May 2026
+description: >-
+  Digi Power X signed a master services agreement with Cerebras for a 40MW AI
+  data center in Alabama — an initial 10-year term worth ~$1.1B, up to $2.5B.
+source_url: https://www.sec.gov/Archives/edgar/data/0001854368/000121390026053566/ea028958501ex99-1.htm

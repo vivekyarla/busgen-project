@@ -489,3 +489,17 @@
   ticker: TSEM
   category: foundry
   subline: "~$1.5B rev, specialty/analog foundry"
+
+- slug: blackstone
+  name: Blackstone
+  ticker: BX
+  category: investor
+  layer: capital
+  subline: "$5B AI-infra JV w/ Google (2026)"
+
+- slug: digi-power-x
+  name: Digi Power X
+  ticker: null
+  category: data_center
+  layer: compute
+  subline: "40MW AI DC for Cerebras"
