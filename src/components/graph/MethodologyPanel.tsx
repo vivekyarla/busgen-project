@@ -62,35 +62,38 @@ export default function MethodologyPanel({ onClose }: { onClose: () => void }) {
               <span style={{ color: DEM }}>Demand</span>
             </p>
             <p className="mx-auto mt-3 max-w-md text-xs leading-relaxed text-zinc-500">
-              A node scores high only when all three line up: capital is rushing
-              in, the market hasn&rsquo;t repriced it yet, and the demand is real.
+              Three things have to be true at once: money is pouring in, the
+              market hasn&rsquo;t woken up yet, and the demand is actually real.
+              Miss any one of them and the score collapses.
             </p>
           </div>
 
           {/* Term cards */}
           <div className="space-y-3 p-5">
-            <Card color={VEL} title="Deal Velocity" plain="How much recent deal flow is converging on this company.">
-              Recency-weighted sum of every deal it&rsquo;s party to (inbound +
-              outbound), decaying with a ~18-month half-scale and boosted by deal
-              size. Normalized 0–100 across the map. Counting outbound matters: a
-              supplier&rsquo;s signal is the demand pulling on its output, not just
-              capital flowing in.
+            <Card color={VEL} title="Deal Velocity" plain="How hard recent deal flow is pointing at one company.">
+              We add up every deal a company touches, the ones it buys and the
+              ones it sells. Recent deals count for more (the weight roughly halves
+              every 18 months), and bigger deals count for more. Then we scale it 0
+              to 100 across the map. Outbound counts as much as inbound: when
+              everyone is buying from you, that pull is the signal, not just the
+              cash flowing in.
             </Card>
-            <Card color={GAP} title="Unrealized Gap" plain="How little the public market has already priced it in.">
+            <Card color={GAP} title="Unrealized Gap" plain="How much the market still hasn't priced in.">
               <code className="text-zinc-300">
                 1 − (stock return − S&amp;P return) ÷ 2
               </code>
-              , measured since the company&rsquo;s first deal and clamped to 0–1. A
-              name that has crushed the market (NVIDIA, SK&nbsp;Hynix) → gap ≈ 0
-              (the story is priced in). Private / no-ticker companies can&rsquo;t be
-              measured, so they default to 0.4.
+              , measured from the company&rsquo;s first deal and capped between 0
+              and 1. If a stock has already crushed the market (think NVIDIA,
+              SK&nbsp;Hynix), the gap sits near 0. The story is out, everyone knows.
+              No ticker means we can&rsquo;t measure it, so those default to 0.4.
             </Card>
-            <Card color={DEM} title="Demand" plain="Whether real demand is confirmed — not just a cheap stock.">
-              A 0–1 signal from filings & news (backlog, &ldquo;sold out,&rdquo;
-              book-to-bill, lead times). It separates <em>cheap because
-              constrained</em> (SK&nbsp;Hynix, sold out → 1.0) from <em>cheap
-              because struggling</em> (Intel foundry, no external backlog → 0.2).
-              Absent → 0.45.
+            <Card color={DEM} title="Demand" plain="Is the demand real, or is the stock just cheap?">
+              A 0 to 1 read from filings and news: backlog, &ldquo;sold
+              out,&rdquo; book-to-bill, lead times. This is the line between{" "}
+              <em>cheap because you can&rsquo;t make enough</em> (SK&nbsp;Hynix,
+              sold out, 1.0) and <em>cheap because nobody&rsquo;s buying</em>
+              (Intel&rsquo;s foundry, no outside backlog, 0.2). No signal either
+              way lands at 0.45.
             </Card>
           </div>
 
@@ -100,13 +103,14 @@ export default function MethodologyPanel({ onClose }: { onClose: () => void }) {
               How to read it
             </h3>
             <p className="text-sm leading-relaxed text-zinc-400">
-              Bright = a supply node where deals are piling up, the market
-              hasn&rsquo;t caught up, and demand is confirmed — a candidate for the
-              next GPUs / next HBM. Dark = either nothing&rsquo;s happening, or
-              it&rsquo;s already priced in. Only the supply layers (compute,
-              networking, raw materials, power) are scored; the application
-              (demand) and capital (finance) layers are excluded, so a hot buyer
-              like OpenAI is correctly <em>not</em> flagged as a bottleneck.
+              Bright means deals are stacking up, the market hasn&rsquo;t caught
+              on, and the demand checks out. That&rsquo;s your candidate for the
+              next GPUs, the next HBM. Dark means either nothing is happening or
+              it&rsquo;s already priced in. We only score the supply layers
+              (compute, networking, raw materials, power). The demand and capital
+              layers sit out, so a hungry buyer like OpenAI never gets flagged. It
+              is the thing everyone wants, <em>not</em> the thing that&rsquo;s
+              scarce.
             </p>
           </div>
 
@@ -117,20 +121,20 @@ export default function MethodologyPanel({ onClose }: { onClose: () => void }) {
             </h3>
             <ul className="space-y-1.5 text-sm leading-relaxed text-zinc-500">
               <Bullet>
-                It can over-rate financial intermediaries (e.g. CoreWeave) whose
-                deal flow reflects circular financing more than scarce supply.
+                It can over-rate the middlemen. CoreWeave looks busy, but a lot
+                of that flow is circular financing, not scarce supply.
               </Bullet>
               <Bullet>
-                The gap reads &ldquo;underperformed&rdquo; — demand confirmation
-                tempers that, but a low stock can still mean justified pessimism.
+                A big gap just means the stock lagged. Demand sanity-checks that,
+                but sometimes a cheap stock is cheap for a good reason.
               </Bullet>
               <Bullet>
-                Demand values are a first-pass read from public sources, hand-
-                editable — directional, not gospel.
+                Demand is a first pass from public sources, editable by hand.
+                Treat it as directional, not gospel.
               </Bullet>
               <Bullet>
-                It only sees what&rsquo;s in the deal data; thinly-covered layers
-                (grid, transformers) are under-represented.
+                It only knows what&rsquo;s in the deal data. Thinly covered
+                corners like the grid and transformers are under-represented.
               </Bullet>
             </ul>
           </div>
