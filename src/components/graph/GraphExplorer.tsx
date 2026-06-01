@@ -16,6 +16,7 @@ import ControlPanel from "./ControlPanel";
 import Legend from "./Legend";
 import NodeDetailPanel from "./NodeDetailPanel";
 import LayerPanel from "./LayerPanel";
+import MethodologyPanel from "./MethodologyPanel";
 import TimeBar from "./TimeBar";
 import SearchBox from "./SearchBox";
 
@@ -60,6 +61,7 @@ export default function GraphExplorer({
     nonce: number;
   } | null>(null);
   const [activeLayer, setActiveLayer] = useState<Layer | null>(null);
+  const [showMethodology, setShowMethodology] = useState(false);
 
   // Select a node and fly the camera to it (used by search + layer panel).
   const pickNode = (id: string) => {
@@ -148,7 +150,11 @@ export default function GraphExplorer({
       {/* Bottom-left: legend (heat/bottleneck only; layers are labeled in-scene) */}
       {colorMode !== "layer" && (
         <div className="pointer-events-none absolute bottom-0 left-0 z-10 p-4">
-          <Legend colorMode={colorMode} maxActivity={maxActivity} />
+          <Legend
+            colorMode={colorMode}
+            maxActivity={maxActivity}
+            onExplain={() => setShowMethodology(true)}
+          />
         </div>
       )}
 
@@ -176,8 +182,13 @@ export default function GraphExplorer({
             data={data}
             nodeId={selectedId}
             onSelect={setSelectedId}
+            onExplain={() => setShowMethodology(true)}
           />
         </div>
+      )}
+
+      {showMethodology && (
+        <MethodologyPanel onClose={() => setShowMethodology(false)} />
       )}
 
       {/* Layer deep-dive modal */}

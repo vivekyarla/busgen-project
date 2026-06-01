@@ -27,10 +27,12 @@ export default function NodeDetailPanel({
   data,
   nodeId,
   onSelect,
+  onExplain,
 }: {
   data: GraphData;
   nodeId: string;
   onSelect: (id: string | null) => void;
+  onExplain?: () => void;
 }) {
   const nameById = useMemo(() => {
     const m = new Map<string, string>();
@@ -135,8 +137,18 @@ export default function NodeDetailPanel({
       {/* Opportunity Indicator breakdown (transparent inputs, not a black box) */}
       <div className="border-b border-zinc-800/70 px-4 py-3">
         <div className="flex items-baseline justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+          <p className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
             Opportunity indicator
+            {onExplain && (
+              <button
+                onClick={onExplain}
+                title="How is this scored?"
+                aria-label="How is this scored?"
+                className="grid h-3.5 w-3.5 place-items-center rounded-full border border-zinc-700 text-[8px] normal-case text-zinc-400 hover:border-zinc-500 hover:text-zinc-100"
+              >
+                i
+              </button>
+            )}
           </p>
           <span
             className="font-mono text-lg font-semibold"

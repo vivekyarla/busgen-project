@@ -6,9 +6,11 @@ import { heatColor, type ColorMode } from "@/lib/data/filter";
 export default function Legend({
   colorMode,
   maxActivity,
+  onExplain,
 }: {
   colorMode: ColorMode;
   maxActivity: number;
+  onExplain?: () => void;
 }) {
   if (colorMode === "heat" || colorMode === "bottleneck") {
     const ramp = `linear-gradient(to right, ${heatColor(0)}, ${heatColor(
@@ -26,9 +28,19 @@ export default function Legend({
           <span>{isBottleneck ? "next bottleneck" : `${maxActivity} deals`}</span>
         </div>
         {isBottleneck && (
-          <p className="mt-1.5 w-44 text-[10px] leading-snug text-zinc-600">
-            Deal velocity × how little the market has priced it in.
-          </p>
+          <>
+            <p className="mt-1.5 w-44 text-[10px] leading-snug text-zinc-600">
+              Velocity × unrealized gap × demand.
+            </p>
+            {onExplain && (
+              <button
+                onClick={onExplain}
+                className="pointer-events-auto mt-1.5 text-[10px] text-zinc-400 underline-offset-2 hover:text-zinc-100 hover:underline"
+              >
+                How is this scored? ⓘ
+              </button>
+            )}
+          </>
         )}
       </div>
     );
