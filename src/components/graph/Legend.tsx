@@ -24,7 +24,7 @@ export default function Legend({
         </p>
         <div className="h-2 w-44 rounded-full" style={{ background: ramp }} />
         <div className="mt-1 flex w-44 justify-between text-[10px] text-zinc-500">
-          <span>{isBottleneck ? "priced in" : "quiet"}</span>
+          <span>{isBottleneck ? "priced in" : "0 deals"}</span>
           <span>{isBottleneck ? "next bottleneck" : `${maxActivity} deals`}</span>
         </div>
         {isBottleneck && (
