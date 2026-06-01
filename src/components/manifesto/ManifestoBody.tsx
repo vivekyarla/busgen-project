@@ -26,10 +26,13 @@ export default function ManifestoBody() {
         <Ext href="https://www.linkedin.com/in/kathyshaoo/?skipRedirect=true">
           Kathy
         </Ext>
-        , <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>,
-        and <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>
+        , <Ext href="https://www.linkedin.com/in/shawngregory/">Shawn</Ext>, and{" "}
+        <Ext href="https://www.linkedin.com/in/georgezzhangg/">George</Ext>
         <br />
-        For BUSGEN 116: Free Systems
+        For{" "}
+        <Ext href="https://x.com/ahall_research/status/2029689071786938398">
+          BUSGEN 116: Free Systems
+        </Ext>
         <br />
         Stanford University
         <br />
