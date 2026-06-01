@@ -4,7 +4,13 @@ import yaml from "js-yaml";
 import { CompanySchema, DealSchema, type Company, type Deal } from "./types";
 import { layerForCategory, layerY, LAYER_META, type Layer } from "./layers";
 import { monthIndex } from "./time";
-import { loadPrices, gapFor, SCORE, isBottleneckCandidate } from "./score";
+import {
+  loadPrices,
+  loadDemand,
+  gapFor,
+  SCORE,
+  isBottleneckCandidate,
+} from "./score";
 
 /**
  * Build-time loader. Reads the curated dataset from /data (companies.yml +
@@ -45,7 +51,9 @@ export interface GraphNode {
   dealVelocity: number;
   /** 1 − market response since first deal, 0..1; null if unmeasured (no ticker). */
   unrealizedGap: number | null;
-  /** DealVelocity × UnrealizedGap, normalized 0..1. The bottleneck score. */
+  /** Demand-confirmation signal 0..1 (backlog/sold-out evidence). */
+  demand: number;
+  /** DealVelocity × UnrealizedGap × Demand, normalized 0..1. The bottleneck score. */
   bottleneckScore: number;
   /** Stock return since firstMonth (fractional), null if unmeasured. */
   priceReturn: number | null;
@@ -155,6 +163,7 @@ export function loadGraph(): GraphData {
       firstMonth: null,
       dealVelocity: 0,
       unrealizedGap: null,
+      demand: SCORE.DEFAULT_DEMAND,
       bottleneckScore: 0,
       priceReturn: null,
       benchmarkReturn: null,
@@ -217,8 +226,9 @@ export function loadGraph(): GraphData {
   const minMonth = months.length ? Math.min(...months) : 0;
   const maxMonth = months.length ? Math.max(...months) : 0;
 
-  // ── Opportunity Indicator: DealVelocity × UnrealizedGap per node ──
+  // ── Opportunity Indicator: DealVelocity × UnrealizedGap × Demand per node ──
   const prices = loadPrices();
+  const demandMap = loadDemand();
   const now = new Date();
   const NOW_MONTH = maxMonth || now.getFullYear() * 12 + now.getMonth();
   const velocityRaw = new Map<string, number>();
@@ -254,10 +264,13 @@ export function loadGraph(): GraphData {
     n.priceReturn = priceReturn;
     n.benchmarkReturn = benchmarkReturn;
     n.scoreMeasured = measured;
+    n.demand = demandMap[n.id] ?? SCORE.DEFAULT_DEMAND;
     // Only supply nodes can be bottlenecks; demand sinks (application labs,
-    // hyperscalers) and capital are excluded so they don't dominate the score.
+    // hyperscalers) and capital are excluded. Demand-confirmation gates the
+    // score so cheap-but-failing laggards (Intel foundry) don't read as
+    // bottlenecks the way cheap-and-constrained suppliers (SK Hynix) do.
     const rs = isBottleneckCandidate(n.layer, n.category)
-      ? vr * (gap ?? SCORE.UNMEASURED_GAP)
+      ? vr * (gap ?? SCORE.UNMEASURED_GAP) * n.demand
       : 0;
     rawScore.set(n.id, rs);
     maxVel = Math.max(maxVel, vr);

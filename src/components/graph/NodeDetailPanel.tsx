@@ -152,6 +152,7 @@ export default function NodeDetailPanel({
             frac={node.unrealizedGap}
             unmeasured={!node.scoreMeasured}
           />
+          <Meter label="Demand confirmed" frac={node.demand} />
         </div>
         <p className="mt-2 text-[11px] leading-snug text-zinc-500">
           {node.layer === "application" ||

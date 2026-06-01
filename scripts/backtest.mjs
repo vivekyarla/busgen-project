@@ -20,7 +20,14 @@ const CAT2LAYER = {
   memory: "raw_materials", packaging: "raw_materials", power: "power", investor: "capital",
 };
 const BOTTLENECK = new Set(["compute", "networking", "raw_materials", "power"]);
-const TAU = 18, R_STAR = 2.0, UNMEASURED = 0.4;
+const TAU = 18, R_STAR = 2.0, UNMEASURED = 0.4, DEFAULT_DEMAND = 0.45;
+// Demand map (live score multiplies this in; historical as-of-date runs do NOT,
+// to stay leak-free since demand reflects today's knowledge).
+let demandMap = {};
+try {
+  const raw = yaml.load(fs.readFileSync(path.join(DATA, "demand.yml"), "utf8"));
+  for (const [s, v] of Object.entries(raw || {})) demandMap[s] = typeof v === "number" ? v : v?.demand ?? DEFAULT_DEMAND;
+} catch {}
 const mi = (d) => { const m = /^(\d{4})-(\d{1,2})/.exec(d || ""); return m ? +m[1] * 12 + (+m[2] - 1) : null; };
 const layerOf = (c) => (BOTTLENECK.has(c.layer) || c.layer === "application" || c.layer === "capital" ? c.layer : CAT2LAYER[c.category] || "compute");
 const bySlug = new Map(companies.map((c) => [c.slug, c]));
@@ -28,7 +35,7 @@ const bySlug = new Map(companies.map((c) => [c.slug, c]));
 function closeAsOf(series, T) { if (!series) return null; let best = null, bm = -Infinity; for (const k of Object.keys(series)) { const m = +k; if (m <= T && m > bm) { bm = m; best = series[k]; } } return best; }
 function closeAtOrAfter(series, m0) { if (!series) return null; let best = null, bm = Infinity; for (const k of Object.keys(series)) { const m = +k; if (m >= m0 && m < bm) { bm = m; best = series[k]; } } return best ?? closeAsOf(series, Infinity); }
 
-function scoresAsOf(T) {
+function scoresAsOf(T, useDemand = false) {
   const vel = new Map(), first = new Map();
   for (const d of deals) {
     const m = mi(d.date); if (m == null || m > T) continue;
@@ -49,8 +56,9 @@ function scoresAsOf(T) {
     }
     const layer = layerOf(c);
     const eligible = BOTTLENECK.has(layer) && c.category !== "hyperscaler";
-    const raw = eligible ? v * gap : 0;
-    rows.push({ slug: c.slug, name: c.name, layer, v, gap, measured, ret, raw });
+    const dem = useDemand ? (demandMap[c.slug] ?? DEFAULT_DEMAND) : 1;
+    const raw = eligible ? v * gap * dem : 0;
+    rows.push({ slug: c.slug, name: c.name, layer, v, gap, measured, ret, raw, dem });
   }
   const maxRaw = Math.max(...rows.map((r) => r.raw), 1e-9);
   rows.forEach((r) => (r.score = Math.round((r.raw / maxRaw) * 100)));
@@ -59,12 +67,12 @@ function scoresAsOf(T) {
 }
 
 // Detailed CURRENT ranking (today's prices + all deals).
-console.log("=== CURRENT bottleneck ranking (latest data) ===");
-const now = scoresAsOf(mi("2026-05"));
-for (const r of now.filter((r) => r.score > 0).slice(0, 14)) {
+console.log("=== CURRENT bottleneck ranking (latest data, demand-adjusted) ===");
+const now = scoresAsOf(mi("2026-05"), true);
+for (const r of now.filter((r) => r.score > 0).slice(0, 16)) {
   const pr = r.measured ? `${(r.ret * 100).toFixed(0)}% vs S&P` : "unmeasured";
   console.log(
-    `  ${String(r.score).padStart(3)} | ${r.name.padEnd(22)} [${r.layer}] vel ${r.v.toFixed(1).padStart(5)} | gap ${String(Math.round(r.gap * 100)).padStart(3)} | ${pr}`,
+    `  ${String(r.score).padStart(3)} | ${r.name.padEnd(22)} [${r.layer}] vel ${r.v.toFixed(1).padStart(5)} | gap ${String(Math.round(r.gap * 100)).padStart(3)} | dem ${String(Math.round(r.dem * 100)).padStart(3)} | ${pr}`,
   );
 }
 

@@ -144,6 +144,14 @@ The "Bottleneck" color mode scores each node by `DealVelocity × UnrealizedGap`:
   Backtest (`node scripts/backtest.mjs`) validates this: it flags SK Hynix at
   #2 as of Jan 2025 — before its ~8× run — then fades it to 0 once priced in.
 
+- **DemandConfirmation** — a 0–1 signal in **`data/demand.yml`** (per slug, with
+  a note) capturing backlog / "sold out" / book-to-bill / lead-time evidence,
+  multiplied into the score. It separates "cheap because constrained" (SK Hynix,
+  sold out → 1.0) from "cheap because failing" (Intel foundry, no external
+  customers → 0.2). Absent slugs default to 0.45. First-pass LLM-assigned from
+  filings/news — edit freely. NOTE: it reflects *today's* knowledge, so the
+  leak-free `backtest.mjs` historical runs deliberately exclude it.
+
 Prices live in **`data/prices.json`** (monthly adjusted closes + S&P benchmark).
 Refresh them with:
 

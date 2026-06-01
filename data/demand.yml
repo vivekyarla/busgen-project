@@ -1,0 +1,99 @@
+# Demand-confirmation signal (0–1): how capacity-constrained / in-demand a node's
+# OUTPUT is for AI, per public signals — backlog, "sold out", book-to-bill, lead
+# times. Multiplied into the bottleneck score for supply nodes (velocity × gap ×
+# demand). Absent → DEFAULT_DEMAND (0.45). This is a first-pass LLM-assigned read
+# grounded in 2025–26 filings/news; edit freely (see data/AGENTS.md). Excluded
+# layers (application/capital/hyperscaler) are omitted — they don't score.
+
+# ── Memory (sold out through 2026) ──
+sk-hynix: { demand: 1.0, note: "DRAM/NAND/HBM sold out through 2026" }
+micron: { demand: 1.0, note: "HBM4 2026 capacity sold out" }
+samsung-memory: { demand: 0.9, note: "HBM4 ramp; >30% of Nvidia 2026" }
+
+# ── Foundry ──
+tsmc: { demand: 1.0, note: "2nm sold out; CoWoS booked 2026-27" }
+samsung-foundry: { demand: 0.7, note: "Tesla $16.5B; regaining share" }
+intel: { demand: 0.2, note: "Foundry lacks external customers at scale (18A); turnaround" }
+globalfoundries: { demand: 0.5, note: "mature-node, steady" }
+umc: { demand: 0.5, note: "mature-node" }
+smic: { demand: 0.6, note: "China demand, capacity-constrained" }
+tower-semiconductor: { demand: 0.5 }
+
+# ── Semicap equipment / materials ──
+asml: { demand: 0.85, note: "EUV/High-NA backlog; gatekeeper" }
+applied-materials: { demand: 0.75, note: "equipment upcycle" }
+lam-research: { demand: 0.75, note: "equipment upcycle" }
+tokyo-electron: { demand: 0.7 }
+kla: { demand: 0.75, note: "process control demand" }
+onto-innovation: { demand: 0.7, note: "HBM metrology" }
+entegris: { demand: 0.6, note: "materials" }
+shin-etsu: { demand: 0.6, note: "photoresist/wafers tight" }
+sumco: { demand: 0.6, note: "silicon wafers" }
+
+# ── Advanced packaging (CoWoS sold out) ──
+amkor: { demand: 0.9, note: "CoWoS expansion; TSMC outsourcing" }
+ase-group: { demand: 0.85, note: "CoWoS/SPIL outsourcing" }
+
+# ── Power ──
+ge-vernova: { demand: 1.0, note: "gas turbines sold out through 2029; transformers" }
+bloom-energy: { demand: 0.9, note: "$7.65B in 90 days; high book-to-bill" }
+eaton: { demand: 0.9, note: "transformers/switchgear; multi-year lead times" }
+siemens-energy: { demand: 0.9, note: "transformers ~5-yr lead; $1B capacity add" }
+vistra: { demand: 0.7, note: "nuclear PPAs in demand" }
+constellation: { demand: 0.7, note: "nuclear PPAs" }
+talen: { demand: 0.7, note: "Susquehanna PPA" }
+entergy: { demand: 0.5, note: "utility AI load" }
+brookfield-renewable: { demand: 0.5 }
+sb-energy: { demand: 0.4 }
+kairos: { demand: 0.4, note: "SMR pre-revenue (Hermes 2 ~2030)" }
+x-energy: { demand: 0.4, note: "SMR pre-revenue" }
+terrapower: { demand: 0.4, note: "SMR pre-revenue" }
+oklo: { demand: 0.4, note: "microreactor pre-revenue" }
+sage-geosystems: { demand: 0.3, note: "early geothermal" }
+
+# ── Networking / optical ──
+coherent: { demand: 1.0, note: "book-to-bill 4x; InP sold out 2027" }
+broadcom: { demand: 0.9, note: "AI networking + custom ASIC huge backlog" }
+lumentum: { demand: 0.8, note: "OCS backlog; CPO ramp" }
+marvell: { demand: 0.7, note: "custom ASIC ramp" }
+astera-labs: { demand: 0.7, note: "connectivity ramp" }
+arista: { demand: 0.7, note: "AI networking" }
+mellanox: { demand: 0.6 }
+credo: { demand: 0.6, note: "growing; DustPhotonics acq" }
+cisco: { demand: 0.4, note: "incumbent, slower AI mix" }
+lightmatter: { demand: 0.4, note: "photonics startup, pre-scale" }
+celestial-ai: { demand: 0.4, note: "photonics startup" }
+ayar-labs: { demand: 0.4, note: "photonics startup" }
+d-matrix: { demand: 0.4, note: "inference startup" }
+dustphotonics: { demand: 0.3, note: "acquired by Credo" }
+
+# ── Chip designers ──
+nvidia: { demand: 1.0, note: "sold out; ~$119B supply commitments" }
+amd: { demand: 0.8, note: "MI300/MI400 ramp" }
+arm: { demand: 0.7, note: "IP across AI silicon" }
+synopsys: { demand: 0.7, note: "EDA; AI chip design demand" }
+cadence: { demand: 0.7, note: "EDA" }
+qualcomm: { demand: 0.5, note: "entering DC inference" }
+groq: { demand: 0.5, note: "inference startup" }
+sambanova: { demand: 0.4 }
+rivos: { demand: 0.4, note: "startup (Nvidia-linked)" }
+
+# ── Neoclouds / data centers / server OEMs ──
+coreweave: { demand: 0.7, note: "$55B+ backlog; capacity in demand" }
+nebius: { demand: 0.7, note: "Meta $27B" }
+crusoe: { demand: 0.6, note: "Stargate Abilene" }
+iren: { demand: 0.6, note: "Nvidia partnership" }
+lambda: { demand: 0.6 }
+nscale: { demand: 0.5 }
+cerebras: { demand: 0.5, note: "inference cloud" }
+aligned-data-centers: { demand: 0.6 }
+vantage: { demand: 0.6, note: "Stargate WI" }
+applied-digital: { demand: 0.6, note: "CoreWeave lease" }
+core-scientific: { demand: 0.5 }
+galaxy: { demand: 0.5 }
+digi-power-x: { demand: 0.4 }
+dell: { demand: 0.6, note: "AI server backlog" }
+super-micro: { demand: 0.6 }
+foxconn: { demand: 0.6, note: "AI server assembly" }
+hpe: { demand: 0.5 }
+zt-systems: { demand: 0.5, note: "AMD-acquired" }

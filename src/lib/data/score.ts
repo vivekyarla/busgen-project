@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import yaml from "js-yaml";
 
 /**
  * Opportunity Indicator math.
@@ -22,7 +23,37 @@ export const SCORE = {
   R_STAR: 2.0, // relative outperformance (×) that fully "closes" the gap
   UNMEASURED_GAP: 0.4, // gap when there's no public price window (don't let
   // unmeasured private nodes ride deal velocity to the top of the score)
+  DEFAULT_DEMAND: 0.45, // demand-confirmation when a node isn't in demand.yml
 };
+
+/**
+ * Demand-confirmation signal (0–1) per company slug, from data/demand.yml.
+ * Distinguishes "cheap stock because constrained supply" from "cheap because
+ * failing" — a laggard with no backlog (Intel foundry) shouldn't read as a
+ * bottleneck. Multiplied into the score. First-pass LLM-assigned, editable.
+ */
+export function loadDemand(): Record<string, number> {
+  try {
+    const raw = yaml.load(
+      fs.readFileSync(path.join(process.cwd(), "data", "demand.yml"), "utf8"),
+    );
+    const out: Record<string, number> = {};
+    if (raw && typeof raw === "object") {
+      for (const [slug, v] of Object.entries(raw as Record<string, unknown>)) {
+        const d =
+          typeof v === "number"
+            ? v
+            : v && typeof v === "object" && "demand" in v
+              ? Number((v as { demand: unknown }).demand)
+              : NaN;
+        if (Number.isFinite(d)) out[slug] = Math.max(0, Math.min(1, d));
+      }
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
 
 // Bottleneck = a SUPPLY-side constraint. The application layer (demand sinks
 // like the labs) and capital layer (financiers) are not bottlenecks, so they're
