@@ -560,3 +560,22 @@
   category: networking
   layer: networking
   subline: Silicon photonics (acq. by Credo)
+
+- slug: airtrunk
+  name: AirTrunk
+  ticker: null
+  category: data_center
+  layer: compute
+  subline: Australian data center operator
+- slug: india-ai-data-centers
+  name: India AI Data Centers
+  ticker: null
+  category: data_center
+  layer: compute
+  subline: AI data center capacity in India
+- slug: spacex
+  name: SpaceX
+  ticker: null
+  category: hyperscaler
+  layer: compute
+  subline: Space exploration technologies company providing cloud capacity.

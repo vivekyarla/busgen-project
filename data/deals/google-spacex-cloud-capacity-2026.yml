@@ -1,0 +1,15 @@
+id: google-spacex-cloud-capacity-2026
+source_slug: google
+source_name: Google
+target_slug: spacex
+target_name: SpaceX
+deal_type: cloud_capacity
+value_billions: 11.04
+value_display: $11.04B
+date: 2026-06
+date_display: June 2026
+description: >-
+  Google's $920-million-a-month deal with SpaceX will let it secure 110,000 Nvidia GPUs starting
+  October 2026.
+source_url: >-
+  https://www.tomshardware.com/tech-industry/artificial-intelligence/google-signs-usd920m-monthly-compute-deal-with-spacex-companys-projected-annual-data-center-revenue-to-exceed-its-combined-proceeds-from-starlink-launch-services-and-ai-in-2025

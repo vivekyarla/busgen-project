@@ -1,0 +1,12 @@
+id: google-spacex-xai-cloud-capacity-2026
+source_slug: google
+source_name: Google
+target_slug: xai
+target_name: SpaceXAI
+deal_type: cloud_capacity
+value_billions: 30
+value_display: $30B
+date: 2026-06
+date_display: June 2026
+description: Google has signed a $30 billion AI computing power deal with SpaceX.
+source_url: https://www.engadget.com/2188862/google-spacex-xai-data-center-deal-gemini/
